@@ -1,0 +1,10 @@
+package protoFile.pet.Pet3502;
+message Get3502Request{
+     required int32 id=1;//角色id
+     required int32 npcId=2;//NPCid
+}
+message Get3502Response{
+	 required bool result = 1;
+	 optional string message = 2;
+	 optional int32 gold = 3;//需要的钻
+}

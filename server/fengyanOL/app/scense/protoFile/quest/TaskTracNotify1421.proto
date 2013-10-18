@@ -1,0 +1,33 @@
+package protoFile.quest.TaskTracNotify1421;
+//推送任务追踪列表
+
+
+//任务追踪链接信息
+message TaskTracLinkInfo{
+	required int32 		id					= 1;		//追踪的id			
+	required string		label				= 2;		//替换的文字
+}
+
+//任务追踪条目
+message TaskTracItem{
+	required int32 		task_id				= 1;		//任务id
+	optional int32		task_state			= 2;		//任务状态
+	optional int32		task_accpet_npc_id	= 3;		//接此任务的npc id
+	optional int32		task_accpet_city_id = 4;		//接任务npc所在城镇id
+	optional int32		need_num			= 5;		//需求数量
+	optional int32		cur_num				= 6;		//当前数量
+	optional int32		is_trac				= 7;		//是否被追踪[0:没有,1:被追踪]
+	optional int32		need_lv				= 8;		//需求任务等级
+	optional string		task_running_des	= 9;		//任务进行中描述
+	optional string		task_complete_des	= 10;		//任务完成的任务描述
+	optional string 	task_name			= 11;		//任务名字
+	repeated TaskTracLinkInfo runing_args	= 12;		//进行中的链接信息
+	repeated TaskTracLinkInfo complete_args	= 13;		//任务完成的连接信息
+}
+
+//任务追踪列表推送消息
+message TaskTracListNotify{
+	repeated TaskTracItem cur_list			= 1;		//已接任务追踪列表
+	repeated TaskTracItem acceptable_list	= 2;		//可接人物追踪列表
+}
+

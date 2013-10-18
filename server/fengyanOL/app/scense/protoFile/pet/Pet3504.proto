@@ -1,0 +1,11 @@
+package protoFile.pet.Pet3504;
+message Get3504Request{
+     required int32 id=1;//角色id
+     required int32 npcId=2;//NPCid
+     optional int32 close=3;//1没有打对勾    -1选中，已经打上对勾
+}
+message Get3504Response{
+	 required bool result = 1;
+	 optional string message = 2;
+	 optional int32 gold = 3;//需要的钻
+}

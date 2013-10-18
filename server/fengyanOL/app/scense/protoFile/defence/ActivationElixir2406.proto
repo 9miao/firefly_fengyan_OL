@@ -1,0 +1,10 @@
+package protoFile.defence.ActivationElixir2406;
+message ActivationElixirRequest{
+     required int32 id=1;//角色id
+     required int32 c_id=2;//副本id
+     required int32 elixirType=3;//药剂类型 0力量1敏捷2智力3精神4耐力5所有
+}
+message ActibationElixirResponse{
+     optional bool result=1;
+     optional string message=2;
+}

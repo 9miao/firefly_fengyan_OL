@@ -1,0 +1,18 @@
+package protoFile.packageInfo.PackageExpansion_223;
+message PackageExpansionRequest{//扩充包裹
+     required int32 characterId = 1;//角色的id
+     required int32 packageType = 2;//包裹的类型 1道具
+     required int32 curpage = 3;//当前分页
+     required int32 position = 4;//扩充到的包裹的位置
+}
+
+message PackageExpansionResponse{//扩充包裹返回的消息
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     optional int32 packageType = 1;//包裹的类型 1道具
+     optional int32 curpage = 2;//当前分页
+}

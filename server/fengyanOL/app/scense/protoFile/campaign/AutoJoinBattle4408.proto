@@ -1,0 +1,9 @@
+package protoFile.campaign.AutoJoinBattle4408;
+message AutoJoinBattleRequest{
+     required int32 id=1;//角色id
+     required bool autoJoinFlag=2;//是否自动加入战斗 默认是不能自动加入
+}
+message AutoJoinBattleResponse{
+     optional string message=1;
+     optional bool result=2;
+}

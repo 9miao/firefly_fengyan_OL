@@ -1,0 +1,22 @@
+package protoFile.item.GetAllHeChengInfos2114;
+message GetAllHechengInfosRequest{//获取所有的合成配方信息的列表
+     required int32 id = 1;//角色的ID
+}
+
+message GetAllHechengInfosResponse{//
+     required bool result = 1;
+     optional string message = 2;
+     optional HeChenInfoList data = 3;
+}
+
+message HeChenInfoList{//配方列表
+     repeated HeChenInfo equiplist = 1;//合成装备的配方 
+     repeated HeChenInfo gemlist = 2;//合成宝石的配方
+}
+
+message HeChenInfo{//配方信息
+     optional int32 itemId = 1;//配方的ID
+     optional string itemname = 2;//配方的名称
+     optional int32 level=3;//物品等级
+}
+

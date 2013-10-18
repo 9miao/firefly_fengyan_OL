@@ -1,0 +1,24 @@
+package protoFile.hall.CheckMatrixCanUse1823;
+message GetGroupInfoRequest{
+    required int32 id=1;//角色id
+    required int32 curPage=2;//获取当前页的角色信息
+}
+message GetGroupInfoResponse{
+    required bool result=1;
+    optional string message = 2;
+    optional GroupInfo data=3;
+}
+message GroupInfo{
+    repeated EveryGroupInfo everyGroupInfo=1;
+    optional int32 maxPage=2;//总页数
+    optional int32 curPage=3;//当前页数
+}
+message EveryGroupInfo{
+    optional int32 groupHallId=1;//房间id
+    optional int32 groupHallNumber=2;//房间号
+    required bool groupHallClock=3;//房间是否加锁 默认为开放
+    optional int32 copySceneLevel=4;//副本级别 0普通1困难2英雄
+    optional string groupName=5;//队伍名称
+    optional int32 curRoleNum=6;//当前玩家数量
+    optional int32 copySceneId=7;//副本id
+}

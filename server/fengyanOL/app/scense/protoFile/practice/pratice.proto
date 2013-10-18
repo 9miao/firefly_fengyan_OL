@@ -1,0 +1,18 @@
+package protoFile.practice.pratice;
+message praticeRequest{
+     required int32 id =1;
+     required int32 monsterId =2;
+     required int32 singleExpBonus = 3;
+     required int32 monsterCount =4;
+     required int32 monsterLevel =5;
+}
+
+message praticeResponse{
+     required bool result =1;
+     optional string message = 2;
+     optional DataPacket data = 3;
+}
+
+message DataPacket{
+     optional string status = 1;
+}

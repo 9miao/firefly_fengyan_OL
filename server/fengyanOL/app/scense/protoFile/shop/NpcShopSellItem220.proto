@@ -1,0 +1,19 @@
+package protoFile.shop.NpcShopSellItem220;
+message npcShopSellItemRequest{
+     required int32 id=1;//角色id
+     required int32 itemPos=2;//物品的位置
+     required int32 packageType = 3;//包裹的标签页 1道具 2任务
+     required int32 curpage = 4;//包裹的当前页
+     required int32 sellCount=5;//出售数量
+}
+
+message npcShopSellItemResponse{
+     required bool result=1;
+     optional string message=2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     optional int32 packageType = 1;//包裹的标签页 1道具 2任务
+     optional int32 curpage = 2;//包裹的当前页
+}

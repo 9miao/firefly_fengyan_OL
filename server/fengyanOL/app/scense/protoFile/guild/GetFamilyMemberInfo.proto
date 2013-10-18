@@ -1,0 +1,23 @@
+package protoFile.guild.GetFamilyMemberInfo;
+message GetFamilyMemberInfoRequest{
+      required int32 id = 1;//角色id
+required int32 index = 2;//分页号
+}
+message GetFamilyMemberInfoResponse{
+      required bool result = 1;
+      optional string message = 2;
+      optional FamilyMemberInfo data = 3;
+}
+message FamilyMemberInfo{
+      optional int32 pageCount = 1;//总页数
+      repeated FamilyMemberBasicInfo familyMemberBasicInfo = 2;
+}
+message FamilyMemberBasicInfo{
+      optional int32 memberId = 1;//族员id
+      optional string memberName = 2;//族员名称
+      optional int32 memberJobs = 3;//族员职位
+      optional int32 memberLevel = 4;//族员等级
+      optional int32 memberContribution = 5;//贡献值
+      optional string lastOnLineTime = 6;//最后一次上线时间
+      optional int32 isOnLine = 7;//是否在线  0 不在线 1 在线
+}

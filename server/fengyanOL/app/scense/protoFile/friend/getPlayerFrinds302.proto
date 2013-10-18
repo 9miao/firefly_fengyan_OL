@@ -1,0 +1,26 @@
+package protoFile.friend.getPlayerFrinds302;
+option optimize_for = CODE_SIZE;
+message getPlayerFrindsRequest{ 
+     required int32 id = 1; //角色id
+}
+
+message getPlayerFrindsResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional Friends data = 3;
+}
+
+message Friends{
+     repeated Friend friends =1;
+}
+
+message Friend{
+     optional int32 roleId=1;//角色id
+     optional string roleName=2;//角色名称
+     optional int32 roleProfession=3;//角色职业
+     optional int32 level=4;//等级
+     optional string comp=5;//军团名称
+     optional string scenename=6;//角色当前场景名称
+     optional int32  zx=7;//好友是否在线  0不在线  2在线
+     optional string  spirit=8;//心情
+}

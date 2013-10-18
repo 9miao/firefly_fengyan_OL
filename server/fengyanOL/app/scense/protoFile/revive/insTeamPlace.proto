@@ -1,0 +1,4 @@
+package protoFile.revive.insTeamPlace;
+message instanceTeamResponse{
+     required int32 leaderid = 1;//¶Ó³¤½ÇÉ«Id
+}

@@ -1,0 +1,9 @@
+package protoFile.defence.GameTopTitle2400;
+message GameTopTitleResponse{
+    optional string message=1;
+    repeated AnouInfo anouInfo=2;
+}
+message AnouInfo{
+    optional int32 anouType=1;//类型1为殖民奖金  2殖民管理  3流光溢彩的殖民管理 4新手奖励 5每日奖励6点石成金
+    optional int32 surplusTimes=2;//剩余时间
+}

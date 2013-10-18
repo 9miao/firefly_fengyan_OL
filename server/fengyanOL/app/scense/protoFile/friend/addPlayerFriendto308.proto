@@ -1,0 +1,5 @@
+package protoFile.friend.addPlayerFriendto308;
+message addPlayerFriendtoRequest{
+     required int32 id = 1;//对方角色id
+     required string playerName =2;//对方角色名称
+}

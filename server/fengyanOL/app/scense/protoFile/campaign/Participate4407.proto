@@ -1,0 +1,10 @@
+package protoFile.campaign.Participate4407;
+
+message ParticipateRequest{//参战请求
+     required int32 id = 1;//角色的ID
+}
+
+message ParticipateResponse{
+     optional string message=1;
+     optional bool result=2;
+}

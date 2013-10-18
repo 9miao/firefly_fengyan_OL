@@ -1,0 +1,29 @@
+package protoFile.packageInfo.getItemsInPackage;
+import "protoFile/itemInfo.proto";
+
+message getItemsInPackageRequest{ //获取获取玩家包裹栏中的物品请求信息
+     required int32 id=1;//角色id
+     required int32 packCategory=2;//包裹的分页 1道具 2任务
+     required int32 curpage = 3;//当前分页
+}
+
+message getItemsInPackageResponse{ //获取获取玩家包裹栏中的物品请求返回信息
+     required bool result=1;
+     optional string message=2;
+     optional ResponseData data=3;
+}
+
+message ResponseData{
+     optional int32 packCategory =1;//包裹的分页 1道具 2任务
+     optional int32 packageSize = 2;//包裹的大小
+     optional int32 curpage = 3;//包裹的当前分页
+     optional int32 maxpage = 4;//包裹的最大分页
+     optional int32 totalsize = 5;//总可用格子数
+     repeated PackageInfo packageItemInfo = 6;//物品的信息
+}
+
+message PackageInfo{
+     optional ItemsInfo itemInfo = 1;
+     optional int32 position = 2;
+    
+}

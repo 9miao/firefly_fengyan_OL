@@ -1,0 +1,5 @@
+package protoFile.revive.pushAskForRevive;
+message pushAskForRevive{
+     required int32 victimerId = 1;	//求救者的Id
+     required string victimerName = 2;  //求救者的名称
+}

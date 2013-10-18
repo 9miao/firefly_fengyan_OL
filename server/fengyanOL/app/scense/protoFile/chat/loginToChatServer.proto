@@ -1,0 +1,9 @@
+package protoFile.chat.loginToChatServer;
+message loginToChatServerRequest{
+     required int32 id = 1;//½ÇÉ«idºÅ
+}
+
+message loginToChatServerResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

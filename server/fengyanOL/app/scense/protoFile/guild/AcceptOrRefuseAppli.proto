@@ -1,0 +1,10 @@
+package protoFile.guild.AcceptOrRefuseAppli;
+message AcceptOrRefuseAppliRequest{
+     required int32 id = 1;//角色id
+     required int32 operType = 2;//操作类型 0 接受 1 拒绝
+     required int32 appliId = 3;//申请ID
+}
+message AcceptOrRefuseAppliResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

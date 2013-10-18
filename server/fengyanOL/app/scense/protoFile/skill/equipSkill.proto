@@ -1,0 +1,11 @@
+package protoFile.skill.equipSkill;
+message equipSkillRequest{
+     required int32 id = 1;  //角色的id
+     required int32 skillInstanceId = 2;//技能的实例id
+     required int32 skillPosition = 3; //技能栏的位置
+}
+
+message equipSkillResponse{
+     required bool result = 1;
+     required string message = 2;
+}

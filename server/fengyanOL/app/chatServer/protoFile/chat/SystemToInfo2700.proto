@@ -1,0 +1,4 @@
+package protoFile.chat.SystemToInfo2700;
+message SystemToInfoResponse{
+    optional string s_info=1;//系统信息
+}

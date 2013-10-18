@@ -1,0 +1,10 @@
+package protoFile.consignment.RevokeCommission1205;
+message RevokeCommissionRequest{
+     required int32 id = 1;//角色的id
+     required int32 itemConsId = 2;//物品的寄售id
+     required int32 type=3;//0物品寄卖 1金币寄卖
+}
+message RevokeCommissionResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

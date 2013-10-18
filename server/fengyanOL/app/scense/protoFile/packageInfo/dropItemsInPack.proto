@@ -1,0 +1,13 @@
+package protoFile.packageInfo.GetShangJiaoInfo3304;
+message dropItemsInPackRequest{//删除背包中的物品
+     required int32 id = 1;//角色的id
+     required int32 position =2;//物品在背包中的位置
+     required int32 packageType = 3;//包裹的类型 1道具 2任务
+     required int32 curPage = 4;//包裹的当前分页
+}
+
+message dropItemsInPackResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional int32 data = 3;//包裹的类型 1道具 2任务
+}

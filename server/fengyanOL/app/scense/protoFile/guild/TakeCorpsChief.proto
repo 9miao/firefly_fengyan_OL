@@ -1,0 +1,8 @@
+package protoFile.guild.TakeCorpsChief;
+message TakeCorpsChiefRequest{
+     required int32 id=1;//½ÇÉ«id
+}
+message TakeCorpsChiefResponse{
+     required bool result=1;
+     optional string message=2;
+}

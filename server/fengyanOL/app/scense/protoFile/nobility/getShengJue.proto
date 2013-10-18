@@ -1,0 +1,10 @@
+package protoFile.nobility.getShengJue;
+message GetShengJueRequest{
+     required int32 id=1;//½ÇÉ«id
+}
+message GetShengJueResponse{
+	 required bool result = 1;
+	 optional string message = 2;
+	
+}
+

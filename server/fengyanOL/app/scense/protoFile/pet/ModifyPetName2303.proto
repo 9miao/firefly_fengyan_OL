@@ -1,0 +1,10 @@
+package protoFile.pet.ModifyPetName2303;
+message ModifyPetNameRequest{
+    required int32 id=1;//角色id
+    required int32 petId=2;//宠物id
+    required string petName=3;//宠物名称
+}
+message ModifyPetNameResponse{
+    optional bool result=1;
+    optional string message=2;
+}

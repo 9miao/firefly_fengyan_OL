@@ -1,0 +1,7 @@
+package protoFile.playerInfo.SceneLoadComplete2600;
+message SceneLoadCompleteRequest{
+     required int32 id=1;//½ÇÉ«id
+}
+message SceneLoadCompleteResponse{
+
+}

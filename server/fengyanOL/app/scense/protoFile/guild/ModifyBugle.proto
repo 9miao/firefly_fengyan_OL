@@ -1,0 +1,9 @@
+package protoFile.guild.ModifyBugle;
+message ModifyBugleRequest{
+     required int32 id=1;//½ÇÉ«id
+     required string bugleTxt=2;//¾üºÅ
+}
+message ModifyBugleResponse{
+     required bool result=1;
+     optional string message=2;
+}

@@ -1,0 +1,9 @@
+//¹Ø±ÕË½ÁÄ´°¿Ú
+package protoFile.chat.CloseChatWindow1014;
+message CloseChatWindowRequest{
+     required int32 id=1;//½ÇÉ«id
+}
+message CloseChatWindowResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

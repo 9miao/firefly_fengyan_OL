@@ -1,0 +1,12 @@
+//发送邮件
+package protoFile.mail.SendMail;
+message sendMailRequest{
+     required int32 id = 1;//角色id
+     required string acceptName = 2;//接受者名称
+     required string mailTitle = 3;//邮件标题
+     required string mailContent = 4;//邮件内容
+}
+message sendMailResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

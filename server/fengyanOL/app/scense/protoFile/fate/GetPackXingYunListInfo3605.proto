@@ -1,0 +1,16 @@
+package protoFile.fate.GetPackXingYunListInfo3605;
+import "XingYunInfo.proto";
+message GetPackXingYunListInfoRequest{
+     required int32 id=1;//角色id
+}
+message GetPackXingYunListInfoResponse{
+     optional string message=1;
+     optional bool result=2;
+     repeated PackInfo xyPackList=3;//星运集合信息
+}
+
+message PackInfo{//每格星运包裹的信息
+     optional int32 postion = 1;//包裹的位置
+     optional XingYunBasicInfo xyInfo = 2;//星运的信息 
+
+}

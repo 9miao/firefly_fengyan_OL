@@ -1,0 +1,9 @@
+package protoFile.pet.ActivationMatrix2308;
+message ActivationMatrixRequest{
+     required int32 id=1;//½ÇÉ«id
+     required int32 matrixId=2;//Õó·¨id
+}
+message ActivationMatrixResponse{
+     optional bool result=1;
+     optional string message=2;
+}

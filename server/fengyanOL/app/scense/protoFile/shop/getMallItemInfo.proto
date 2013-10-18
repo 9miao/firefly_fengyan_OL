@@ -1,0 +1,44 @@
+package protoFile.shop.getMallItemInfo;
+message getMallItemInfoRequest{
+     required int32 id = 1;
+     required int32 categories = 2;//商城物品的分类
+     required int32 page = 3;//页面，默认为1
+}
+
+message getMallItemInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     optional int32 categories =1;//商城分类
+     optional int32 goal = 2;//商品总页数
+     repeated ItemIifo items = 3;//商品信息集合
+} 
+
+message ItemIifo{
+     optional int32 id = 1;
+     optional string name = 2;
+     optional string description = 3;
+     optional string icon = 4;
+     optional int32 qualityLevel = 5;//物品品质等级
+     optional int32 levelRequire = 6;//物品装备需求等级
+     optional int32 minDamage = 7;//最小伤害
+     optional int32 maxDamage = 8;//最大伤害
+     optional int32 defense = 9;//防御值
+     optional int32 professionRequire = 10;//职业要求
+     optional int32 strRequire = 11;//力量需求
+     optional int32 dexRequire = 12;//灵巧需求
+     optional int32 vitRequire = 13;//体质需求
+     optional int32 type = 14;//物品类型
+     optional int32 durability = 15;//耐久度
+     optional int32 bind = 16;//绑定方式 0=非绑定物品1=拾取即绑定 2=装备即绑定
+     optional int32 aliveTime = 17;//剩余时间(天) -1：表示无时间限制
+     optional int32 bodyType = 18;//-1 非装备 0 头部（帽子）1 #身体（上衣） 2 #腰带 3 #下装 4 #鞋子 5 #护腕 6 #披风 7 #项链 8 #腰饰 9 #武器
+     optional int32 promotion= 19;//促销分类 1=新品2=热卖3=特价4=限量 -1表示没有促销分类
+     optional int32 price= 20; //价格
+     optional int32 priceType= 21;// 1为魔钻价格 2为魔晶价格    魔钻价格(人民币) 魔晶价格(礼券)
+     optional int32 restrict=22;//购买数量限制  -1为无限制
+     optional int32 maxstack=23;//物品的最大堆叠数量
+}

@@ -1,0 +1,15 @@
+package protoFile.consignment.CommissionSellItem1206;
+message CommissionSellItemRequest{
+     required int32 id=1;//角色id
+     required int32 itemId=2;//物品id
+     required int32 commissionType=3;//寄卖类型0物品-1钻-2金币
+     required int32 sellNum=4;//商品数量
+     required int32 commissionTime=5;//寄卖时间 0为6小时 1为12小时 2为24小时
+     required bool setTop=6;//是否置顶 默认不置顶
+     required int32 muchType=7;//总价类型0金币1钻石
+     required int32 muchNum=8;//总价
+}
+message CommissionSellItemResponse{
+     required bool result=1;
+     optional string message=2;
+}

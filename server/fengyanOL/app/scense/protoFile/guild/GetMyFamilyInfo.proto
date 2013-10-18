@@ -1,0 +1,32 @@
+package protoFile.guild.GetMyFamilyInfo;
+message GetMyFamilyInfoRequest{
+      required int32 id = 1;//角色id
+}
+message GetMyFamilyInfoResponse{
+      required bool result = 1;
+      optional string message = 2;
+      optional MyFamilyInfo data= 3;//自己所在家族的信息
+ 
+}
+message MyFamilyInfo{
+      optional FamilyInfo myFamilyInfo = 1;//自己家族基本信息
+      optional FamilyInfo allianceFamilyInfo = 2;//同盟家族基本信息
+      optional FamilyInfo hostilityFamilyInfo = 3;//敌对家族基本信息
+      optional int32 familyMoney = 4;//家族资金
+      optional int32 familyState = 5;//家族状态 0正常1被殖民
+      optional string familyStrategierLeft = 6;//左参谋
+      optional string familyStrategierRight = 7;//右参谋
+      optional string familyMonitorLeft = 8;//左队长
+      optional string familyMonitorCenter = 9;//中队长
+      optional string familyMonitorRight = 10;//右队长
+      optional int32 myContribution = 11;//我的贡献
+      optional int32 isCanUpLevel = 12;//是否可以升级
+}
+message FamilyInfo{
+      optional int32 familyId = 1;//家族id
+      optional string familyName = 2;//家族名称
+      optional int32 familyLevel = 3;//家族等级
+      optional string familyLeader = 4;//族长
+      optional int32 curFamilyNum = 5;//家族当前人数
+      optional int32 maxFamilyNum = 6;//家族人数上限
+}

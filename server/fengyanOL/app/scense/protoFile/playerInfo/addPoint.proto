@@ -1,0 +1,20 @@
+package protoFile.playerInfo.addPoint;
+message addPointRequest{
+     required int32 id = 1;
+     required int32 manualStr = 2;
+     required int32 manualVit = 3;
+     required int32 manualDex = 4;
+}
+
+message addPointResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data= 3;
+}
+
+message ResponseData{
+     required int32 sparePoint = 1;
+     required int32 manualStr = 2;
+     required int32 manualVit = 3;
+     required int32 manualDex = 4;
+}

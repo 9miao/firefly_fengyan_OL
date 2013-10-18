@@ -1,0 +1,21 @@
+package protoFile.packageInfo.getItemsInEquipSlot;
+import "protoFile/itemInfo.proto";
+
+message getItemsInEquipSlotRequest{//获取装备栏中的物品
+     required int32 id = 1;//角色的id
+}
+
+message getItemsInEquipSlotResponse{
+     required bool result = 1;
+     optional string message =2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     repeated PackageInfo packageItemInfo = 1;
+}
+
+message PackageInfo{
+     optional ItemsInfo itemInfo = 1;
+     optional int32 position = 2;
+}

@@ -1,0 +1,27 @@
+package protoFile.login.loginToServer;
+message loginToServerRequest{
+     required string user = 1;//用户名
+     required string password = 2;//密码
+}
+
+message loginToServerResponse{
+     required bool result =1;
+     optional string message=2;
+     optional UserInfo data = 3;
+}
+
+message UserInfo{
+     optional int32 userId=1;
+     optional int32 len=2;
+     optional int32 defaultId = 3;//默认选择的角色
+     repeated RoleInfo character=4;//角色列表
+     
+}
+
+message RoleInfo{
+     optional int32 id=1;        //角色的id
+     optional string nickname=2;  //角色的昵称
+     optional int32 level=3;     //角色的等级
+     optional string profession=4;//角色的职业编号
+     optional int32 viptype=5;  //角色的类型 1为VIP
+}

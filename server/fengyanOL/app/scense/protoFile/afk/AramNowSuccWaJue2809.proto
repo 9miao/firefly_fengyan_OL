@@ -1,0 +1,10 @@
+package protoFile.afk.AramNowSuccWaJue2809;
+message AramNowSuccWaJueRequest{
+     required int32 id=1;//角色id
+     required int32 type=2;//类型0为角色1为宠物
+     required int32 funId=3;//宠物或角色id
+}
+message AramNowSuccWaJueResponse{
+     optional string message=1;
+     optional bool result=2;
+}

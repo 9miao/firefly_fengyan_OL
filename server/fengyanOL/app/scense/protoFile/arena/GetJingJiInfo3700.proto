@@ -1,0 +1,32 @@
+package proto.jingji.jingji3700;
+message GetJingJiRequest{
+     required int32 id=1;//角色id
+}
+message GetJingJiResponse{
+     optional string message=1;
+     optional bool result=2;
+     optional JingJiInfo jingjiInfo=3;//竞技场信息
+}
+message JingJiInfo{
+     optional string rankInfo=1;//排名信息
+     optional int32 jifen=2;//积分
+     optional int32 weiwang=3;//威望
+     optional int32 rank=4;//排名
+     optional int32 liansheng=5;//连胜
+     optional int32 tzCount=6;//挑战次数
+     repeated DiRenInfo drList=7;//敌人列表信息
+     repeated BattleInfo battleInfoList=8;//战报信息
+     optional int32 addCount=9;//已购买次数
+     optional int32 reqCoin=10;//所需金币
+     optional int32 obtainTime=11;//领取时间
+}
+message DiRenInfo{
+     optional int32 bId=1;//对方id
+     optional string bName=2;//对方名称
+     optional int32 bLevel=3;//对方等级
+     optional int32 bRank=4;//对方排名
+     optional int32 profession=5;//职业类型 
+}
+message BattleInfo{
+     optional string battleStr=1;//战斗信息
+}

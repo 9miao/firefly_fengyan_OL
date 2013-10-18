@@ -1,0 +1,9 @@
+package protoFile.hall.CheckMatrixCanUse1823;
+message CheckMatrixCanUseRequest{
+     required int32 id=1;
+     optional int32 vipMatrix=2;//1(高级阵法)2（白金阵法）3（至尊阵法）
+}
+message CheckMatrixCanUseResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

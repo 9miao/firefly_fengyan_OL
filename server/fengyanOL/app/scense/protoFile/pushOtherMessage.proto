@@ -1,0 +1,4 @@
+package protoFile.pushOtherMessage;
+message OtherMessage{
+     required string msg = 1;
+}

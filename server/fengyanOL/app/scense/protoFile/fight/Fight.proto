@@ -1,0 +1,167 @@
+package protoFile.fight.Fight;
+message FightRequest{
+     required int32 id = 1;
+     required int32 tid = 2;
+     optional int32 type = 3;//攻击类型 1： 打怪  2：决斗
+}
+
+message FightResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3; 
+}
+
+message ResponseData{
+     required int32 fightType = 1;//攻击类型 1： 打怪  2：决斗	3:Boss  4:出现结算界面
+     required int32 battleResult =2;//战斗结果
+     repeated InitBattleData startData = 3;
+     repeated stepFightData stepData = 4; 
+     repeated SettlementData setData = 5;
+     required int32 centerX = 6;
+     required int32 centerY = 7;
+}
+
+message InitBattleData{
+     optional int32 CharacterType = 1;
+     optional int32 camp = 2;
+     optional int32 fightType = 3;
+     optional int32 figure = 4;
+     optional float hp = 5;
+     optional float mp = 6;
+     optional int32 id = 7;
+     optional int32 labelId = 8;
+     optional int32 level = 9;
+     optional float maxHp = 10;
+     optional float maxMp = 11;
+     optional string name = 12;
+     repeated int32 position = 13;
+     optional string weaponName = 14;
+}
+
+message stepFightData{
+     repeated groupFightData group = 1; 
+}
+
+message groupFightData{
+     repeated FightData fightData = 1;
+}
+
+message FightData{
+     optional int32 actors = 1;
+     optional int32 actType = 2;
+     optional int32 actorsFightType = 3;
+     optional int32 skillId = 4;
+     optional int32 skillReleaseEffect = 5;
+     optional int32 skillthrowEffect = 6;
+     optional int32 skillBearEffect = 7;
+     optional int32 fixedPointEffectId = 8;
+     repeated int32 startPosition = 9;
+     repeated int32 endPosition = 10;
+     optional float actorsHp = 11;
+     optional float actorsMp = 12;
+     optional float actorsMaxHp = 13;
+     optional float actorsMaxMp = 14;
+     optional float actorLostHp = 15;
+     optional float actorLostMp = 16;
+     optional int32 victim = 17;
+     repeated int32 victimPosition = 18;
+     optional int32 victimFixedPointEffectId = 19;
+     optional int32 injuredType = 20;
+     optional float victimHp = 21;
+     optional float victimMp = 22;
+     optional float victimMaxHp = 23;
+     optional float victimMaxMp = 24;
+     optional float victimLostHp = 25;
+     optional float victimLostMp = 26;
+     optional int32 actorsFigure = 27;    //攻的形象
+     optional int32 victimFigure = 28;    //受的形象
+     optional int32 isCrit = 29; //是否暴击
+     optional int32 actorsDBId = 30;//攻的角色ID
+     optional int32 victimDBId = 31;//受的角色ID
+}
+
+message SettlementData{
+     optional int32 id = 1;	//角色的id
+     optional int32 expBonus = 2; //角色获得的经验
+     optional int32 coinBonus = 3; //角色获得的铜币奖励
+     optional int32 goldBonus = 4; //角色获得的金币奖励
+     optional ItemsInfo itemsBonus = 5; //角色获得的物品奖励
+     optional int32 popularity = 6;//声望奖励
+     optional int32 attackGoal = 7;//攻击得分
+     optional int32 defenseGoal = 8;//防御得分
+     optional int32 slayGoal = 9;//必杀得分
+}
+
+message ItemsInfo{
+     optional int32 id = 1;//物品的id
+     optional int32 type = 2;//物品的类型
+     optional string name = 3;//物品的名称
+     optional string prefixNmae = 4;//物品的前缀名称
+     optional string suffixName = 5;//物品的后缀名称
+     optional int32 bindType = 6;//物品的绑定类型
+     optional int32 isBound = 7;//是否绑定
+     optional string description = 8;//物品描述
+     optional int32 professionRequire = 9;//职业限制
+     optional int32 canInjection = 10;//可否注魂
+     optional int32 bodyType = 11;//装备位置
+     optional int32 weaponType = 12;//武器类型
+     optional int32 nowQuality = 13;//当前品质
+     optional int32 baseAttack = 14;//基础攻击
+     optional int32 extAttack = 15;//附加攻击
+     optional int32 attackType = 16;//攻击类型
+     optional int32 baseSpeed = 17;//武器速度
+     optional int32 levelRequire = 18;//等级限制
+     optional int32 baseStr = 19;//基础力量
+     optional int32 extStr = 20;//附加力量
+     optional int32 baseVit = 21;//基础耐力
+     optional int32 extVit = 22;//附加耐力
+     optional int32 baseDex = 23;//基础敏捷
+     optional int32 extDex = 24;//附加敏捷
+     optional int32 baseWis = 25;//基础智力
+     optional int32 extWis = 26;//附加智力
+     optional int32 baseSpi = 27;//基础精神
+     optional int32 extSpi = 28;//附加精神
+     optional int32 basePhysicalAttack = 29;//基础物理攻击附加
+     optional int32 extPhysicalAttack = 30;//附加物理攻击附加
+     optional int32 baseMagicAttack = 31;//基础魔法攻击附加
+     optional int32 extMagicAttack = 32;//附加魔法攻击附加
+     optional int32 basePhysicalDefense = 33;//基础物理防御附加
+     optional int32 extPhysicalDefense = 34;//附加魔法防御附加
+     optional int32 baseMagicDefense = 35;//基础魔法攻击附加
+     optional int32 extMagicDefense = 36;//附加魔法攻击附加
+     optional int32 baseHpAdditional = 37;//基础HP附加
+     optional int32 extHpAdditional = 38;//附加HP附加
+     optional int32 baseMpAdditional = 39;//基础MP附加
+     optional int32 extMpAdditional = 40;//附加MP附加
+     optional int32 baseHitAdditional = 41;//基础命中附加
+     optional int32 extHitAdditional = 42;//附加命中附加
+     optional int32 baseCritAdditional = 43;//基础暴击附加
+     optional int32 extCritAdditional = 44;//附加暴击附加
+     optional int32 baseDodgeAdditional = 45;//基础闪避附加
+     optional int32 extDodgeAdditional = 46;//附加闪避附加
+     optional int32 baseSquelchAdditional = 47;//基础反击附加
+     optional int32 extSquelchAdditional = 48;//附加反击附加
+     optional int32 baseSpeedAdditional = 49;//基础速度附加
+     optional int32 extSpeedAdditional = 50;//附加速度附加
+     optional int32 baseBogeyAdditional = 51;//基础破防附加
+     optional int32 extBogeyAdditional = 52;//附加破防附加
+     optional string equipEffect = 53;//装备特效
+     optional string devilEffect = 54;//附魔特效
+     optional string suiteEffect = 55;//套装特效
+     repeated Suite SuiteItems = 56;//套装效果
+     optional int32 buyingRateCoin = 57;//交易价格
+     optional int32 baseDurability = 58;//基础耐久
+     optional int32 nowDurability = 59;//当前耐久
+     optional int32 baseDefense = 60;//基础防御
+     optional int32 extDefense = 61;//附加防御
+     optional int32 stack = 62;//物品的层叠数
+     optional int32 starLevel = 63;//物品的星级
+     optional int32 icon = 64;//物品的图标
+     optional int32 templateId= 65;//物品的模板ID
+     optional int32 maxstack = 66;//物品的最大堆叠数
+}
+
+message Suite{
+     optional string suitItemName = 1;
+     optional int32 hasSiutitem = 2;
+}

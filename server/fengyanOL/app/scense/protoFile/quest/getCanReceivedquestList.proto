@@ -1,0 +1,19 @@
+package protoFile.quest.getCanReceivedquestList;
+message getCanReceivedquestListRequest{//获取可接任务列表
+     required int32 id = 1;//角色的ID、
+}
+
+message getCanReceivedquestListResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     repeated Quest canReceivedquestList = 1;//可接任务列表
+}
+
+message Quest{
+     optional int32 taskId = 1;			//任务的ID
+     optional string taskname = 2;		//任务的名称
+}

@@ -1,0 +1,22 @@
+package protoFile.item.GetOneItemHeChengInfo2115;
+message GetOneItemHechengRequest{//获取单个物品的合成信息
+     required int32 id = 1;//角色的ID
+     required int32 itemId = 2;//配方的ID
+}
+
+message GetOneItemHechengResponse{
+     required bool result = 1;
+     required string message = 2;
+     optional PeiFangInfo data = 3;//配方信息
+}
+
+message PeiFangInfo{//合成配方信息
+     optional int32 coinrequired = 1;//合成需要消耗的金币
+     optional int32 itemA = 2;//合成材料A的物品ID
+     optional int32 itemAcnt = 3;//合成材料A的数量
+     optional int32 itemAGoal = 4;//合成材料A的需求数量
+     optional int32 itemB = 5;//合成材料B的物品ID
+     optional int32 itemBcnt = 6;//合成材料B的数量
+     optional int32 itemBGoal = 7;//合成材料B的需求数量
+     optional int32 itemBound = 8;//合成获得的装备（装备预览）的物品ID
+}

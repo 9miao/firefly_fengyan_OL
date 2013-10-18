@@ -1,0 +1,8 @@
+package protoFile.campaign.JoinBattle4407;
+message JoinBattleRequest{
+    required int32 id=1;//½ÇÉ«id
+}
+message JoinBattleResponse{
+    optional string message=1;
+    optional bool result=2;
+}

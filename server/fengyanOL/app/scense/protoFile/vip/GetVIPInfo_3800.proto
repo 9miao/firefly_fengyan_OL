@@ -1,0 +1,37 @@
+package protoFile.vip.GetVIPInfo_3800;
+message GetVIPInfoRequest{//获取VIP信息
+     required int32 id = 1;//角色的id
+}
+
+message GetVIPInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseDate data = 3;
+}
+
+message ResponseDate{
+     optional int32 viplevel = 1;//VIP的等级
+     optional int32 exp = 2;//当前的VIP经验
+     optional int32 maxexp = 3;//升级最大的经验
+     optional string msg = 4;//升级的提示
+     repeated VIPInfo vipinfo = 5;//VIP权限信息
+}
+
+message VIPInfo{//VIP信息
+     optional string funcname = 1;//功能名称
+     optional string vip1cnt = 2;//VIP1的权限次数
+     optional string vip2cnt = 3;//VIP2的权限次数
+     optional string vip3cnt = 4;//VIP3的权限次数
+     optional string vip4cnt = 5;//VIP4的权限次数
+     optional string vip5cnt = 6;//VIP5的权限次数
+     optional string vip6cnt = 7;//VIP6的权限次数
+     optional string vip7cnt = 8;//VIP7的权限次数
+     optional string vip8cnt = 9;//VIP8的权限次数
+     optional string vip9cnt = 10;//VIP9的权限次数
+     optional string vip10cnt = 11;//VIP10的权限次数
+}
+
+
+
+
+

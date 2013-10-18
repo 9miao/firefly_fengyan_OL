@@ -1,0 +1,54 @@
+package protoFile.defence.GetColonizationSceneInfo2405;
+message GetColonizationSceneInfoRequest{
+    required int32 id=1;//角色id
+    required int32 curPage=3;//当前页数
+}
+message GetColonizationSceneInfoResponse{
+    optional string message=1;
+    optional bool result=2;
+    optional CopySceneColoInfo data=3;//副本信息
+}
+message CopySceneColoInfo{
+    optional int32 curPage=1;//页数
+    optional int32 maxPage=2;//总页数
+    repeated CopyInfo copyInfo=3;//副本列表
+}
+message CopyInfo{
+    optional int32 c_id=1;//副本id
+    optional string c_name=2;//副本名称
+    optional int32 li_liang=3;//基础力量
+    optional int32 add_li_liang=4;//力量加成
+    optional int32 min_jie=5;//敏捷
+    optional int32 add_min_jie=6;//敏捷加成
+    optional int32 zhi_li=7;//智力
+    optional int32 add_zhi_li=8;//智力加成
+    optional int32 nai_li=9;//耐力
+    optional int32 add_nai_li=10;//耐力加成
+    optional int32 ji_shen=11;//精神
+    optional int32 add_ji_shen=12;//精神加成
+    optional int32 wu_gong=13;//物攻
+    optional int32 add_wu_gong=14;//物攻加成
+    optional int32 wu_fang=15;//物防
+    optional int32 add_wu_fang=16;//物防加成
+    optional int32 mo_gong=17;//魔攻
+    optional int32 add_mo_gong=18;//魔攻加成
+    optional int32 mo_fang=19;//魔防
+    optional int32 add_mo_fang=20;//魔防加成
+    optional int32 gong_su=21;//攻速
+    optional int32 add_gong_su=22;//攻速加成
+    optional int32 ming_zhong=23;//命中
+    optional int32 add_ming_zhong=24;//命中加成
+    optional int32 bao_ji=25;//暴击
+    optional int32 add_bao_ji=26;//暴击加成
+    optional int32 shan_bi=27;//闪避
+    optional int32 add_shan_bi=28;//闪避加成
+    optional ItemManInfo liliang_info=29;//力量药剂信息
+    optional ItemManInfo minjie_info=30;//敏捷药剂信息
+    optional ItemManInfo zhili_info=31;//智力药剂信息
+    optional ItemManInfo naili_info=32;//耐力药剂信息
+    optional ItemManInfo jingshen_info=33;//精神药剂信息
+}
+message ItemManInfo{
+    optional int32 status=1;//药剂状态0未激活1激活
+    optional int32 remainTime=2;//剩余时间
+}

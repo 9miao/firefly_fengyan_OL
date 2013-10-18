@@ -1,0 +1,4 @@
+package protoFile.playerInfo.pushCharacterLevelMessage;
+message pushCharacterLevelMessage{ //推送角色升级消息
+     required int32 Signal = 1;
+}

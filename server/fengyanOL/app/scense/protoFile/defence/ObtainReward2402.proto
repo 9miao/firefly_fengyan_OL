@@ -1,0 +1,9 @@
+package protoFile.defence.ObtainReward2402;
+message ObtainRewardRequest{
+    required int32 id=1;//½ÇÉ«id
+    required int32 r_id=2;//½±Àøid
+}
+message ObtainRewardResponse{
+    optional bool result=1;
+    optional string message=2;
+}

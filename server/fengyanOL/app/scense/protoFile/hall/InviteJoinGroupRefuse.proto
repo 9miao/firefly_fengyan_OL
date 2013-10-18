@@ -1,0 +1,9 @@
+package protoFile.hall.InviteJoinGroupRefuse;
+message InviteJoinGroupRefuseRequest{
+     required int32 id=1;//½ÇÉ«id
+     required int32 inviteId=2;//ÑûÇëÈËid
+}
+message InviteJoinGroupRefuseResponse{
+     required bool result=1;
+     optional string message=2;
+}

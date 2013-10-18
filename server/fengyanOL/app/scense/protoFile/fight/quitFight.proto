@@ -1,0 +1,14 @@
+package protoFile.fight.quitFight;
+message quitFightRequest{
+     required int32 id = 1;
+}
+
+message quitFightResponse{
+     required bool result = 1;
+     optional string message =2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     optional int32 placeId = 1;   //退出战斗后的场景
+}

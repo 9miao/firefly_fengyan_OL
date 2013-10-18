@@ -1,0 +1,8 @@
+package protoFile.guild.CorpsInvitePlayerNotify;
+message UnionInvitePlayerNotify{ 
+    required int32 playerid = 1;	//邀请者角色id
+	required int32 unionid = 2;		//邀请者公会id
+	required string playername = 3; //邀请者名字
+	required string unionname = 4;	//邀请者所在公会名字
+}
+

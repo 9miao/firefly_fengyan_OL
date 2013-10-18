@@ -1,0 +1,8 @@
+package protoFile.campaign.CancelBattle4409;
+message CancelBattleRequest{
+    required int32 id=1;//½ÇÉ«id
+}
+message CancelBattleResponse{
+    optional string message=1;
+    optional bool result=2;
+}

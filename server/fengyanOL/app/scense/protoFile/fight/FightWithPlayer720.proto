@@ -1,0 +1,11 @@
+package proto.battle.battle720;
+
+message FightPkRequest{
+     required int32 id = 1;//角色的id
+     required int32 tid = 2;//对方的id
+}
+
+message FightPkResponse{
+     required bool result = 1;//结果
+     optional string message = 2;//消息
+}

@@ -1,0 +1,10 @@
+package protoFile.pet.LevelUpPetSkill2302;
+message LevelUpPetSkillRequest{
+     required int32 id=1;//角色id
+     required int32 petId=2;//宠物技能id
+     required int32 skillPos=3;//技能所在位置
+}
+message LevelUpPetSkillResponse{
+     optional bool result=1;
+     optional string message=2;
+}

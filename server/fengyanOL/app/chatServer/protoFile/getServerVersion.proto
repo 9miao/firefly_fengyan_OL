@@ -1,0 +1,4 @@
+package protoFile;
+message getVersionResponse{
+     required string version = 1;
+}

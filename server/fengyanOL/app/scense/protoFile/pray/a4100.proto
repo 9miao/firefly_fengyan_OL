@@ -1,0 +1,14 @@
+package protoFile.pray.a4100;
+message GetPrayInfoRequest{
+     required int32 id=1;//角色id
+     optional bool  qd=2;//true:祈祷   false:查看
+}
+message GetPrayInfoResponse{
+     optional bool result=1;
+     optional string message=2;
+	 optional string prayDes=3;//祈祷描述
+	 optional int32 needDiamond=4;//祈祷需要钻
+	 optional int32 remainTimes=5;//剩余祈祷次数
+     repeated string otherPrayMsg=6;//其他玩家祈祷信息
+     
+}

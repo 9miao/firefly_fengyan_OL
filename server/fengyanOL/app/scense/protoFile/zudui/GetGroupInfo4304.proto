@@ -1,0 +1,17 @@
+package protoFile.zudui.GetGroupInfo4304;
+message GetGroupInfoRequest{
+    required int32 id=1;//角色id
+    required int32 dwId=2;//队伍id
+}
+message GetGroupInfoResponse{
+    optional string message=1;
+    optional bool result=2;
+    repeated DWMemberInfo dwMemberInfo=3;
+}
+message DWMemberInfo{
+    optional int32 roleId=1;
+    optional string roleName=2;
+    optional int32 level=3;
+    optional int32 proType=4;//职业类型
+    optional int32 pos=5;//所在阵法位置索引
+}

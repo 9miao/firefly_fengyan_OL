@@ -1,0 +1,28 @@
+package protoFile.nobility.GetWeiWangInfo3303;
+message GetWeiWangInfoRequest{
+     required int32 id=1;//角色id
+}
+
+
+message GetWeiWangInfoResponse{
+	 required bool result = 1;
+	 optional string message = 2;
+	 optional Itemt data = 3;//威望任务物品信息
+}
+
+
+message Itemt{
+	 repeated Wupin wp=1;//物品信息
+}
+
+
+message Wupin{
+	 optional int32  id=1;//物品模板id
+	 optional string name=2;//物品名称
+	 optional int32  count=3;//物品数量
+	 optional int32  weiwang=4;//奖励的威望值
+	 optional bool   adddq=5;//是否可以上交
+         optional string  wy=6;//唯一标识
+         optional bool    addzuan=7;//魔钻是否足够
+	 
+}

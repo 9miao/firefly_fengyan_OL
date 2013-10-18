@@ -1,0 +1,24 @@
+package protoFile.pet.GetTuJianPetList2315;
+message GetTuJianPetListRequest{
+    required int32 id=1;//角色id
+    required int32 page=2;
+    required int32 type=3;//1防御2物攻3魔攻
+}
+message GetTuJianPetListResponse{
+    optional bool result=1;
+    optional string message=2;
+    optional SjListInfo slInfo=3;
+}
+message SjListInfo{
+    optional int32 sjPro=1;//当前收集完成度
+    optional int32 curPage=2;//当前页
+    optional int32 maxPage=3;//总页数
+    repeated SjPetInfo sjListPet=4;//宠物信息集合
+}
+message SjPetInfo{
+    optional string petName=1;//宠物名称
+    optional int32 petLevel=2;//宠物等级
+    optional int32 petId=3;//宠物模板id
+    optional bool viewFlag=4;//是否查看
+    optional int32 quality=5;//品质
+}

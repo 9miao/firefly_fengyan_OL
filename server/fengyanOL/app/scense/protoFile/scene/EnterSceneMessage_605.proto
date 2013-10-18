@@ -1,0 +1,29 @@
+package protoFile.scene.EnterSceneMessage_605;
+message EnterSceneMessage{//通知进入场景的消息
+     required int32 sceneId = 1;//场景的id
+     required int32 resourceId = 2;//场景的资源类型
+     required int32 sceneType = 3;//场景的类型 1公共场景 2副本
+     required string scenename = 4;//场景的名称
+     repeated NPC npclist = 5;//场景中的npc列表
+     repeated Portal portals= 6;//场景的传送门列表
+     optional string corpsName=7;//军阀名称
+     optional string rewardCorpsName=8;//殖民军团名称
+}
+
+message NPC{
+     optional int32 npcId = 1;//npc的ID
+     optional string npcName = 2;//npc的名称
+     optional int32 resourceId = 3;//npc的资源ID
+     optional int32 funcType = 4;//npc的功能类型 待定
+     optional int32 positionX = 5;//npc在场景中的x坐标
+     optional int32 positionY = 6;//npc在场景中的y坐标
+}
+
+message Portal{
+     optional int32 portalId = 1;//传送门的ID
+     optional string portalName = 2;//传送门的名称
+     optional int32 funcType = 3;//传送门的功能类型 1副本选择 2副本内场景切换 3公共场景切换
+     optional int32 positionX = 4;//npc在场景中的x坐标
+     optional int32 positionY = 5;//npc在场景中的y坐标
+     optional int32 resourceId = 6;//传送门的资源类型
+}

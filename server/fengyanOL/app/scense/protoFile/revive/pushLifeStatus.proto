@@ -1,0 +1,4 @@
+package protoFile.revive.pushLifeStatus;
+message pushLifeStatus{
+     required int32 Signal = 1;
+}

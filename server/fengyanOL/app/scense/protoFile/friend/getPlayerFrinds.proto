@@ -1,0 +1,28 @@
+package protoFile.friend.getPlayerFrinds;
+message getPlayerFrindsRequest{ //获取好友/仇人信息请求
+     required int32 id = 1; //角色id
+     required int32 type = 2;//关系类型 1.好友 2.仇敌
+}
+
+message getPlayerFrindsResponse{//获取好友/仇人信息返回
+     required bool result = 1;
+     optional string message = 2;
+     optional Friends data = 3;
+}
+
+message Friends{
+     repeated Friend friends =1;
+     optional int32 friendCount = 2;
+     optional int32 type = 3;
+}
+
+message Friend{
+     optional string camp = 1;
+     optional int32 friendId = 2;
+     optional int32 id = 3;
+     optional int32 isSheildedMail = 4;
+     optional int32 level = 5;
+     optional string nickname = 6;
+     optional string profession = 7;
+     optional int32 type = 8;
+}

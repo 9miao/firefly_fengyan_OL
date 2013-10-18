@@ -1,0 +1,13 @@
+package protoFile.instance.GetCopySceneInfo1507;
+message GetCopySceneInfoRequest{
+    required int32 id=1;//角色id
+}
+message GetCopySceneInfoResponse{
+    optional bool result=1;
+    optional string message=2;
+    optional int32 monsterNum=3;//怪物数量
+    optional int32 corpsId=4;//军团id
+    optional string corpsName=5;//军团名称
+    optional int32 rewardId=6;//军阀id
+    optional string rewardName=7;//军阀名称
+}

@@ -1,0 +1,10 @@
+package protoFile.team.agreeGroup;
+message agreeGroupRequest{
+     required int32 id = 1;
+     required int32 tid = 2;
+}
+
+message agreeGroupResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

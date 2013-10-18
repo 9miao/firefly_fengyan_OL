@@ -1,0 +1,8 @@
+package protoFile.tower.RefreshInfo4201;
+message RefreshInfoRequest{
+    required int32 id=1;
+}
+message RefreshInfoResponse{
+    optional string message=1;
+    optional bool result=2;
+}

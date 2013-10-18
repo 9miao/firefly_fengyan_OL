@@ -1,0 +1,17 @@
+package protoFile.campaign.GetXuYuanInfo4404;
+message GetXuYuanInfoRequest{
+     required int32 id=1;//角色id
+}
+message GetXuYuanInfoResponse{
+     optional string message=1;
+     optional bool result=2;
+     optional XuYuanInfo xuYuanInfo=3;
+}
+message XuYuanInfo{
+     optional int32 xyValue=1;//星运值
+     repeated UsedInfo usedInfo=2;//使用记录
+}
+message UsedInfo{
+     optional string name=1;//名称
+     optional int32 type=2;//使用类型0四叶草1郁金香2蝴蝶兰3紫罗兰4曼陀罗
+}

@@ -1,0 +1,8 @@
+package protoFile.quest.TaskFinshNotify1422;
+//推送任务达到完成条件
+
+//任务追踪列表推送消息
+message TaskFinshNotify{
+	required int32 finshID = 1;	//完成的任务id
+}
+

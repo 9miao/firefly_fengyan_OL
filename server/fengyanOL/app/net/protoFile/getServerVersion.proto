@@ -1,0 +1,4 @@
+package protoFile.getServerVersion;
+message getVersionResponse{
+     required string version = 1;
+}

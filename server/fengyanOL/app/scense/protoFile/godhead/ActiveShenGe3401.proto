@@ -1,0 +1,9 @@
+package protoFile.godhead.ActiveShenGe3401;
+message ActiveShenGeRequest{
+     required int32 id=1;//½ÇÉ«id
+     required int32 sgID=2;//Éñ¸ñid
+}
+message ActiveShenGeResponse{
+     optional string message=1;
+     optional bool result=2;
+}

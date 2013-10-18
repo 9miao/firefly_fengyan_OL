@@ -1,0 +1,11 @@
+package protoFile.team.invitedGroup;
+message invitedGroupRequest{
+     required int32 id = 1;
+     required int32 tid = 2;
+}
+
+message invitedGroupResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional string data = 3;
+}

@@ -1,0 +1,10 @@
+package protoFile.instance.EscColonizationBattle713;
+message EscColonizationBattleRequest{
+     required int32 id=1;//角色id
+     required int32 sceneId=2;//副本id
+     required bool battleResult=3;//战斗结果
+}
+message EscColonizationBattleResponse{
+     optional bool result=1;
+     optional string message=2;
+}

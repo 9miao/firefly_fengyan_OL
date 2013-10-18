@@ -1,0 +1,8 @@
+package protoFile.guild.LevelUpEmblem;
+message LevelUpEmblemRequest{
+     required int32 id=1;//”√ªßid
+}
+message LevelUpEmblemResponse{
+     required bool result=1;
+     optional string message = 2;
+}

@@ -1,0 +1,4 @@
+package protoFile.fight.showAllCards;
+message showAllCards{
+     required int32 signal =1; 
+}

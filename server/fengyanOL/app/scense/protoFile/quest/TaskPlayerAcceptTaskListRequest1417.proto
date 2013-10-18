@@ -1,0 +1,15 @@
+//请求角色可接任务列表
+package protoFile.quest.TaskPlayerAcceptTaskListRequest1417;
+
+import "protoFile/quest/TaskItemInfo.proto";
+
+message TaskPlayerAcceptTaskListRequest{ 
+    required int32 id		= 1;			//角色id
+}
+
+message TaskPlayerAcceptTaskListResponse{
+	required bool	result				= 1;			//是否成功
+	repeated TaskItemInfo tasks			= 2;			//任务列表 
+	optional string message				= 3;			//错误说明
+}
+

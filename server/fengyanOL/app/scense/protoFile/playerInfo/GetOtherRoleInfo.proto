@@ -1,0 +1,54 @@
+package protoFile.playerInfo.GetOtherRoleInfo;
+message GetOtherRoleInfoRequest{
+     required int32 id=1;//角色id
+     required int32 roleId=2;//其他玩家角色id
+}
+message GetOtherRoleInfoResponse{
+     required bool result=1;
+     optional string message=2;
+     optional OtherRoleInfo data=3;
+}
+
+message OtherRoleInfo{
+     optional int32 id=1;     //角色id
+     optional string nickname =2;  //用户名
+     optional int32 roletype = 3; //角色类型（vip）
+     optional int32 level = 4;//角色等级
+     optional int32 profession = 5;//角色职业
+     optional int32 energy = 6;//角色的活力
+     optional string rank = 7;//角色的军衔
+     optional string guildname = 8;// 角色行会的名称
+     optional int32 manualStr = 9; //玩家自定义加的力量点数
+     optional int32 manualVit = 10;//玩家自定义加的体质(耐力)点数
+     optional int32 manualDex = 11;//玩家自定义加的灵巧(敏捷)点数
+     optional int32 manualWis = 12;//自定义加上的智力
+     optional int32 manualSpi = 13;//自定义加的精神
+     optional int32 sparePoint = 14;//剩余点数
+     optional int32 maxHp = 15;//最大血量
+     optional int32 hp = 16;//当前血量
+     optional int32 maxMp = 17;//最大魔法值
+     optional int32 mp = 18;//当前魔法值
+     optional int32 exp = 19;//当前经验值
+     optional int32 maxExp = 20;//升级所需经验值
+     optional float physicalAttack = 21;//物理攻击
+     optional float magicAttack = 22;//魔法攻击
+     optional float physicalDefense = 23;//物理防御
+     optional float magicDefense = 24;//魔法防御
+     optional float speed = 25;//速度
+     optional float squelch = 26;//反击
+     optional float critRate = 27;//暴击
+     optional float hitRate = 28;//命中
+     optional float dodgeRate = 29;//闪避
+     optional float ignore = 30;//破甲（破防）
+     optional int32 gold = 31;//魔钻(金币)
+     optional int32 coupon = 32;//魔晶(礼券)
+     optional int32 coin = 33;//游戏币
+     optional int32 deposit = 34;//存款
+     optional Appellation appellation = 35;//称号
+     repeated Appellation appellationList = 36;//称号列表
+}
+message Appellation{
+     optional int32 idInDB = 1;   //称号的记录ID
+     optional int32 modID = 2;    //称号的模板ID
+     optional string name = 3;     //称号的名称
+}

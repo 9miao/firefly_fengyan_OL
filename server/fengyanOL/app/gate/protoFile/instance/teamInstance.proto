@@ -1,0 +1,10 @@
+package protoFile.instance.teamInstance;
+message teamInstanceRequest{
+     required int32 id = 1;//½ÇÉ«id
+     required int32 leaderid = 2;//¶Ó³¤id
+}
+
+message teamInstanceResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

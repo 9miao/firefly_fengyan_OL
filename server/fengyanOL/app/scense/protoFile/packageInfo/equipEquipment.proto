@@ -1,0 +1,14 @@
+package protoFile.packageInfo.equipEquipment;
+message equipEquipmentRequest{
+     required int32 id = 1;//角色的id
+     required int32 fromPosition = 2;//物品在包裹中的位置
+     required int32 toPosition = 3;//装备到得部位
+     required int32 fromPackCategory = 4;//包裹的分页 1道具 2任务
+     required int32 curpage = 5;//物品所在包裹的分页
+}
+
+message equipEquipmentResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional int32 usetype = 3;//使用物品的类型 1宠物
+}

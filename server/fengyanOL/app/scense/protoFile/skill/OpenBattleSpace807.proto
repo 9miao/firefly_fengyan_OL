@@ -1,0 +1,9 @@
+package protoFile.skill.OpenBattleSpace807;
+message OpenBattleSpaceRequest{
+    required int32 id=1;//角色id
+    required int32 spacePos=2;//技能位置
+}
+message OpenBattleSpaceResponse{
+    optional bool result=1;
+    optional string message=2;
+}

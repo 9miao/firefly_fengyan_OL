@@ -1,0 +1,27 @@
+package protoFile.friend.searchCharacterByName;
+message searchCharacterByNameRequest{
+     required int32 id = 1;
+     required string nickName = 2;
+     optional int32 ziduan=3;//1按角色名称,0角色等级，2行会名称  3最近登录时间
+     optional int32 guize=4;//排序规则 1正序   0倒序
+}
+
+message searchCharacterByNameResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional Friends data = 3;
+}
+
+message Friends{
+     repeated Friend friends =1;
+}
+
+message Friend{
+     optional int32 roleId=1;//角色id
+     optional string roleName=2;//角色名称
+     optional int32 roleProfession=3;//角色职业
+     optional int32 level=4;//等级
+     optional string comp=5;//行会
+     optional string lastLoadTime=6;//最后登录时间
+     optional int32  zx=7;//好友是否在线  0不在线  2在线
+}

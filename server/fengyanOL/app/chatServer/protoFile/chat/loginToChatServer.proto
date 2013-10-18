@@ -1,0 +1,10 @@
+package protoFile.chat.loginToChatServer;
+message loginToChatServerRequest{
+     required int32 id = 1;//角色id号
+     required int32 placeId = 2;//角色进入的场景的id
+}
+
+message loginToChatServerResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

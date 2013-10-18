@@ -1,0 +1,17 @@
+package protoFile.chat.GetChatSettingInfo1007;
+message GetChatSettingInfoRequest{
+     required int32 id=1;//角色id
+}
+message GetChatSettingInfoResponse{
+     required bool result=1;
+     optional string message=2;
+     optional SettingInfo data=3;
+}
+message SettingInfo{
+     required bool systemCK=1;//是否接受系统讯息
+     required bool showCK=2;//是否接受提示讯息
+     required bool commonCK=3;//是否接受一般聊天
+     required bool groupCK=4;//是否接受队伍频道
+     required bool corpsCK=5;//是否接受军团讯息
+     required bool selfCK=6;//是否接受密语讯息
+}

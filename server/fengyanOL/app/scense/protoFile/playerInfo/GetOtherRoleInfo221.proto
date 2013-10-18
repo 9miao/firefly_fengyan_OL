@@ -1,0 +1,25 @@
+package protoFile.playerInfo.GetOtherRoleInfo221;
+
+import "protoFile/itemInfo.proto";
+import "protoFile/PlayerProperty.proto";
+
+message GetOtherRoleInfoRequest{
+     required int32 id=1;//角色id
+     required int32 roleId=2;//其他玩家角色id
+}
+message GetOtherRoleInfoResponse{
+     required bool result=1;
+     optional string message=2;
+     optional ResponseInfoData data=3;
+}
+
+message ResponseInfoData{
+     required PlayerPropertyInfo otherRoleInfo = 1;
+     repeated OtherRoleItemInfo otherRoleItem = 2;
+}
+
+message OtherRoleItemInfo{
+     optional ItemsInfo itemInfo = 1;
+     optional int32 position = 2;
+}
+

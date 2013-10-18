@@ -1,0 +1,7 @@
+package protoFile.arena.JingJiRankInfo3702;
+message JingJiRankInfoRequest{
+    required int32 id=1;//角色id
+}
+message JingJiRankInfoResponse{
+    optional string anStr=1;//排名公告信息
+}

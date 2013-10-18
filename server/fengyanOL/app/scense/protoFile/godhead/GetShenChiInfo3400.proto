@@ -1,0 +1,27 @@
+package protoFile.godhead.GetShenChiInfo3400;
+message GetShenChiInfoRequest{
+     required int32 id=1;//角色id
+     required int32 page=2;//页数
+}
+message GetShenChiInfoResponse{
+     optional string message=1;
+     optional bool result=2;
+     optional ShenChiInfo shenChiInfo=3;
+}
+message ShenChiInfo{
+     optional int32 douqi=1;
+     optional string des=2;
+     optional int32 curPage=3;//当前页
+     optional int32 maxPage=4;//最大页
+     optional bool nextBtnFlag=5;//下一页按钮是否可以点击
+     repeated ShenGeInfo shenGeList=6;
+}
+message ShenGeInfo{
+     optional int32 sgID=1;//神格id
+     optional int32 sgType=2;//神格类型1=力量2=自然3=大地4=时间5=命运6=光明7=黑暗
+     optional string sgName=3;//神格名称
+     optional bool activateFlag=4;//是否激活
+     optional int32 reqDQ=5;//所需斗气值
+     optional string sgDes=6;//神格描述
+     optional int32 level = 7;//开启神格所需的等级
+}

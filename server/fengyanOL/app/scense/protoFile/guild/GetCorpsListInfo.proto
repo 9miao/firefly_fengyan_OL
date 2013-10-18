@@ -1,0 +1,33 @@
+package protoFile.guild.GetCorpsListInfo;
+message GetCorpsListInfoRequest{
+     required int32 id=1;//角色id
+     required int32 getType = 2;//0获取所有1搜索
+     optional int32 curPage=3;//页数
+     optional string searchCriteria = 4;//搜索条件
+     
+}
+message GetCorpsListInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional CorpsListInfo data = 3;//军团信息
+}
+message CorpsListInfo{
+     optional int32 curPage = 1;//当前页数据
+     optional int32 maxPage = 2;//总页数
+     repeated CorpsInfo corpsInfo = 3;//军团信息
+}
+message CorpsInfo{
+     optional int32 corpsId = 1;//军团id
+     optional int32 corpsImg = 2;//军徽 
+     optional string corpsName = 3;//军团名称
+     optional string corpsChief = 4;//军团长
+     optional int32 corpsLevel = 5;//军团等级
+     optional int32 curNum = 6;//当前军团人数
+     optional int32 maxNum = 7;//军团总人数
+     optional bool onApplication = 8;//是否申请了次军团
+     optional string corpsTitle = 9;//军团称号
+     optional string corpsAnnouncement = 10;//军团公告
+     optional int32 leaderId = 11;//军团长的角色ID
+     optional bool runningFlag=12;//是否在线
+     optional int32 levelrequired = 13;//加入军团需要的等级
+}

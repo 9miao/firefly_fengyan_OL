@@ -1,0 +1,10 @@
+package protoFile.team.rejectGroup;
+message rejectGroupRequest{
+     required int32 id = 1;
+     required int32 toid = 2;
+}
+
+message rejectGroupResponse{
+     required bool result = 1;
+     required string message = 2;
+}

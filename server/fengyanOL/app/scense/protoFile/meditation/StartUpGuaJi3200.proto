@@ -1,0 +1,8 @@
+package protoFile.meditation.StartUpGuaJi3200;
+message StartUpGuaJiRequest{
+    required int32 id=1;//½ÇÉ«id
+}
+message StartUpGuaJiResponse{
+    optional bool result=1;
+    optional string message=2;
+}

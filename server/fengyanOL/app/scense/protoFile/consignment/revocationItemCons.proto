@@ -1,0 +1,10 @@
+package protoFile.consignment.revocationItemCons;
+message revocationItemConsRequest{
+     required int32 id = 1;//角色的id
+     required int32 itemConsId = 2;//物品的寄售id
+}
+
+message revocationItemConsResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

@@ -1,0 +1,9 @@
+package protoFile.guild.CreateCorps;
+message CreateCorpsRequest{
+     required int32 id=1;//角色id
+     required string corpsName = 2;//军团名
+}
+message CreateCorpsResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

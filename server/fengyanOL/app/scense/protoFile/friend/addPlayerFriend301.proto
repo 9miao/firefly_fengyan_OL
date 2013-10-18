@@ -1,0 +1,11 @@
+package protoFile.friend.addPlayerFriend301;
+message addPlayerFriendRequest{
+     required int32 id = 1;
+     required string playerName =2;
+     required int32 type = 3;//1ºÃÓÑ  2ºÚÃûµ¥ 
+}
+
+message addPlayerFriendResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

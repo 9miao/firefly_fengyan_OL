@@ -1,0 +1,9 @@
+package protoFile.beginners.RecordStepID;
+message RecordStepIDRequest{
+     required int32 beginnerId = 1;
+     required int32 recordId = 2;
+}
+
+message RecordStepIDResponse{
+     required bool result = 1;
+}

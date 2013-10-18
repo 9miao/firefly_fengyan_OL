@@ -1,0 +1,16 @@
+package protoFile.campaign.GetCityListInfo4402;
+message GetCityListInfoRequest{
+     required int32 id=1;//角色id
+}
+message GetCityListInfoResponse{
+     optional string message=1;
+     optional bool result=2;
+     repeated CityInfo cityInfo=3;
+}
+message CityInfo{
+     optional string lzName=1;//领主军团名称
+     optional int32 lzIcon=2;//领主军团军徽
+     optional string tzName=3;//挑战军团名称
+     optional int32 tzIcon=4;//挑战军团军徽
+     optional int32 btnState=5;//按钮状态0挑战1等待征战2征战中
+}

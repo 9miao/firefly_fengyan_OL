@@ -1,0 +1,10 @@
+package protoFile.guild.applyChallenge;
+message applyChallengeRequest{
+     required int32 id = 1;//
+     required int32 eachGuildId = 2;//对方行会的id
+}
+
+message applyChallengeResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

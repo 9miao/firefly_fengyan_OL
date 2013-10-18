@@ -1,0 +1,12 @@
+package protoFile.tower.AutoPaTa4202;
+message AutoPaTaRequest{
+    required int32 id=1;
+}
+message AutoPaTaResponse{
+   optional string message=1;
+   optional bool result=2;
+   repeated PaTaInfo paTaInfoList=3;
+}
+message PaTaInfo{
+   optional string itemStr=1;//ÌôÕ½½±Àø
+}

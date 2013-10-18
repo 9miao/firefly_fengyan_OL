@@ -1,0 +1,37 @@
+package protoFile.campaign.GetBattleInfo4406;
+message GetBattleInfoRequest{
+    required int32 id=1;//角色id
+}
+message GetBattleInfoResponse{
+    optional string message=1;
+    optional bool result=2;
+    optional GroupBattleInfo groupBattleInfo=3;
+}
+message GroupBattleInfo{
+    optional int32 roundCount=1;//轮数 当前进行第几轮
+    optional int32 remainTime=2;//剩余时间
+    optional int32 jishaCount=3;//击杀人数
+    optional int32 obtainCoin=4;//获得金币
+    optional int32 failCount=5;//战败次数
+    optional int32 obtainSw=6;//获得声望
+    repeated BattleInfo battleInfoList=7;//战斗信息
+    optional GroupInfo group1Info=8;//一方军团信息
+    optional GroupInfo group2Info=9;//另一方军团信息
+}
+message BattleInfo{
+    optional int32 roleId1=1;//角色1id
+    optional string roleName1=2;//角色1名称
+    optional int32 roleId2=3;//角色2id
+    optional string roleName2=4;//角色2名称
+    optional int32 sucObCoin=5;//战胜方获得的金币
+}
+message GroupInfo{
+    optional string groupName=1;//军团名称
+    optional int32 groupCount=2;//积分
+    optional int32 icon=3;//军徽
+    repeated GroupMember groupMember=4;
+}
+message GroupMember{
+    optional int32 memberId=1;//角色id
+    optional string memberName=2;//角色名称
+}

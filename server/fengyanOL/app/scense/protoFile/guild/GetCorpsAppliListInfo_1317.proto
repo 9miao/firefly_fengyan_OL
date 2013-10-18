@@ -1,0 +1,25 @@
+package protoFile.guild.GetCorpsAppliListInfo_1317;
+message GetCorpsAppliListInfoRequest{//获取申请列表信息
+     required int32 id=1;//角色id
+     optional string searchCriteria = 2;//搜索条件
+     optional int32 curPage=3;
+}
+message GetCorpsAppliListInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional AppliListInfo data = 3;
+}
+message AppliListInfo{
+     repeated AppliListBaseInfo appliListBaseInfo=1;
+     optional int32 curPage=2;
+     optional int32 maxPage=3;
+     optional int32 levelrequired = 4;//加入军团需要的等级
+}
+message AppliListBaseInfo{
+     optional int32 memberliId = 1;//申请列表id
+     optional string memberName = 2;//名称
+     optional int32 memberLevel = 3;//等级
+     optional string memberProfession = 4;//职业
+     optional string memberRank=5;//军衔
+     optional string memberTime = 6;//申请时间 
+}

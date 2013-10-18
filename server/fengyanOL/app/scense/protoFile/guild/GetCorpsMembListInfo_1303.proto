@@ -1,0 +1,25 @@
+package protoFile.guild.GetCorpsMembListInfo_1303;
+message GetCorpsMemberListInfoRequest{//获取成员列表信息
+     required int32 id=1;//角色id
+     optional string searchCriteria = 2;//搜索条件 全部时为空字符串
+     optional int32 curPage=3;
+}
+message GetCorpsMemberListInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional MemberListInfo data = 3;
+}
+message MemberListInfo{
+     repeated MemberListBaseInfo memberListBaseInfo=1;
+     optional int32 curPage=2;
+     optional int32 maxPage=3;
+}
+message MemberListBaseInfo{
+     optional int32 memberliId = 1;//申请列表id
+     optional string memberName = 2;//名称
+     optional int32 memberLevel = 3;//等级
+     optional string memberProfession = 4;//职业
+     optional string memberRank=5;//军衔
+     optional string onlineState=6;//在线状态
+     optional int32  memberContribution = 7;//贡献
+}

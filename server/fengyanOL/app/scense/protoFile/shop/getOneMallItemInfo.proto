@@ -1,0 +1,12 @@
+package protoFile.shop.getOneMallItemInfo;
+message getoneMallItemInfoRequest{
+     required int32 id = 1;//物品Id
+}
+message getoneMallItemInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional responseData data = 3;
+}
+message responseData{
+     required int64 endtime =1;//结束倒计时时间
+}

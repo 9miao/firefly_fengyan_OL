@@ -1,0 +1,9 @@
+package protoFile.pet.ZhaoHuan2317;
+message ZhaoHuanRequest{
+    required int32 id=1;//½ÇÉ«id
+    required int32 petId=2;//³èÎïÄ£°åid
+}
+message ZhaoHuanResponse{
+    optional bool result=1;
+    optional string message=2;
+}

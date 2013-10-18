@@ -1,0 +1,25 @@
+package protoFile.scene.pushSceneMessage;
+message pushSceneMessage{
+     required int32 sceneId = 1; //场景资源id
+     repeated characterPosition PlayerPosition = 2;//角色
+     repeated characterPosition MonsterPosition = 3;//怪物
+     repeated characterPosition petInfo = 4;//宠物
+}
+
+message characterPosition{
+     required int32 id = 1;//角色或怪物的id
+     required string name = 2;//名称
+     required string profession = 3;//角色职业，怪物资源id
+     required int32 figure = 4;//角色职业，怪物资源id 跟3一样
+     required int32 x = 5;//怪物左边
+     required int32 y = 6;//怪物左边
+     optional string guildname = 7;//军团的名称
+     optional int32 masterId = 8;//主人的ID(仅针对角色)
+     optional int32 level = 9;//角色的等级
+     optional int32 viptype = 10;//角色的vip等级
+     optional int32 gemlevel = 11;//角色的宝石等级
+     optional int32 headicon = 12;//角色的头像ID
+     optional int32 currentHP = 13;//角色的当前血量
+     optional int32 MaxHP = 14;//角色的最大血量
+     optional int32 camp = 15;//对象所属的阵营 当阵营不同时表示可以攻击 为0时表示不可被攻击 -1表示都可以攻击
+}

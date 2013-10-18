@@ -1,0 +1,27 @@
+package protoFile.guild.GetEmblemInfo1310;
+message GetEmblemInfoRequest{
+     required int32 id=1;//角色id
+}
+message GetEmblemInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional EmblemInfo data = 3;
+}
+message EmblemInfo{
+     optional string corpsFounder=1;//军团创始人
+     optional int32 corpsId=2;//军团id
+     optional int32 corpsImg=3;//军团图标
+     optional string createData=4;//创建日期
+     optional int32 corpsLevel=5;//军团等级
+     optional int32 emblemLevel=6;//军徽等级
+     optional string corpsChief=7;//军团长
+	 optional int32	curProgress=8;//升级当前进度
+	 optional int32	maxPorgress=9;//升级最大进度
+     repeated ManagermentInfo veteranList = 10;//元老
+     repeated ManagermentInfo staffInfo = 11;//参谋
+     repeated ManagermentInfo orderInfo = 12;//议事
+     optional string bugleTxt = 13;//军号
+}
+message ManagermentInfo{
+     optional string roleName=1;//名称
+}

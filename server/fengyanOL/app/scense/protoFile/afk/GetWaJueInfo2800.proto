@@ -1,0 +1,13 @@
+package protoFile.afk.GetWaJueInfo2800;
+message GetWaJueInfoRequest{
+    required int32 id=1;//角色id
+}
+message GetWaJueInfoResponse{
+    optional string message=1;
+    optional bool result=2;
+    optional int32 remainTime=3;//剩余时间
+    optional bool runningTask=4;//是否有进行中的任务
+    optional int32 sptimes = 5;//点石成金当前剩余次数
+    optional int32 coinbound = 6;//点石成金可以得到的金币奖励
+    optional int32 goldreq = 7;//点石成金当前所需的消耗
+}

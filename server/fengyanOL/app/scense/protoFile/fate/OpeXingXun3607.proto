@@ -1,0 +1,13 @@
+package protoFile.fate.OpeXingXun3607;
+message OpeXingXunRequest{
+     required int32 id=1;
+     optional int32 opeId=2;//操作对象id
+     required int32 opeType=3;//0从角色身上到背包1从背包到角色身上2从角色身上到角色身上3从背包到背包
+     required int32 fromPos=4;
+     required int32 toPos=5;
+}
+message OpeXingXunResponse{
+     optional string message=1;
+     optional bool result=2;
+     optional int32 oType=3;//操作类型
+}

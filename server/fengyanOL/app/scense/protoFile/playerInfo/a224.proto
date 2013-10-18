@@ -1,0 +1,9 @@
+package protoFile.playerInfo.a224;
+message AddHuoLiRequest{
+    required int32 id=1;//角色id
+}
+message AddHuoLiResponse{
+    optional string message=1;
+    optional bool result=2;
+    optional int32 failType=3;//失败原因1钻不足
+}

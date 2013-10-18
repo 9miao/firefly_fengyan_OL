@@ -1,0 +1,9 @@
+package protoFile.guild.ModifyDefaultDonate;
+message ModifyDefaultDonateRequest{
+      required int32 id=1;//½ÇÉ«id
+      required int32 technologyId=2;//¿Æ¼¼id
+}
+message ModifyDefaultDonateResponse{
+      required bool result = 1;
+      optional string message = 2;
+}

@@ -1,0 +1,19 @@
+package protoFile.award.GetRewardInfo2410;
+import "protoFile/itemInfo.proto";
+
+message GetRewardInfoRequest{
+   required int32 id=1;//角色id
+   required int32 r_type=2;//奖励类型4新手奖励5每日奖励
+}
+message GetRewardInfoResponse{
+   optional string message=1;
+   optional bool result=2;
+   optional RewardInfo rewardInfo=3;
+}
+message RewardInfo{
+   optional string rewardDes=1;//内容区的显示内容
+   optional int32 gold=2;//金币
+   optional int32 zuan=3;//钻
+   optional int32 tili=4;//体力
+   repeated ItemsInfo itemInfo=5;//物品信息集合
+}

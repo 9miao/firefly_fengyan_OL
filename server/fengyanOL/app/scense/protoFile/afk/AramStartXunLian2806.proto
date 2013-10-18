@@ -1,0 +1,11 @@
+package protoFile.afk.AramStartXunLian2806;
+message AramStartXunLianRequest{
+    required int32 id=1;//角色id
+    required int32 type=2;//挖掘类型
+    required int32 funType=3;//类型0为角色1为宠物
+    required int32 funId=4;//宠物或角色id
+}
+message AramStartXunLianResponse{
+    optional string message=1;
+    optional bool result=2;
+}

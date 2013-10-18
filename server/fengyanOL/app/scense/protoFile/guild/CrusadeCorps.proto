@@ -1,0 +1,9 @@
+package protoFile.guild.CrusadeCorps;
+message CrusadeCorpsRequest{
+     required int32 id=1;//角色id
+     required int32 corpsId=2;//要讨伐的军团id
+}
+message CrusadeCorpsResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

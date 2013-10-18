@@ -1,0 +1,16 @@
+//获取私聊信息
+package protoFile.chat.GetOneObjectChatInfo1011;
+message GetOneObjectChatInfoRequest{
+     required int32 id=1;//角色id
+     required int32 chatObjectId=2;//私聊对象id
+}
+message GetOneObjectChatInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional string chatMessage=3;//私聊信息
+     optional string name=4;//私聊对象名称
+     optional string level=5;//私聊对象等级
+     optional string perfession=6;//私聊对象职业
+     optional string chatObjectPos=7;//私聊对象所在城镇
+     
+}

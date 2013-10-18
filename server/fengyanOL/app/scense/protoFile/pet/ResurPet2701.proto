@@ -1,0 +1,11 @@
+package protoFile.pet.ResurPet2701;
+message ResurPetRequest{
+    required int32 id=1;
+    required int32 petId=2;//宠物id
+}
+
+message ResurPetResponse{
+    optional bool result=1;
+    optional int32 failType=2;//失败类型0其他1钻不足
+    optional string message=3;
+}

@@ -1,0 +1,8 @@
+package protoFile.afk.NowSuccWaJue2804;
+message NowSuccWaJueRequest{
+     required int32 id=1;//½ÇÉ«id
+}
+message NowSuccWaJueResponse{
+     optional string message=1;
+     optional bool result=2;
+}

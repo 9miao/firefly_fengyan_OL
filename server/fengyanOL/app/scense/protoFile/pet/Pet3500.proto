@@ -1,0 +1,66 @@
+package protoFile.pet.Pet3500;
+message GetTavernListInfoRequest{
+     required int32 id=1;//角色id
+	 required int32 npcId=2;//NPCid
+	 optional bool istrue=3;//是否是立即刷新
+}
+message GetTavernTaskInfoResponse{
+	 required bool result = 1;
+	 optional string message = 2;
+	 optional WoW data = 3;//酒馆魔兽信息
+}
+
+message WoW{
+	 repeated TavernWoWInfo wowInfo=1;//魔兽信息
+	 repeated Schedule fashiPet = 2;//法师宠物列表
+	 repeated Schedule zhanshiPet = 3;//战士宠物列表
+	 repeated Schedule youxiaPet = 4;//游侠宠物列表
+	 optional int32 xingyunzhi=5;//累计幸运值
+	 optional int32 refreshTime=6;//刷新时间剩余秒数
+	 required bool isClose=7;//是否关闭消费提示
+	 optional int32 shengYuCiShu=8;//刷新剩余次数
+}
+
+message TavernWoWInfo{
+
+	 optional string wSkill=1;//技能
+	 optional string wTexing=2;//特性
+	  optional int32 wLiliang=3;//力量
+	   optional int32 wZhili=4;//智力
+	    optional int32 wNaili=5;//耐力
+		 optional int32 wMinjie=6;//敏捷
+		  optional int32 wWugong=7;//物攻
+		   optional int32 wMogong=8;//魔攻
+		    optional int32 wGongsu=9;//攻速
+			 optional int32 wBaoji=10;//暴击
+			 optional int32 wWufang=11;//物防
+			 optional int32 wMofang=12;//魔防
+			 optional int32 wMingzhong=13;//命中
+			 optional int32 wShanbi=14;//闪避
+			 optional int32 wKaobao=15;//抗暴
+			 optional int32 wGuyongzhi=16;//是否标记已拥有  1标记  -1不标记
+			 optional string wName=17;//宠物名称
+			 optional int32 wGuYongJinBi=18;//雇佣价格(金币)
+			 optional int32 wGuYongXingYunZhi=19;//雇佣价格(幸运值)
+			 optional int32 id=20;//模板id
+			 optional int32 color=21;//宠物颜色1=普通（绿）2=优秀（蓝）3=精良（紫） 4=史诗（金）5=传说（橙）6=逆天（红）
+			 optional int32 type=22;//宠物类型（大）
+			 optional int32 icon=23;//宠物id	（大）
+			 optional int32 level=24;//宠物等级	
+			
+}
+
+message Schedule{
+	optional int32 type=1;//宠物类型
+	optional int32 icon=2;//宠物id	
+	 optional string Skill=3;//技能
+	 optional string Texing=4;//特性
+	  optional int32 Liliang=5;//力量
+	   optional int32 Zhili=6;//智力
+	    optional int32 Naili=7;//耐力
+		 optional int32 Minjie=8;//敏捷
+		  optional int32 Dengji=9;//等级
+		  optional int32 Hp=10;//生命
+		  optional string Name=11;//名字
+}
+

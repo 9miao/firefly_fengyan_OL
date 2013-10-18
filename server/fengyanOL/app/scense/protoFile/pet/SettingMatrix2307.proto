@@ -1,0 +1,18 @@
+package protoFile.pet.SettingMatrix2307;
+message SettingMatrixRequest{
+    required int32 id=1;//角色id
+    required int32 petId=2;//宠物id
+    required int32 operationType=3;//操作类型0从宠物列表到阵法1从阵法到宠物列表2从阵法到阵法
+    optional int32 fromPos=4;//起始位置 当operationType为1和2是才用到此值
+    optional int32 toPos=5;//终点位置 当operationType为0和2才用到此值
+    required int32 matrixId=6;//阵法id
+}
+message SettingMatrixResponse{
+    optional bool result=1;
+    optional string message=2;
+    optional int32 petId=3;//宠物id
+    optional int32 operationType=4;//操作类型0从宠物列表到阵法1从阵法到宠物列表2从阵法到阵法
+    optional int32 fromPos=5;//起始位置 当operationType为1和2是才用到此值
+    optional int32 toPos=6;//终点位置 当operationType为0和2才用到此值
+    optional int32 matrixId=7;//阵法id
+}

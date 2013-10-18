@@ -1,0 +1,9 @@
+package protoFile.zudui.LeaveDuiWu4305;
+message LeaveDuiWuRequest{
+     required int32 id=1;//角色id 离开队伍的角色
+     required int32 dwId=2;//队伍id
+}
+message LeaveDuiWuResponse{
+     optional string message=1;
+     optional bool result=2;
+}

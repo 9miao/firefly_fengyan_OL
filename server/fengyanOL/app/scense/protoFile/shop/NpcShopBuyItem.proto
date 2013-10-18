@@ -1,0 +1,17 @@
+//购买或购回
+package protoFile.shop.NpcShopBuyItem;
+message npcShopBuyItemRequest{
+    required int32 id=1;//角色id
+    required int32 itemId=2;//物品Id
+    required int32 opeType=3;//操作类型 0购买1购回
+    required int32 buyNum=4;//购买的数量
+    required int32 npcId = 5;//商店npc的ID
+}
+message npcShopBuyItemResponse{
+    required bool result=1;
+    optional string message=2;
+    optional ResponseInfo data=3;
+}
+message ResponseInfo{
+    optional int32 opeType=1;//操作类型0购买1购回
+}

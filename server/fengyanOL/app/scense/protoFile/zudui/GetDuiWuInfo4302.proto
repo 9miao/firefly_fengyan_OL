@@ -1,0 +1,17 @@
+package protoFile.zudui.GetDuiWuInfo4302;
+message GetDuiWuInfoRequest{
+     required int32 id=1;
+     required int32 dwId=2;//队伍id
+}
+message GetDuiWuInfoResponse{
+     optional string message=1;
+     optional bool result=2;
+     repeated PosRoleInfo posRoleInfo=3;
+}
+message PosRoleInfo{
+     optional int32 roleId=1;//角色id
+     optional int32 pos=2;//角色所在位置
+     optional int32 level=3;//角色等级
+     optional string roleName=4;//角色名称
+     optional int32 roleType=5;//角色职业类型1战士2法师3游侠
+}

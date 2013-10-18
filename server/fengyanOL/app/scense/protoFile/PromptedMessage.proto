@@ -1,0 +1,4 @@
+package protoFile.PromptedMessage;
+message PromptedMessage{//系统提示
+      required string prompted = 1;//提示内容
+}

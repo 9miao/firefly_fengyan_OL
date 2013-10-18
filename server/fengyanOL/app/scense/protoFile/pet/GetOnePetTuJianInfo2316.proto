@@ -1,0 +1,14 @@
+package protoFile.pet.GetOnePetTuJianInfo2316;
+import "protoFile/pet/petInfo.proto";
+message GetOnePetTuJianInfoRequest{
+     required int32 id=1;//角色id
+     required int32 petId=2;//宠物Id
+}
+message GetOnePetTuJianInfoResponse{
+     optional bool result=1;
+     optional string message=2;
+     optional PetInfo info = 3;//宠物信息
+     optional int32 curHun=4;//当前惊魂
+     optional int32 maxHun=5;//最大惊魂
+     optional int32 reqCoin=6;//召唤消耗
+}

@@ -1,0 +1,4 @@
+package protoFile.ContinueMessage_905;
+message OtherMessage{
+     required string msg = 1;
+}

@@ -1,0 +1,16 @@
+package protoFile.practice.getMonsterPracticeExp;
+message getMonsterPracticeExpRequest{
+     required int32 id = 1;
+     required int32 monsterId =2;
+}
+
+message getMonsterPracticeExpResponse{
+     required bool result = 1;
+     optional string message =2;
+     optional DataPacket data = 3;
+}
+
+message DataPacket{
+     optional int32 expBonus =1;
+     optional int32 monsterLevel =2;
+}

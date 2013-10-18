@@ -1,0 +1,12 @@
+package protoFile.item.XiangQian2112;
+message XiangQianRequest{
+     required int32 id=1;//角色id
+     required int32 equipId=2;//装备id
+     required int32 sId=3;//宝石id
+     required int32 type=4;//1背包2身上装备
+     required int32 position = 5;//镶嵌到的位置
+}
+message XiangQianResponse{
+     optional string message=1;
+     optional bool result=2;
+}

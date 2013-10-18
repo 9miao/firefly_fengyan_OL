@@ -1,0 +1,24 @@
+package protoFile.defence.GetRewardList2401;
+message GetRewardListRequest{
+    required int32 id=1;//角色Id
+    required int32 page=2;//当前页数
+}
+message GetRewardListResponse{
+    optional bool result=1;
+    optional string message=2;
+    optional RewardListInfo rewardListInfo=3;//奖励信息
+}
+message RewardListInfo{
+    optional int32 curPage=1;//当前页数
+    optional int32 maxPage=2;//最大页数
+    repeated RewardInfo rewardInfo=3;//奖励信息
+}
+message RewardInfo{
+    optional int32 r_id=1;//奖励信息id
+    optional int32 r_type=2;//奖励类型0为副本1为城镇
+    optional string t_name=3;//城镇或副本名称
+    optional string t_e1=4;//属性1 如果是城镇则是城镇总收入，如果是副本则是副本通关次数
+    optional string t_e2=5;//属性2 如果是城镇则是税收比例,如果是副本则是单次通关奖励
+    optional string t_e3=6;//属性3 税收
+    optional bool   t_e4=7;//属性4 是否达到税收最大值 True or False
+}

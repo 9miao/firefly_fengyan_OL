@@ -1,0 +1,14 @@
+package protoFile.fate.ZhanXing3601;
+import "XingYunInfo.proto";
+
+message ZhanXingRequest{
+     required int32 id=1;
+     required int32 sIndex=2;//点击的索引
+}
+message ZhanXingResponse{
+     optional string message=1;
+     optional bool result=2;
+     optional int32 showIndex=3;
+     optional XingYunBasicInfo xyInfo=4;//所得星运信息
+     optional int32 maxCount=5;//积分
+}

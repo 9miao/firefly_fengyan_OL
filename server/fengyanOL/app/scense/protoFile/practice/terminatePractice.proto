@@ -1,0 +1,18 @@
+package protoFile.practice.terminatePractice;
+message terminatePracticeRequest{
+     required int32 id = 1;
+}
+
+message terminatePracticeResponse{
+     required bool result =1;
+     optional string message =2;
+     optional DataPacket data=3;
+}
+
+message DataPacket{
+     optional string monsterName =1;
+     optional int32 currentExp =2;
+     optional int32 currentCountHit =3;
+     optional string status = 4;
+     optional int32 level =5;
+}

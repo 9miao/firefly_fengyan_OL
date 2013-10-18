@@ -1,0 +1,14 @@
+package protoFile.packageInfo.splitItemsInPack;
+message splitItemsInPackRequest{
+     required int32 id = 1;
+     required int32 packageType = 2;//包裹的类型     1道具分页 2任务分页
+     required int32 fromposition = 3;//拆分的其实位置
+     required int32 toposition = 4;// 物品拆分到得包裹的位置 
+     required int32 splitnum = 5;//拆分的数量
+}
+
+message splitItemsInPackResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional int32 data = 3;//包裹的类型     1道具分页 2任务分页
+}

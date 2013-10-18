@@ -1,0 +1,6 @@
+package protoFile.fight.TurnOneCard;
+message TurnOneCard{//翻转一张卡牌
+     required int32 characterId = 1;//翻转卡牌的角色的id
+     required string nickname = 2;//角色的名称
+     required int32 cardId = 3; //被翻转的卡牌的id
+}

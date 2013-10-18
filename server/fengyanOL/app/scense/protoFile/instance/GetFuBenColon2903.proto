@@ -1,0 +1,11 @@
+package protoFile.instance.GetFuBenColon2903;
+message GetFuBenColonRequest{
+    required int32 id=1;//角色id
+    required int32 cId=2;//副本id
+}
+message GetFuBenColonResponse{
+    optional bool result=1;
+    optional string message=2;
+    optional int32 coloNum=3;//殖民次数
+    optional string coloDes=4;//殖民描述
+}

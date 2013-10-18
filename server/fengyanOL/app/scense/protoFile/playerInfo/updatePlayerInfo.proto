@@ -1,0 +1,4 @@
+package protoFile.playerInfo.updatePlayerInfo;
+message updatePlayerInfo{
+     required int32 signal =1;
+}

@@ -1,0 +1,4 @@
+package protoFile.fight.TurnAllCards;
+message TurnAllCards{//翻转所有的卡牌
+     required int32 signal = 1;
+}

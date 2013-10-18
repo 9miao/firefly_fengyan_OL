@@ -1,0 +1,10 @@
+package protoFile.pet.ModifySlogan2309;
+message ModifySloganRequest{
+    required int32 id=1;//½ÇÉ«id
+    required int32 petId=2;//³èÎïId
+    required string sloganStr=3;//Õ½¶·ÐûÑÔ
+}
+message ModifySloganResponse{
+    optional bool result=1;
+    optional string message=2;
+}

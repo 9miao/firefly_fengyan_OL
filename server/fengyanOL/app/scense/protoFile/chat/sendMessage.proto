@@ -1,0 +1,19 @@
+package protoFile.chat.sendMessage;
+message chatConectingRequest{
+     required int32 id = 1;//角色的id
+     required int32 topic = 2;// // 1全部 2组队 3公会 7私聊
+     required string content = 3;//聊天内容
+     repeated ItemLinkData linkData = 4;//聊天连接信息
+     optional string chatOjbect=5;//如果是私聊则私聊对象名称
+}
+
+message chatConectingResponse{
+     required bool result = 1;
+     optional string message = 2;
+}
+
+message ItemLinkData{
+     optional int32 chatEquipType = 1;
+     optional int32 id = 2;
+     optional string name = 3;
+}

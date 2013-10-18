@@ -1,0 +1,9 @@
+package protoFile.zudui.TiRen4306;
+message TiRenRequest{
+    required int32 id=1;//角色id
+    required int32 roleId=2;//被踢出者id
+}
+message TiRenResponse{
+    optional string message=1;
+    optional bool result=2;
+}

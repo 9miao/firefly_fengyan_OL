@@ -1,0 +1,28 @@
+package protoFile.consignment.searchGoldCon;
+message searchGoldConRequest{
+     required int32 id = 1;
+     required string keyName = 2;
+     required int32 searchType = 3;//搜索方式(1、按玩家名称搜索 0、全部 3、搜索自己寄售的金币信息)
+     required int32 sortType = 4;
+     required int32 index = 5;
+}
+
+message searchGoldConResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     repeated GoldConInfo goldCon= 1;
+     optional int32 pageGoal = 2;
+     optional int32 searchType = 3;
+}
+
+message GoldConInfo{
+     optional int32 consignmentId = 1; //寄卖信息的id
+     optional int32 goldNum = 2; //金币的数量
+     optional int32 ownerId = 3; //寄卖者的id
+     optional int32 coinPrice = 4; //寄卖的价格
+     optional string operationTime = 5; //寄卖的时间
+}

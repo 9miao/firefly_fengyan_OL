@@ -1,0 +1,7 @@
+package protoFile.hall.InviteJoinGroupMsg;
+message InviteJoinGroupMsg{//邀请加入房间的消息
+     required int32 inviteID = 1;//邀请人的ID
+     required int32 areaID =2;//房间所在的区域的ID
+     required int32 roomId = 3;//邀请的房间的ID
+     required string message = 4;//邀请的消息
+}

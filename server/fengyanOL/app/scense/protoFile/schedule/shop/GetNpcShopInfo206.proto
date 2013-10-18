@@ -1,0 +1,26 @@
+package protoFile.shop.GetNpcShopInfo206;
+import "protoFile/itemInfo.proto";
+message getNpcShopInfoRequest{//获取商店信息请求
+     required int32 id=1;//角色id
+     required int32 npcId = 2;//npcid
+     required int32 shopCategory = 3;//0购买1出售
+     required int32 curPage=4;//获取数据的页数
+}
+
+message getNpcShopInfoResponse{//获取商店信息返回
+     required bool result=1;
+     optional string message=2;
+     optional ShopInfo data=3;
+}
+
+message ShopInfo{
+     repeated PackageInfo packageItemInfo = 1;
+     optional int32 shopCategory =2;//0购买1出售
+     optional int32 curPage=3;//获取数据的当前页
+     optional int32 maxPage=4;//总页数
+}
+
+message PackageInfo{
+     optional ItemsInfo itemInfo = 1;
+     optional int64 remainTime = 2;//物品剩余时间  购回时使用
+}

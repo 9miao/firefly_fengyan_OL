@@ -1,0 +1,11 @@
+package protoFile.consignment.BuyCommissionItem1202;
+message BuyCommissionItemRequest{
+     required int32 id=1;//½ÇÉ«id
+     required int32 commissionId=2;//ÅÄÂôid
+     required int32 type=3;//0ÎïÆ·¼ÄÂô 1½ğ±Ò¼ÄÂô
+
+}
+message BuyCommissionItemResponse{
+     required bool result=1;
+     optional string message=2;
+}

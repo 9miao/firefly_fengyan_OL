@@ -1,0 +1,26 @@
+package protoFile.login.deleteRole;
+message deleteRoleRequest{
+     required int32 userId=1;//用户id
+     required int32 id=2;//角色id
+     required string password = 3;//用户的密码
+}
+
+message deleteRoleResponse{
+     required bool result=1;
+     optional string message=2;
+     optional UserInfo  data=3;
+}
+
+message UserInfo{
+     optional int32 userId=1;
+     optional int32 len=2;
+     repeated RoleInfo character=3;
+}
+
+message RoleInfo{
+     optional int32 id=1;
+     optional string nicName=2;
+     optional int32 level=3;
+     optional string profession=4;
+     optional int32 roletype=5;
+}

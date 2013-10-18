@@ -1,0 +1,16 @@
+//请求提交任务
+package protoFile.quest.TaskNpcSubTaskRequest1411;
+
+//请求npc任务信息
+message TaskNpcSubTaskRequest{ 
+    required int32 id		= 1;			//角色id
+	required int32 task_id	= 2;			//任务id
+	optional int32 npc_id	= 3;			//npc id
+}
+
+message TaskNpcSubTaskResponse{
+	required bool	result				= 1;			//是否成功
+	required int32	task_id				= 2;			//任务id
+	optional string message				= 3;			//错误说明
+}
+

@@ -1,0 +1,27 @@
+package protoFile.defence.GetRewardBattleInfo2404;
+message GetRewardBattleInfoRequest{
+     required int32 id=1;//角色id
+     required int32 r_id=2;//奖励id
+     required int32 page=3;//页数
+}
+message GetRewardBattleInfoResponse{
+     optional bool result=1;
+     optional string message=2;
+     optional BattleListInfo battleListInfo=3;
+}
+message BattleListInfo{
+     optional int32 r_id=1;//奖励id
+     optional int32 curPage=2;//当前页数
+     optional int32 maxPage=3;//最大页数
+     repeated BattleInfo battleInfo=4;//战斗信息
+}
+message BattleInfo{
+     optional string battleName=1;//城镇或副本名称
+     optional bool battleResult=2;//战斗是否成功 true成功false失败
+     repeated BattleRoleInfo sucRoleInfo=3;//成功者信息
+     repeated BattleRoleInfo failRoleInfo=4;//失败者信息
+}
+message BattleRoleInfo{
+     optional int32 roleId=1;//角色id
+     optional string roleName=2;//角色名称
+}

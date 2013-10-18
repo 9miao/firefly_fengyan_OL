@@ -1,0 +1,19 @@
+package protoFile.scene.enterPlace;
+message enterPlaceRequest{
+     required int32 id = 1;
+     required int32 placeId = 2;
+     optional bool force = 3;
+}
+
+message enterPlaceResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional EnterPlaceData data = 3;
+}
+
+message EnterPlaceData{
+     optional int32 placeId = 1;//场景id
+     optional bool isboos = 2;//是否有boss
+     optional int32 copySceneId = 3;//副本id
+     optional int32 sceneType = 4;//场景类型 1 普通场景 2 副本
+}

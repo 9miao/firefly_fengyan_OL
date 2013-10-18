@@ -1,0 +1,42 @@
+package protoFile.pet;
+message PetInfo{
+     optional int32 petId=1;//宠物id
+     optional int32 resPetId=2;//宠物资源id
+     optional string petName=3;//宠物名称
+     optional int32 petLevel=4;//宠物等级
+     optional bool inMatrixFlag=5;//是否在阵法中
+     optional string petDes=6;//宠物描述
+     optional int32 baseHp=7;//基础血量
+     optional int32 manualHp=8;//血量加成
+     optional int32 basePhyAttack=9;//基础物理攻击
+     optional int32 manualPhyAttack=10;//物理攻击加成
+     optional int32 baseMagicAttack=11;//基础魔法攻击
+     optional int32 manualMagicAttack=12;//魔法攻击加成
+     optional int32 basePhyDefense=13;//基础物理防御
+     optional int32 manualPhyDefense=14;//物理防御加成
+     optional int32 baseMagicDefense=15;//基础魔法防御
+     optional int32 manualMagicDefense=16;//魔法防御加成
+     optional int32 baseHitRate=17;//基础命中
+     optional int32 manualHitRate=18;//命中加成
+     optional int32 baseDodgeRate=19;//基础闪避
+     optional int32 manualDodgeRate=20;//闪避加成
+     optional int32 baseSpeed=21;//基础攻击速度
+     optional int32 manualSpeed=22;//基础速度加成
+     optional int32 baseCritRate=23;//基础暴击
+     optional int32 manualCritRate=24;//暴击加成
+     optional int32 icon = 25;//宠物的图标
+     optional int32 type = 26;//宠物的图标类型
+     optional string petSkillInfo=27;//宠物技能信息
+     optional bool flowFlag=28;//是否跟随
+     optional int32 baseBlock=29;//基础抗暴
+     optional int32 manualBlock=30;//抗暴加成
+     optional int32 liliang=31;//力量
+     optional int32 zhili=32;//智力
+     optional int32 naili=33;//耐力
+     optional int32 minjie=34;//敏捷
+     optional int32 maxHp=35;//总血量
+     optional int32 curExp=36;//当前经验
+     optional int32 maxExp=37;//总经验
+     optional int32 curQuality=38;//当前品质0普通1优秀2精良3史诗5传说
+     optional string texing=39;//特性
+}

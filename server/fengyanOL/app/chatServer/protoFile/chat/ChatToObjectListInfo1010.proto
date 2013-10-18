@@ -1,0 +1,12 @@
+package protoFile.chat.ChatToObjectListInfo1010;
+message ChatToObjectListResponse{
+     repeated ChatObjectInfo chatObjectInfo=1;//最近联系人信息
+}
+message ChatObjectInfo{
+     optional int32 chatObjectId=1;//私聊对象id
+     optional string name=2;//私聊对象名称
+     optional string level=3;//私聊对象等级
+     optional string perfession=4;//私聊对象职业
+     optional string chatObjectPos=5;//私聊对象所在城镇
+     optional bool  readFlag=6;//是否已读
+}

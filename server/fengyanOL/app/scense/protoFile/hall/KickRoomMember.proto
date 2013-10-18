@@ -1,0 +1,11 @@
+package protoFile.hall.KickRoomMember;
+message KickRoomMemberRequest{//踢出房间成员
+     required int32 id = 1;//角色的id
+     required int32 tid = 2;//成员的id
+}
+
+message KickRoomMemberResponse{
+     required bool result = 1;
+     optional string message = 2;
+}
+

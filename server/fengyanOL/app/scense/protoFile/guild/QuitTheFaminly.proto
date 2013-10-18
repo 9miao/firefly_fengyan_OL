@@ -1,0 +1,9 @@
+package protoFile.guild.QuitTheFaminly;
+message QuitTheFamilyRequest{
+     required int32 id = 1;
+}
+
+message QuitTheFamilyResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

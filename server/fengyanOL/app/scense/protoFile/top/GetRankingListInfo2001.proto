@@ -1,0 +1,25 @@
+package protoFile.top.GetRankingListInfo2001;
+message GetRankingListInfoRequest{
+     required int32 id=1;//角色id
+     optional int32 rankingType=2;//排行分类类型 1角色等级排行2个人战力排行3军团等级排行4军团战力排行
+}
+message GetRankingListInfoResponse{
+     required bool result=1;
+     optional string message=2;
+     optional RankingListInfo data=3;
+}
+message RankingListInfo{
+     repeated RankingInfo rankingInfo=1;
+     optional string myRanking=2;//我的排名
+     optional string refreshTime=3;//刷新时间
+     
+}
+message RankingInfo{
+     optional int32 id=1;//角色或军团id
+     optional string param1=2;//属性1
+     optional string param2=3;//属性2
+     optional string param3=4;//属性3
+     optional string param4=5;//属性4
+     optional string param5=6;//属性5
+
+}

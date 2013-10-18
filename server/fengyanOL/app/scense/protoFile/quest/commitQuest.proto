@@ -1,0 +1,14 @@
+package protoFile.quest.commitQuest;
+message commitQuestRequest{
+     required int32 id = 1;
+     required int32 taskId = 2;
+}
+
+message commitQuestResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional TaskInfo data = 3;
+}
+message TaskInfo{
+     optional int32 taskId = 1;
+}

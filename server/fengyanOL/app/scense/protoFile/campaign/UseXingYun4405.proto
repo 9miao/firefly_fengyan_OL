@@ -1,0 +1,9 @@
+package protoFile.campaign.UseXingYun4405;
+message UseXingYunRequest{
+    required int32 id=1;//角色id
+    required int32 type=2;//使用类型0四叶草1郁金香2蝴蝶兰3紫罗兰4曼陀罗
+}
+message UseXingYunResponse{
+    optional string message=1;
+    optional bool result=2;
+}

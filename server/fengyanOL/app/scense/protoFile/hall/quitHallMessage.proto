@@ -1,0 +1,4 @@
+package protoFile.hall.quitHallMessage;
+message QuitHallMessage{
+     required int32 signal = 1;
+}

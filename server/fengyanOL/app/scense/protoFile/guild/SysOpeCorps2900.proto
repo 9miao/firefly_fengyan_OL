@@ -1,0 +1,21 @@
+package protoFile.guild.SysOpeCorps2900;
+
+message SysOpeCorpsResponse{
+   optional int32 roleId=1;//申请加入军团的角色id
+   optional string roleName=2;//申请加入军团的角色名称
+   optional int32 sysOpeType=3;//消息类型0军团1获得装备2强化装备3升级技能4更换技能5增加宠物6更换阵法7背包空间不足
+   optional int32 icon=4;//当消息类型为1时需要的数据
+   optional int32 type=5;//当消息类型为1时需要的数据
+   optional int32 pos=6;//装备位置
+   optional int32 curPage=7;//所在包裹分页
+   optional string tishiStr=8;//提示描述
+   optional string contentStr=9;//内容描述
+   optional string caozuoStr=10;//操作描述
+   optional int32 toposition = 11;//装备安装到的位置
+   optional GuaJiInfo guaJiInfo=12;//挂机信息
+}
+
+message GuaJiInfo{
+   optional int32 exp=1;//累积经验
+   optional int32 time=2;//冥想时间
+}

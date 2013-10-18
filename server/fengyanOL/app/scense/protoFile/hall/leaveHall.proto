@@ -1,0 +1,9 @@
+package protoFile.hall.leaveHall;
+message leaveHallRequest{
+     required int32 id = 1;//½ÇÉ«µÄID
+}
+
+message leaveHallResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

@@ -1,0 +1,9 @@
+package protoFile.beginners.GMInfo4000;
+message GMInfoRequest{
+     required int32 id=1;
+     required string gmMsg=2;
+}
+message GMInfoResponse{
+     optional string message=1;
+     optional bool result=2;
+}

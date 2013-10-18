@@ -1,0 +1,17 @@
+package protoFile.login.activeNewPlayer102;
+message activeNewPlayerRequest{
+     required int32 userId=1;       //用户的id
+     required string nickName=2;    //角色的昵称
+     required int32 profession=3;   //职业的编号
+}
+
+message activeNewPlayerResponse{
+     required bool result=1;
+     optional string message=2;
+     optional UserInfo  data=3;
+}
+
+message UserInfo{
+     optional int32 userId=1;     //用户的id
+     optional int32 newCharacterId = 3;  //新的角色的id
+}

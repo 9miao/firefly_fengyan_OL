@@ -1,0 +1,13 @@
+package protoFile.quest.getScenceNpcQuestStatus;
+message getScenceNpcQuestStatusRequest{
+      required int32 id = 1;
+}
+
+message getScenceNpcQuestStatusResponse{
+     repeated NPCQuestStatus NPCQuestStatusList = 1;
+}
+
+message NPCQuestStatus{
+     optional int32 npcID = 1;//npc的ID
+     optional int32 statu = 2;//npc的任务状态 无状态:1，未接:2，未完成:3，完成:4
+}

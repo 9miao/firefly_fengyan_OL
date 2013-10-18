@@ -1,0 +1,22 @@
+//排行榜
+package protoFile.guild.GetFamilyRankingInfo;
+message GetFamilyRankingInfoRequest{
+       required int32 id = 1;//角色id
+       required int32 index = 2;//分页号
+}
+message GetFamilyRankingInfoResponse{
+       required bool result = 1;
+       optional string message = 2;
+       optional FamilyRankingInfo data = 3;
+}
+message FamilyRankingInfo{
+       optional int32 pageCount = 1;//总页数
+        repeated FamilyRankingBasicInfo familyRankingBasicInfo = 2;
+}
+message FamilyRankingBasicInfo{
+       optional int32 familyRank = 1;//名次
+       optional int32 familyId = 2;//行会id
+       optional string familyName = 3;//行会名称
+       optional int32 familyLevel = 4;//行会等级
+       optional int32 familyScale = 5;//行会规模
+}

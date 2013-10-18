@@ -1,0 +1,19 @@
+package protoFile.consignment.getGoldPriceTrends;
+message getGoldPriceTrendsRequest{
+     required int32 id = 1;
+}
+
+message getGoldPriceTrendsResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional responseData data = 3;
+}
+
+message responseData{
+     repeated Trend trends = 1;
+}
+
+message Trend{
+     optional string recordData = 1; //日期
+     optional int32 unitPrice = 2;  //平均价格
+}

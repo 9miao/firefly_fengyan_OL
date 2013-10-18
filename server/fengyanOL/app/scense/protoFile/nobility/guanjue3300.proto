@@ -1,0 +1,31 @@
+package protoFile.nobility.guanjue3300;
+message GetGuanJueInfoRequest{
+     required int32 id=1;//角色id
+     optional int32 curpage=2;//当前页
+
+}
+message GetGuanJueInfoResponse{
+	 required bool result = 1;
+	 optional string message = 2;
+	 optional GuanJueInfo data = 3;//官爵信息
+}
+
+message GuanJueInfo{
+	 optional string currentJuewei=1;//当前爵位
+	 optional int32 weiwang=2;//当前威望
+	 optional int32 currentJinbi=3;//当前金币
+	 optional int32 currentDouqi=4;//当前斗气
+	 repeated string adddq=5;//当前增加属性及其数值
+	 optional string nextJuewei=6;//下级爵位
+	 optional int32 nextWeiwang=7;//下级威望
+	 optional int32 nextJinbi=8;//下级金币
+	 optional int32 nextDouqi=9;//下级斗气
+	 repeated string addxj=10;//下级增加属性及其数值
+	 repeated string ftime = 11;//封爵史时间列表
+	 repeated string fcontext = 12;//封爵史内容列表
+	 optional int32 curpage=13;//当前页
+	 optional int32 totalpage=14;//总共页
+	 optional bool isjw=15;//是否可以升级爵位
+         optional bool hasGetSalary=16;//是否可领取爵禄
+         optional int32 level=17;//限制等级
+}

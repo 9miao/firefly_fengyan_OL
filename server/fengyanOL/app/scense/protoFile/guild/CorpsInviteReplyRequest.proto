@@ -1,0 +1,14 @@
+package protoFile.guild.CorpsInviteReplyRequest;
+message UnionInviteReplyRequest{ 
+    required int32 id = 1;			//角色id
+	required int32 union_id = 2;	//对方的军团id
+	required int32 is_ok = 3;		//是否同意加入军团
+}
+
+message UnionInviteReplyResponse{
+	required bool result = 1;
+	optional int32 union_id = 2;	//军团id
+	optional string union_name = 3; //军团名字
+	optional string message = 4; 
+}
+

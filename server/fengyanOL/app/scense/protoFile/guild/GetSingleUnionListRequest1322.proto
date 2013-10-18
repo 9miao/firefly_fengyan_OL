@@ -1,0 +1,21 @@
+package protoFile.guild.GetSingleUnionListRequest1322;
+message GetSingleUnionInfoRequest{
+     required int32 id			= 1;	//角色id
+     optional int32 union_id 	= 2;	//查询的军团id
+     
+}
+message GetSingleUnionInfoResponse{
+	 required bool		result		= 1;	//
+     optional int32 	corpsId 	= 2;	//军团id
+     optional int32 	corpsImg 	= 3;	//军徽 
+     optional string 	corpsName 	= 4;	//军团名称
+     optional string 	corpsChief 	= 5;	//军团长
+     optional int32 	corpsLevel 	= 6;	//军团等级
+     optional int32 	curNum 		= 7;	//当前军团人数
+     optional int32 	maxNum 		= 8;	//军团总人数
+     optional bool 		onApplication = 9;	//是否申请了次军团
+     optional string 	corpsTitle 	= 10;	//军团称号
+     optional string 	corpsAnnouncement = 11;//军团公告
+     optional int32 	leaderId 	= 12;	//军团长的角色ID
+	 optional string	msg			= 13;	//错误信息
+}

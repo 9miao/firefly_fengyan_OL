@@ -1,0 +1,10 @@
+package protoFile.strengthen.StrengthenTime2120;
+message StrengthenTimeRequest{
+    required int32 id=1;//½ÇÉ«id
+}
+
+message StrengthenTimeResponse{
+    optional string message=1;
+    optional bool result=2;
+    optional int32 reTime=3;//Ê£ÓàÊ±¼ä
+}

@@ -1,0 +1,52 @@
+package protoFile.instance.instanceActivate;
+
+//按钮不可用状态
+enum UnionState {
+	ERROE 			= 0;		//错误
+	PASS			= 1;		//全部开启
+	NO_UNION 		= 2;		//允许普通
+	JINGYING_LEVEL 	= 3;		//允许打开精英
+	YINGXIONG_LEVEL = 4;		//允许打开英雄
+}
+
+
+message instanceActivateRequest{
+     required int32 id 	= 1;	//用户角色id
+     required int32 csz = 2;	//传送阵id
+}
+
+message instanceActivateResponse{
+     required bool 			result 	= 1;
+     optional string 		message = 2;
+     optional ResponseData 	data	= 3;
+}
+
+message ResponseData{
+	 required int32	levelState 	= 1;	//军团需求状态 
+     repeated Item 	info		= 2;	//副本信息
+     optional int32 csz			= 3;	//传送阵id
+}
+
+message FMonsterInfo{
+	required int32 lv		= 1;		//怪物等级
+	required string name	= 2;		//怪物名
+	repeated FItemInfo items = 3;		//奖励信息
+}
+
+message FItemInfo{
+	required int32 nowQuality = 1; 	//品质
+	required string name 	  = 2;	//物品名
+}
+
+message Item{
+     optional int32    	   id				= 1;	//副本组id
+     optional int32    	   state			= 2;	//副本状态 -1没激活  1激活  2通关
+     repeated int32    	   instanceList	= 3;	//副本id列表
+     repeated FMonsterInfo monsterinfos = 4;	//怪物信息
+     optional int32   	   score			= 5;	//通关副本评分
+     optional int32	   union_id		= 6;	//殖民军团id
+     optional int32 	   leader_id		= 7;	//殖民军团长id
+     optional string	   union_name		= 8;	//殖民军团名
+     optional string 	   leader_name		= 9;	//殖民军团长名字
+     optional int32        camp                 =10;    //副本所属阵营(也就是殖民此副本的角色的军团的阵营)0中立  1光明  2黑暗
+}

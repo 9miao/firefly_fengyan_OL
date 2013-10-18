@@ -1,0 +1,10 @@
+package protoFile.login.getRandomName;
+message getRandomNameRequest{
+
+}
+
+message getRandomNameResponse{
+     required int32 result = 1;
+     optional string message = 2;
+     optional string name = 3;
+}

@@ -1,0 +1,11 @@
+//发送私聊信息
+package protoFile.chat.SendChatMessage1013;
+message SendChatMessageRequest{
+      required int32 id=1;//角色id
+      required int32 chatId=2;//私聊对象id
+      required string chatMessage=3;//私聊信息
+}
+message SendChatMessageResponse{
+      required bool result = 1;
+      optional string message = 2;
+}

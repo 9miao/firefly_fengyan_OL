@@ -1,0 +1,14 @@
+package protoFile.hall.OpeningMatrix;
+message OpeningMatrixRequest{
+    required int32 id=1;//角色id
+    required int32 matrixId=2;//阵法id
+    repeated MatrixListInfo matrixListInfo=3;
+}
+message MatrixListInfo{
+    optional int32 roleId=1;//角色id
+    optional int32 pos=2;//角色所在的位置
+}
+message OpeningMatrixResponse{
+    required bool result=1;
+    optional string message=2;
+}

@@ -1,0 +1,16 @@
+//对好友升级提示的回复
+package protoFile.friend.FriendLevelUpReplyRequest311;
+message FriendLevelupReplyRequest{ 
+    	required int32 id = 1;			//角色id
+	required int32 friend_id = 2;		//好友id
+	required int32 handle_type = 3;		//操作类型 0:错误 1:恭喜 2:鄙视
+}
+
+message FriendLevelupReplyResponse{
+	required bool result = 1;
+	required int32 friend_id = 2;		//好友id
+	required string friend_name = 3;	//好友名字
+	optional int32 handle_type = 4;		//操作结果0:错误 1:恭喜 2:鄙视
+	optional string message = 5; 
+}
+

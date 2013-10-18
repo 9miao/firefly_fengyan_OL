@@ -1,0 +1,19 @@
+package protoFile.beginners.FinalRegist;
+message FinalRegistRequest{
+     required string username = 1;
+     required string password = 2;
+     required string nickname = 3;
+     required int32 profession = 4;
+}
+
+message FinalRegistResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     optional int32 userId = 1;        //用户的ID
+     optional int32 characterId = 2;   //角色的ID
+     optional int32 placeId = 3;       //场景的ID
+}

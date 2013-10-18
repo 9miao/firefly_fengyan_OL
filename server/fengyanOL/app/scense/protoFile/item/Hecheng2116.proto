@@ -1,0 +1,10 @@
+package protoFile.item.Hecheng2116;
+message HeChengRequest{//物品合成
+     required int32 id = 1;//角色的ID（你懂的）
+     required int32 itemId = 2;//配方的ID（懂么）
+}
+
+message HeChengResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

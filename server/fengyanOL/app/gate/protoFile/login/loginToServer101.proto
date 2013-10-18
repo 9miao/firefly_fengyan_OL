@@ -1,0 +1,17 @@
+package protoFile.login.loginToServer101;
+message loginToServerRequest{
+     required string user = 1;
+     required string password = 2;
+}
+
+message loginToServerResponse{
+     required bool result =1;
+     optional string message=2;
+     optional UserInfo data = 3;
+}
+
+message UserInfo{
+     optional int32 userId=1;
+     optional bool hasRole=2;
+     optional int32 defaultId=3;
+}

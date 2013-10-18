@@ -1,0 +1,9 @@
+package protoFile.defence.OpenCangku2409;
+message OpenCangkuRequest{
+    required int32 id=1;//角色id
+    required int32 pos=2;//所开格子位置
+}
+message OpenCangkuResponse{
+    optional bool result=1;
+    optional string message=2;
+}

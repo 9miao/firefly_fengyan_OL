@@ -1,0 +1,20 @@
+package protoFile.campaign.GetGroupLingDiInfo4400;
+message GetGroupLingDiInfoRequest{
+     required int32 id=1;//角色id
+}
+
+message GetGroupLingDiInfoResponse{
+     optional string message=1;
+     optional bool result=2;
+     optional GroupInfo groupInfo=3;//军团领地信息
+}
+message GroupInfo{
+     optional int32 ldType=1;//默认0无领地1克罗村2雷格镇3塞拉恩特王城4皇城5纱布西6塔斯蒂落皇宫7布多克部落8魔蓝迪域9众神之域
+     optional string groupName=2;//军团名称
+     optional int32 groupLevel=3;//军团等级
+     optional string groupLeader=4;//军团长
+     optional bool obtainJL=5;//是否获取奖励默认flase
+     optional int32 icon=6;//军徽
+     repeated string battleInfo=7;
+     optional int32 battleTime=8;//距离战斗时间
+}

@@ -1,0 +1,51 @@
+package protoFile.zhanyi.GetNowZhanYiInfo4500;
+
+message GetNowZhanYiInfoRequest{//获取当前的战役的ID
+     required int32 id = 1;//角色的ID
+     required int32 index = 2;//获取战役的序号 0当前 1下一页 -1上一页
+}
+
+message GetNowZhanYiInfoResponse{
+     required bool result = 1;
+     required string message = 2;
+     optional ZhanyiResponseData data = 3;
+}
+
+message ZhanyiResponseData{
+     optional int32 index = 1;//当前页
+     optional int32 maxpage = 2;//最大页数
+     optional string name = 3;//当前战役的名称
+     optional string desc = 4;//当前战役的描述
+     optional int32 state = 5;//战役的状态 1未激活 2激活 3通关
+     optional ZhanyiMonster monster = 6;//当前战役首领的信息
+     repeated ZhangJieInfo zhangjielist = 7;//战役中所以的章节信息
+}
+
+message ZhangJieInfo{
+     optional int32 zhangjieid = 1;//章节的ID
+     optional int32 state = 2;//状态1未激活 2激活 3通关
+     optional string name = 3;//章节的名称
+     optional string desc = 4;//章节的信息
+     optional ZhanyiMonster monster = 5;//章节的首领的信息
+
+}
+
+message ZhanyiMonster{
+     optional int32 id = 1;//怪物的ID
+     optional string name = 2;//怪物的名称
+     optional int32 resource = 3;//怪物的资源ID
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+package protoFile.guild.CreateCorps1302;
+
+enum UnionTypeEnum{
+	GUANGMING = 1;
+	HEIAN = 2;
+}
+
+message CreateCorpsRequest{
+     required int32 id=1;//角色id
+     required string corpsName = 2;//军团名
+	 required int32	type=3;//军团阵营
+}
+message CreateCorpsResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

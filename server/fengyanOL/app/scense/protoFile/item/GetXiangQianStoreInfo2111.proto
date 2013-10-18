@@ -1,0 +1,16 @@
+package protoFile.item.GetXiangQianStoreInfo2111;
+import "protoFile/itemInfo.proto";
+message GetXiangQianStoreInfoRequest{
+     required int32 id=1;//½ÇÉ«id
+     required int32 page=2;//Ò²Êý
+}
+message GetXiangQianStoreInfoResponse{
+     optional string message=1;
+     optional bool result=2;
+     optional XQStoreInfo xqStoreInfo=3;
+}
+message XQStoreInfo{
+     optional int32 curPage=1;
+     optional int32 maxPage=2;
+     repeated ItemsInfo itemsInfo=3;
+}

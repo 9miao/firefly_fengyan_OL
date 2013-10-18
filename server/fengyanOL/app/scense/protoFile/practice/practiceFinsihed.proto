@@ -1,0 +1,4 @@
+package protoFile.practice.practiceFinsihed;
+message PracticeFinsihed{
+     required string message = 1;
+}

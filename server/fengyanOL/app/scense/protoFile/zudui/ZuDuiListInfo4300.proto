@@ -1,0 +1,22 @@
+package protoFile.zudui.ZuDuiListInfo4300;
+
+message ZuDuiListInfoRequest{
+    required int32 id=1;//角色Id
+    required int32 curPage=2;//页数
+}
+message ZuDuiListInfoResponse{
+    optional string message=1;
+    optional bool result=2;
+    optional ZuDuiInfo zuDuiInfo=3;
+}
+message ZuDuiInfo{
+    optional int32 curPage=1;
+    optional int32 maxPage=2;
+    repeated DuiWuInfo duiWuInfo=3;
+}
+message DuiWuInfo{
+    optional int32 dwId=1;//队伍Id
+    optional int32 dwType=2;//队伍类型1 lv30荒城回廊2 lv60斗技庭院3lv90混沌空间
+    optional int32 curNum=3;//当前人数
+    optional string leaderName=4;//队长
+}

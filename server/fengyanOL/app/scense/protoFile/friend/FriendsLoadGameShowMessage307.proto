@@ -1,0 +1,10 @@
+package protoFile.friend.FriendsLoadGameShowMessage307;
+message friendsLoadGameShowMessageRequest{
+     required int32 id=1;//角色id
+     required int32 friendId=2;//好友id
+     required bool showMesFlag=3;//是否提示
+}
+message friendsLoadGameShowMessageResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

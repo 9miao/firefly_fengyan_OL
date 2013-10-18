@@ -1,0 +1,9 @@
+package protoFile.afk.StartWaJue2801;
+message StartWaJueRequest{
+    required int32 id=1;//½ÇÉ«id
+    required int32 type=2;//ÍÚ¾òÀàĞÍ
+}
+message StartWaJueResponse{
+    optional string message=1;
+    optional bool result=2;
+}

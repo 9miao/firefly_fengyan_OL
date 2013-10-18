@@ -1,0 +1,16 @@
+package protoFile.instance.GetColonizationList2901;
+message GetColonizationListRequest{
+    required int32 id=1;//角色id
+    required int32 curPage=2;//当前页数
+}
+message GetColonizationListResponse{
+    optional string message=1;
+    optional bool result=2;
+    optional int32 rCurPage=3;//当前页数
+    optional int32 maxPage=4;//总页数
+    repeated ColonizationInfo coloList=5;//殖民信息
+}
+message ColonizationInfo{
+    optional int32 coloId=1;//传送阵id
+    optional string coloName=2;//传送阵名称
+}

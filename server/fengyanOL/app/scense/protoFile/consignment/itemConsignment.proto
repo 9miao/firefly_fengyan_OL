@@ -1,0 +1,16 @@
+package protoFile.consignment.itemConsignment;
+message itemConsignmentRequest{
+     required int32 id = 1;
+     repeated Operation operationInfo = 2;
+}
+
+message Operation{
+     required int32 position = 1;
+     required int32 stack = 2;
+     required int32 coinPrice = 3;
+}
+
+message itemConsignmentResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

@@ -1,0 +1,26 @@
+package protoFile.mail.mailList;
+message mailListRequest{//获取邮件列表
+     required int32 id = 1;//角色id
+}
+
+message mailListResponse{
+     required bool result = 1;
+     optional string message =2;
+     optional dataPacket data = 3;
+}
+
+message dataPacket{
+     repeated MailInfo mails =1;
+}
+
+message MailInfo{
+     optional int32 id = 1;
+     optional string name = 2;
+     optional int32 systemType = 3;
+     optional string sendTime = 4;
+     optional string content = 5;
+     optional int32 type = 6;
+     optional string reference = 7;
+     optional int32 isFriend = 8;
+     optional int32 playerId = 9;
+}

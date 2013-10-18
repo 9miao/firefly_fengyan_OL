@@ -1,0 +1,13 @@
+package protoFile.strengthen.StrengthenItem2118;
+message StrengthenItemRequest{
+     required int32 id=1;//角色id
+     required int32 itemId1=2;//装备1id(转移后强化等级变成0的装备)
+     required int32 itemId2=3;//装备2id(转移后强化等级增加的装备)
+}
+message StrengthenItemResponse{
+     required bool result=1;
+     optional string message=2;
+     optional int32  qh=3;
+     optional int32  coin=4;
+
+}

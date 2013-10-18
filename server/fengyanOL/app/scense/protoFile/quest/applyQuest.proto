@@ -1,0 +1,15 @@
+package protoFile.quest.applyQuest;
+message applyQuestRequest{
+     required int32 id = 1;
+     required int32 taskId = 2;    //要求接受的任务的ID
+}
+
+message applyQuestResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     optional int32 taskId = 1;
+}

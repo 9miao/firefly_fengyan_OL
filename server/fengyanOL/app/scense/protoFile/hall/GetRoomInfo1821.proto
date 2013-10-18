@@ -1,0 +1,16 @@
+package protoFile.hall.GetRoomInfo1821;
+message GetRoomInfoRequest{
+     required int32 id=1;//角色id
+}
+message GetRoomInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional RoomInfo data = 3;
+}
+message RoomInfo{
+     optional int32 roomId=1;//房间id
+     optional string groupName=2;//队伍名称
+     optional string groupPassword=3;//密码
+     optional int32 copySceneId=4;//副本id
+     optional int32 copyLevel=5;//难道级别0普通1精英2英雄
+}

@@ -1,0 +1,22 @@
+package protoFile.hall.GetUserOrFriendsListInfo;
+message GetUserOrFriendsListInfoRequest{
+     required int32 id=1;//角色id
+     required int32 curPage=2;//获取数据的页数
+     required int32 dataType=3;//0为大厅用户数据1好友
+}
+message GetUserOrFriendsListInfoResponse{
+     required bool result=1;
+     optional string message=2;
+     optional UserOrFriendsListInfo data=3;
+}
+message UserOrFriendsListInfo{
+     repeated UserOrFriendInfo userOrFriendInfo=1; 
+     optional int32 maxPage=2;//总页数
+     optional int32 curPage=3;//当前页数 
+}
+message UserOrFriendInfo{
+     optional int32 roleId=1;//角色id
+     optional int32 roleLevel=2;//角色等级
+     optional string roleName=3;//角色名称
+     optional int32 roleProfession=4;//角色职业
+}

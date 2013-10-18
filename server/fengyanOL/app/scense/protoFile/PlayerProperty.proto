@@ -1,0 +1,57 @@
+package protoFile;
+
+message PlayerPropertyInfo{  
+     optional int32 id=1;     //角色id
+     optional string nickname =2;  //用户名
+     optional int32 roletype = 3; //角色类型（vip）
+     optional int32 level = 4;//角色等级
+     optional int32 profession = 5;//角色职业
+     optional int32 energy = 6;//角色的活力
+     optional string rank = 7;//角色的军衔
+     optional string guildname = 8;// 角色行会的名称
+     optional int32 manualStr = 9; //玩家自定义加的力量点数
+     optional int32 manualVit = 10;//玩家自定义加的体质(耐力)点数
+     optional int32 manualDex = 11;//玩家自定义加的灵巧(敏捷)点数
+     optional int32 manualWis = 12;//自定义加上的智力
+     optional int32 maxHp = 13;//最大血量
+     optional int32 hp = 14;//当前血量
+     optional int32 exp = 15;//当前经验值
+     optional int32 maxExp = 16;//升级所需经验值
+     optional float physicalAttack = 17;//物理攻击
+     optional float magicAttack = 18;//魔法攻击
+     optional float physicalDefense = 19;//物理防御
+     optional float magicDefense = 20;//魔法防御
+     optional float speed = 21;//速度
+     optional float critRate = 22;//暴击
+	 optional float block = 23;//抗爆
+     optional float hitRate = 24;//命中
+     optional float dodgeRate = 25;//闪避
+     optional int32 gold = 26;//魔钻(金币)
+     optional int32 coin = 27;//游戏币
+     optional int32 deposit = 28;//存款
+	 optional int32 exULiliang = 29;	//军团加成力量
+	 optional int32 exUMinjie = 30;		//军团加成敏捷
+	 optional int32 exUZhili = 31;		//军团加成智力
+	 optional int32 exUNaili = 32;		//军团加成耐力
+	 optional int32 exUWugong=33;		//军团加成物攻
+	 optional int32	exUMonggong=34;		//军团加成魔攻
+	 optional string unionType=35;		//军团阵营
+     optional Appellation appellation = 36;//称号
+     repeated Appellation appellationList = 37;//称号列表
+     optional CorpsInfo corpsInfo = 38;//军团信息
+     optional int32 ranking = 39;//角色的排名
+}
+
+message CorpsInfo{
+     optional bool joinCorpsFlag= 1;//是否进入军团
+     optional int32 corpsPosition = 2;//军团职位 0普通成员1议事2参谋3元老4军团长
+     optional string corpsName = 3;//军团名
+     optional int32 corpsLevel = 4;//军团等级
+}
+
+message Appellation{
+     optional int32 idInDB = 1;   //称号的记录ID
+     optional int32 modID = 2;    //称号的模板ID
+     optional string name = 3;     //称号的名称
+}
+

@@ -1,0 +1,41 @@
+package proto;
+
+message ItemsInfo{
+     optional int32 id = 1;//物品的id
+     optional string prefixNmae = 2;//物品的前缀名称
+     optional string suffixName = 3;//物品的后缀名称
+     optional int32 isBound = 4;//是否绑定
+     optional int32 extAttack = 5;//附加攻击
+     optional int32 extStr = 6;//附加力量
+     optional int32 extVit = 7;//附加耐力
+     optional int32 extDex = 8;//附加敏捷
+     optional int32 extWis = 9;//附加智力
+     optional int32 extPhysicalAttack = 10;//附加物理攻击附加
+     optional int32 extMagicAttack = 11;//附加魔法攻击附加
+     optional int32 extPhysicalDefense = 12;//附加魔法防御附加
+     optional int32 extMagicDefense = 13;//附加魔法攻击附加
+     optional int32 extHpAdditional = 14;//附加HP附加
+     optional int32 extMpAdditional = 15;//附加MP附加
+     optional int32 extHitAdditional = 16;//附加命中附加
+     optional int32 extCritAdditional = 17;//附加暴击附加
+     optional int32 extBlockAdditional = 18;//附加抗暴
+     optional int32 extDodgeAdditional = 19;//附加闪避附加
+     optional int32 extSpeedAdditional = 20;//附加速度附加
+     optional int32 buyingRateCoin = 21;//交易价
+     optional int32 extDefense = 22;//附加防御
+     optional int32 stack = 23;//物品的层叠数
+     optional int32 starLevel = 24;//物品的星级
+     optional int32 templateId= 25;//物品的模板ID
+     optional XQ_Info xqInfo=26;//镶嵌信息
+}
+message XQ_Info{
+     optional int32 xqItemId1=1;//镶嵌位置1处的物品id
+     optional string xqDes1=2;//插槽一处的描述
+     optional int32 xqItemId2=3;//镶嵌位置2处的物品id
+     optional string xqDes2=4;//插槽二处的描述
+     optional int32 xqItemId3=5;//镶嵌位置3处的物品id
+     optional string xqDes3=6;//插槽三处的描述
+     optional int32 xqItemId4=7;//镶嵌位置4处的物品id
+     optional string xqDes4=8;//插槽四处的描述
+}
+

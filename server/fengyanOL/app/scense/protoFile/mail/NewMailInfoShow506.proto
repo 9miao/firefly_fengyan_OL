@@ -1,0 +1,4 @@
+package protoFile.mail.NewMailInfoShow506;
+message NewMailInfoShowResponse{
+
+}

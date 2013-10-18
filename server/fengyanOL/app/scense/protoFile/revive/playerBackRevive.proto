@@ -1,0 +1,9 @@
+package protoFile.revive.playerBackRevive;
+message playerBackReviveRequest{//»Ø³Ç¸´»î
+     required int32 id = 1;
+}
+
+message playerBackReviveResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

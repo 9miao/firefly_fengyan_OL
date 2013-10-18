@@ -1,0 +1,10 @@
+package protoFile.skill.LoadSkill;
+message LoadSkillRequest{
+     required int32 id=1;//角色id
+     required int32 skillId=2;//技能id
+     required int32 skillPos=3;//技能位置0第一技能1第二技能
+}
+message LoadSkillResponse{
+     required bool result=1;
+     optional string message=2;
+}

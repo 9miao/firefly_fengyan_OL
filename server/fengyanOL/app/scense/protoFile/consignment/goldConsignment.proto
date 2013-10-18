@@ -1,0 +1,11 @@
+package protoFile.consignment.goldConsignment;
+message goldConsignmentRequest{
+     required int32 id = 1;
+     required int32 goldNum = 2;
+     required int32 coinPrice = 3;
+}
+
+message goldConsignmentResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

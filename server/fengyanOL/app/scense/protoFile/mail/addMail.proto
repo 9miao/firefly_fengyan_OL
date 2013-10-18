@@ -1,0 +1,13 @@
+package protoFile.mail.addMail;
+message addMailRequest{
+     required int32 id = 1;
+     required string playerName = 2;
+     required string content = 3;
+     required string reference = 4;
+     required int32 systemId = 5;
+}
+
+message addMailResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

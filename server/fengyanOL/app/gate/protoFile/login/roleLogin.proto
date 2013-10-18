@@ -1,0 +1,16 @@
+package protoFile.login.roleLogin;
+message roleLoginRequest{ //角色登录请求
+     required int32 userId=1;//用户id
+     required int32 id=2;//角色id
+}
+
+message roleLoginResponse{ //角色登录返回
+     required bool result=1;
+     optional string message=2;
+     optional RoleInfo data=3;
+}
+
+message RoleInfo{
+     optional int32 placeId=1; //场景id
+     
+}

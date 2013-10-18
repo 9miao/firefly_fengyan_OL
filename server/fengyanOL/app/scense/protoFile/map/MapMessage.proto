@@ -1,0 +1,60 @@
+//地图数据处理消息
+package protoFile.map.MapMessage;
+
+//城镇地图信息
+message SceneMapInfo{
+	required int32 id 			= 1;		//城镇id
+	required int32 color 		= 2;		//殖民军团颜色
+	required int32 tax			= 3;		//税收比例
+	required int32 income		= 4;		//昨日收益
+	required string scene_name	= 5;		//城镇名
+	optional string union_name 	= 6;		//所属军团名
+}
+
+//副本组地图信息
+message InstanceMapInfo{
+	required int32 id 				= 1;		//副本组id
+	required int32 color 			= 2;		//殖民军团颜色
+	required int32 once				= 3;		//通关一次收入
+	required int32 income			= 4;		//昨日收益
+	required string instance_name	= 5;		//副本名称
+	optional string union_name		= 6;		//所属军团 占领者(军团名)
+}
+
+//请求场景信息数组 2401 
+message SceneMapInfosRequest{ 
+    required int32 id = 1;				//角色id
+}
+//场景信息数组回复
+message SceneMapInfosResponse{ 
+     required bool result 			= 1;
+	 required int32	self_color		= 2; //自身军团势力颜色
+	 repeated SceneMapInfo infos 	= 3; //城镇地图数据
+     optional string message 		= 4; 
+}
+
+
+//请求副本组信息数组 2402 
+message InstanceMapInfosRequest{ 
+    required int32 id = 1;				//角色id
+}
+//场景信息数组回复
+message InstanceMapInfosResponse{ 
+     required bool result 			= 1;
+	 required int32	self_color		= 2; //自身军团势力颜色
+	 repeated InstanceMapInfo infos = 3; //副本组地图数据
+     optional string message 		= 4; 
+}
+
+
+//请求修改本军团势力颜色 2403 
+message ChangeUnionColorRequest{ 
+    required int32 id 		= 1;				//角色id
+	required int32 color 	= 2;				//要修改的颜色
+}
+//修改军团势力颜色回复
+message ChangeUnionColorResponse{ 
+     required bool result 			 = 1;
+	 required int32 color			 = 2; //修改后的颜色
+     optional string message 		 = 3; 
+}

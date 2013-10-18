@@ -1,0 +1,28 @@
+package proto.skill.skill801;
+message GetSkillInfoRequest{
+     required int32 id=1;//角色id
+}
+message GetSkillInfoResponse{
+     required bool result=1;
+     optional string message=2;
+     optional DataInfo data=3;
+}
+message DataInfo{
+     repeated SkillInfoList skillInfoList=1;//技能
+}
+message SkillInfoList{
+     optional int32 skillId=1;//技能id
+     optional string skillName=2;//技能名称
+     optional int32 skillLevel=3;//技能等级
+     optional int32 remainRoleLevel=4;//需求人物等级
+     optional string skillDes=5;//技能说明
+     optional int32 releasePreEnergy=6;//释放所需能量值
+     optional string levelUpEffect=7;//升级后效果
+     optional string levelUpProps=8;//升级所需道具
+     optional int32 levelUpMoney=9;//升级所需金币
+     optional int32 levelUpRoleLevel=10;//升级所需角色等级
+     optional int32 skillStatus=11;//角色状态 0 激活 1未激活 当战斗技能0未解锁1未装备2已装备
+     optional int32 icon=12;//物品的图标
+     optional int32 type=13;//物品类型
+     optional int32 skillType=14;//技能类型0主动技能1被动技能2应用技能3战斗技能
+}

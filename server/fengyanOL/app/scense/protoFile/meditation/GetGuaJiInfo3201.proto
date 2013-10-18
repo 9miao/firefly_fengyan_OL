@@ -1,0 +1,11 @@
+package protoFile.meditation.GetGuaJiInfo3201;
+message GetGuaJiInfoRequest{
+    required int32 id=1;
+}
+message GetGuaJiInfoResponse{
+    optional bool result=1;
+    optional string message=2;
+    optional string expStr=3;//估计获得经验
+    optional string zhanliStr=4;//挂机获得战力
+    optional int32 gujiTime=5;//挂机时间
+}

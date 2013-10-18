@@ -1,0 +1,10 @@
+package protoFile.pet.PetChuanCheng2314;
+message PetChuanChengRequest{
+    required int32 id=1;
+    required int32 petId=2;
+    required int32 bjcPetId=3;//±»´«³Ð³èÎïid
+}
+message PetChuanChengResponse{
+    optional string message=1;
+    optional bool result=2;
+}

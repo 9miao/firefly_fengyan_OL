@@ -1,0 +1,26 @@
+package protoFile.fate.JiFeng;
+import "XingYunInfo.proto";
+
+message GetJiFengListInfoRequest{
+     required int32 id=1;//角色id
+     required int32 nowpage = 2;//当前页
+}
+
+message GetJiFengListInfoResponse{
+	 required bool result = 1;
+	 optional string message = 2;
+	 optional JiFengExch data = 3;//积分兑换信息
+}
+
+message JiFengExch{
+	 repeated ExchangeInfo exchInfo=1;//物品信息
+	 optional int32 jiFengTotal = 2;//总积分
+	 optional int32 curpage=3;//当前页
+	 optional int32 totalpage=4;//总共页
+}
+
+message ExchangeInfo{
+         optional XingYunBasicInfo xingYun = 1;//星运信息
+         optional int32 jifengValue = 2;//兑换花费值
+	}
+

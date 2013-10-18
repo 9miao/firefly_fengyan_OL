@@ -1,0 +1,15 @@
+package protoFile.instance.instancePlace;
+message instancePlaceRequest{
+     required int32 id = 1;//角色Id
+     required int32 types= 2;//1退出副本 2重打副本
+}
+
+message instancePlaceResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional InstancePlaceData data = 3;
+}
+
+message InstancePlaceData{
+     optional int32 id= 1;//角色id
+}

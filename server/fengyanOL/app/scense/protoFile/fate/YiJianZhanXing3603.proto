@@ -1,0 +1,16 @@
+package protoFile.fate.YiJianZhanXing3603;
+import "XingYunInfo.proto";
+
+message YiJianZhanXingRequest{
+     required int32 id=1;
+}
+message YiJianZhanXingResponse{
+     optional string message=1;
+     optional bool result=2;
+     repeated YJXingYunInfo yjXYinfoList=3;
+}
+message YJXingYunInfo{
+     optional XingYunBasicInfo xyInfo=1;//星运集合信息
+     optional int32 showIndex=2;//当前可点击的索引下标从1开始 
+     optional int32 maxCount=3;//积分
+}

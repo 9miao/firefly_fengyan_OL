@@ -1,0 +1,28 @@
+package protoFile.strengthen.BlacksmithStrengthenInfo2101;
+import "protoFile/itemInfo.proto";
+message BlacksmithStrengthenInfoRequest{
+     required int32 id=1;//角色id
+     required int32 itemId=2;//物品1，存在物品赋值物品id,不存在赋值 -1
+     required int32 type=3;//物品1在装备或者背包中，1背包2身上装备
+     required int32 itemId1=4;//物品2，存在物品赋值物品id,不存在赋值 -1
+     required int32 type1=5;//物品2在装备或者背包中，1背包2身上装备
+
+}
+message BlacksmithStrengthenInfoResponse{
+     required bool result=1;
+     optional string message=2;
+     optional ItemStrengthenInfo data = 3;
+}
+message ItemStrengthenInfo{
+     optional int32 strengthenSuccRate=1;//强化成功率
+     optional ItemsInfo itemsInfo=2;//要强化的装备信息
+     optional int32 itemType=3;//强化物品类型0装备1强化石
+     optional int32 strLevel=4;//等级
+     optional string param1Name=5;//属性
+     optional int32 param1=6;//属性1加成
+     optional string param2Name=7;//属性
+     optional int32 param2=8;//属性1加成
+     optional string requiredCoin=9;//所需金币
+     optional string failDes=10;//失败惩罚
+     optional int32 inPackType=11;//是否在背包中 1背包2身上装备
+}

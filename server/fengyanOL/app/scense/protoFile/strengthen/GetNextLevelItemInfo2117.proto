@@ -1,0 +1,18 @@
+package protoFile.strengthen.GetNextLevelItemInfo2117;
+message GetNextLevelItemInfoRequest{
+    required int32 id=1;//角色id
+    required int32 itemId=2;//物品id
+}
+message GetNextLevelItemInfoResponse{
+    optional string message=1;
+    optional bool result=2;
+    optional NextInfo nextInfo=3;//获取的物品信息
+}
+message NextInfo{
+    optional int32 itemId=1;//物品信息id
+    optional string strEff=2;//强化效果名称
+    optional string effValue=3;//强化效果值
+    optional int32 reqCoin=4;//强化费用（金币）
+    optional int32 mubanid=5;//物品模板id
+    optional int32 qhlevel=6;//物品强化等级
+}

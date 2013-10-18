@@ -1,0 +1,14 @@
+package protoFile.chat.ModifyChatSetting1006;
+message ModifyChatSettingRequest{
+     required int32 id=1;//角色id
+     required bool systemCK=2;//是否接受系统讯息
+     required bool showCK=3;//是否接受提示讯息
+     required bool commonCK=4;//是否接受一般聊天
+     required bool groupCK=5;//是否接受队伍频道
+     required bool corpsCK=6;//是否接受军团讯息
+     required bool selfCK=7;//是否接受密语讯息
+}
+message ModifyChatSettingResponse{
+     required bool result=1;
+     optional string message=2;
+}

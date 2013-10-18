@@ -1,0 +1,24 @@
+package protoFile.lodeg.restOperate;
+message restOperateRequest{
+     required int32 id = 1;
+     required string type = 2;
+     required string payType = 3;
+     required int32 payNum = 4;
+}
+
+message restOperateResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional DataPacket data= 3;
+}
+
+message DataPacket{
+     optional int32 hp= 1;
+     optional int32 mp = 2;
+     optional int32 energy = 3;
+     optional int32 gold = 4;
+     optional int32 coupon = 5;
+     optional int32 coin = 6;
+     optional string type = 7;
+     optional int32 count = 8;
+}

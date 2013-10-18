@@ -1,0 +1,4 @@
+package protoFile.pushJokeMessage;
+message JokeMessage{
+     required int32 signal = 1;
+}

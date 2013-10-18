@@ -1,0 +1,24 @@
+package protoFile.afk.GetAramListInfo2805;
+message GetAramListInfoRequest{
+     required int32 id=1;//角色id
+}
+message GetAramListInfoResponse{
+     optional bool result=1;
+     optional string message=2;
+     optional bool roleRunningFlag=3;//当前角色是否正在训练中
+     optional int32 roleRunTime=4;//如果角色正在训练，则剩余时间
+     repeated PetAramInfo petAramInfo=5;
+     optional int32 sptimes = 6;//加急训练当前的剩余次数
+     optional int32 expbound = 7;//加急训练可以得到的经验奖励
+     optional int32 goldreq = 8;//加急训练当前所需的消耗
+}
+message PetAramInfo{
+     optional int32 petId=1;//宠物id
+     optional int32 resPetId=2;//宠物资源id
+     optional string petName=3;//宠物名称
+     optional int32 petLevel=4;//宠物等级
+     optional int32 icon = 5;//宠物的图标
+     optional int32 type = 6;//宠物的图标类型
+     optional bool runningFlag=7;//是否正在训练中
+     optional int32 remainTime=8;//训练剩余时间
+}

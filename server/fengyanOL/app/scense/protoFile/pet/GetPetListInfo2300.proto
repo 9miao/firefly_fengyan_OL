@@ -1,0 +1,19 @@
+package protoFile.pet.GetPetListInfo2300;
+message GetPetListInfoRequest{
+     required int32 id=1;//角色id
+}
+message GetPetListInfoResponse{
+     optional bool result=1;
+     optional string message=2;
+     repeated PetInfo petInfo = 3;//宠物信息列表
+     optional int32 curPetNum=4;//当前宠物数量
+     optional int32 maxPetNum=5;//最大宠物数量
+}
+message PetInfo{
+     optional int32 petId=1;//宠物id
+     optional int32 resPetId=2;//宠物资源id
+     optional string petName=3;//宠物名称
+     optional int32 petLevel=4;//宠物等级
+     optional int32 icon = 5;//宠物的图标
+     optional int32 type = 6;//宠物的图标类型
+}

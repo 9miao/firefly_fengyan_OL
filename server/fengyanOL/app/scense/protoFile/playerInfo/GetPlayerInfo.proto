@@ -1,0 +1,14 @@
+package protoFile.playerInfo.GetPlayerInfo;
+
+import "protoFile/PlayerProperty.proto";
+
+message GetPlayerInfoRequest{ //获取角色信息请求
+     required int32 id=1;//角色id
+}
+
+message GetPlayerInfoResponse{ //获取角色信息返回
+     required bool result=1;
+     optional string message=2;
+     optional PlayerPropertyInfo data=3;
+     optional int32 buyCount=4;
+}

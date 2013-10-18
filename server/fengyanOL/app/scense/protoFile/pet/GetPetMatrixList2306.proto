@@ -1,0 +1,22 @@
+package protoFile.pet.GetPetMatrixList2306;
+message GetPetMatrixListRequest{
+     required int32 id=1;//角色id
+}
+message GetPetMatrixListResponse{
+     optional bool result=1;
+     optional string message=2;
+     optional MatrixInfo matrixInfo=3;
+}
+message MatrixInfo{
+     optional string jwDes=1;//爵位
+     optional int32 curNum=2;//出战人数
+     optional int32 maxNum=3;//最大人数
+     repeated MatrixTitleInfo matrixTitleInfo=4;//阵法格子信息
+}
+message MatrixTitleInfo{
+     optional int32 titlePos=1;//当前格子所在位置默认第一个从0开始
+     optional bool hasPet=2;//是否存在宠物
+     optional int32 petId=3;//宠物id
+     optional int32 type=4;
+     optional int32 icon=5;
+}

@@ -1,0 +1,17 @@
+package protoFile.revive.ReviveTeamMember;
+message ReviveTeamMemberRequest{
+     required int32 id = 1;
+     required int32 victimerId = 2;   //求救者的Id
+     required int32 paytype = 3;    //支付类型 1：物品 2：金币
+}
+
+message ReviveTeamMemberResponse{
+     required bool result = 1;
+     optional string message = 2;
+     required ResponseData data = 3;
+}
+
+message ResponseData{
+     required int32 faildtype = 1;
+     optional int32 goldprice = 2;
+}

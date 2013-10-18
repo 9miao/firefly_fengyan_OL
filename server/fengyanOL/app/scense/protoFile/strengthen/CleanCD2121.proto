@@ -1,0 +1,9 @@
+package protoFile.strengthen.CleanCD2121;
+message CleanCDRequest{
+    required int32 id=1;
+}
+
+message CleanCDResponse{
+    optional string message=1;
+    optional bool result=2;
+}

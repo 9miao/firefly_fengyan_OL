@@ -1,0 +1,11 @@
+package protoFile.consignment.ConsAnnon;
+message ConsAnnonRequest{
+     required int32 id = 1;
+     required int32 consType = 2;//寄卖的类型 1物品 2金币
+     required int32 consId = 3;//寄卖的记录id
+}
+
+message ConsAnnonResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

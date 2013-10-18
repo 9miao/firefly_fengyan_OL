@@ -1,0 +1,11 @@
+package protoFile.zudui.CreateZuDui4301;
+message CreateZuDuiRequest{
+    required int32 id=1;//角色id
+    required int32 pos=2;//角色所在位置 索引从1开始
+    required int32 gkType=3;//管卡类型1(lv30荒城回廊)2（lv60斗技庭院）3(lv90混沌空间)
+}
+message CreateZuDuiResponse{
+    optional string message=1;
+    optional bool result=2;
+    optional int32 dwId=3;
+}

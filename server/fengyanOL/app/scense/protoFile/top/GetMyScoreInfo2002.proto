@@ -1,0 +1,87 @@
+package protoFile.top.GetMyScoreInfo2002;
+message GetMyScoreInfoRequest{
+     required int32 id=1;//角色id
+
+}
+message GetMyScoreInfoResponse{
+     required bool result=1;
+     optional string message=2;
+     repeated MyScoreListInfo data=3;
+}
+message MyScoreListInfo{
+     optional int32 score=1;//评分
+     optional ItemsInfo itemsInfo=2;//装备信息
+}
+message ItemsInfo{
+     optional int32 id = 1;//物品的id
+     optional int32 type = 2;//物品的类型
+     optional string name = 3;//物品的名称
+     optional string prefixNmae = 4;//物品的前缀名称
+     optional string suffixName = 5;//物品的后缀名称
+     optional int32 bindType = 6;//物品的绑定类型
+     optional int32 isBound = 7;//是否绑定
+     optional string description = 8;//物品描述
+     optional int32 professionRequire = 9;//职业限制
+     optional int32 canInjection = 10;//可否注魂
+     optional int32 bodyType = 11;//装备位置
+     optional int32 weaponType = 12;//武器类型
+     optional int32 nowQuality = 13;//当前品质
+     optional int32 baseAttack = 14;//基础攻击
+     optional int32 extAttack = 15;//附加攻击
+     optional int32 attackType = 16;//攻击类型
+     optional int32 baseSpeed = 17;//武器速度
+     optional int32 levelRequire = 18;//等级限制
+     optional int32 baseStr = 19;//基础力量
+     optional int32 extStr = 20;//附加力量
+     optional int32 baseVit = 21;//基础耐力
+     optional int32 extVit = 22;//附加耐力
+     optional int32 baseDex = 23;//基础敏捷
+     optional int32 extDex = 24;//附加敏捷
+     optional int32 baseWis = 25;//基础智力
+     optional int32 extWis = 26;//附加智力
+     optional int32 baseSpi = 27;//基础精神
+     optional int32 extSpi = 28;//附加精神
+     optional int32 basePhysicalAttack = 29;//基础物理攻击附加
+     optional int32 extPhysicalAttack = 30;//附加物理攻击附加
+     optional int32 baseMagicAttack = 31;//基础魔法攻击附加
+     optional int32 extMagicAttack = 32;//附加魔法攻击附加
+     optional int32 basePhysicalDefense = 33;//基础物理防御附加
+     optional int32 extPhysicalDefense = 34;//附加魔法防御附加
+     optional int32 baseMagicDefense = 35;//基础魔法攻击附加
+     optional int32 extMagicDefense = 36;//附加魔法攻击附加
+     optional int32 baseHpAdditional = 37;//基础HP附加
+     optional int32 extHpAdditional = 38;//附加HP附加
+     optional int32 baseMpAdditional = 39;//基础MP附加
+     optional int32 extMpAdditional = 40;//附加MP附加
+     optional int32 baseHitAdditional = 41;//基础命中附加
+     optional int32 extHitAdditional = 42;//附加命中附加
+     optional int32 baseCritAdditional = 43;//基础暴击附加
+     optional int32 extCritAdditional = 44;//附加暴击附加
+     optional int32 baseDodgeAdditional = 45;//基础闪避附加
+     optional int32 extDodgeAdditional = 46;//附加闪避附加
+     optional int32 baseSquelchAdditional = 47;//基础反击附加
+     optional int32 extSquelchAdditional = 48;//附加反击附加
+     optional int32 baseSpeedAdditional = 49;//基础速度附加
+     optional int32 extSpeedAdditional = 50;//附加速度附加
+     optional int32 baseBogeyAdditional = 51;//基础破防附加
+     optional int32 extBogeyAdditional = 52;//附加破防附加
+     optional string equipEffect = 53;//装备特效
+     optional string devilEffect = 54;//附魔特效
+     optional string suiteEffect = 55;//套装特效
+     repeated Suite SuiteItems = 56;//套装效果
+     optional int32 buyingRateCoin = 57;//交易价格
+     optional int32 baseDurability = 58;//基础耐久
+     optional int32 nowDurability = 59;//当前耐久
+     optional int32 baseDefense = 60;//基础防御
+     optional int32 extDefense = 61;//附加防御
+     optional int32 stack = 62;//物品的层叠数
+     optional int32 starLevel = 63;//物品的星级
+     optional int32 icon = 64;//物品的图标
+     optional int32 templateId= 65;//物品的模板ID
+     optional int32 maxstack = 66;//最大堆叠数
+}
+
+message Suite{
+     optional string suitItemName = 1;
+     optional int32 hasSiutitem = 2;
+}

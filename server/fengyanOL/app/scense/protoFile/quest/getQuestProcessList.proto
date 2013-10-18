@@ -1,0 +1,28 @@
+package protoFile.quest.getQuestProcessList;
+message getQuestProcessListRequest{
+     required int32 id = 1;
+}
+
+message getQuestProcessListResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     repeated QuestProcess questprocesslist = 1;
+}
+
+message QuestProcess{
+     optional int32 taskId = 1;
+     repeated ProcessInfo processinfolist = 2;
+}
+
+message ProcessInfo{
+     optional int32 questGoalId = 1;
+     optional int32 killMonsterCount = 2;
+     optional int32 collectItemCount = 3;
+     optional int32 hasTalkedtoNPC = 4;
+     optional int32 resourcesCount = 5;
+}
+

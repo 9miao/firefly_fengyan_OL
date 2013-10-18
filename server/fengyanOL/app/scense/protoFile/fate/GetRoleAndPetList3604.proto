@@ -1,0 +1,24 @@
+package protoFile.fate.GetRoleAndPetList3604;
+import "XingYunInfo.proto";
+
+message GetRoleAndPetListRequest{
+    required int32 id=1;
+}
+message GetRoleAndPetListResponse{
+    optional string message=1;
+    optional bool result=2;
+    repeated RoleAndPetInfo roleAndPetInfo=3;
+}
+message RoleAndPetInfo{
+    optional int32 rpId=1;//角色或宠物id
+    optional string rpName=2;//角色或宠物名称
+    optional int32 rpLevel=3;//角色或宠物等级
+    optional int32 icon=4;//图片资源
+    optional XingYunBasicInfo xyBody1=5;
+    optional XingYunBasicInfo xyBody2=6;
+    optional XingYunBasicInfo xyBody3=7;
+    optional XingYunBasicInfo xyBody4=8;
+    optional XingYunBasicInfo xyBody5=9;
+    optional XingYunBasicInfo xyBody6=10;
+    optional int32 rpType = 11;//角色类型 1角色 2宠物
+} 

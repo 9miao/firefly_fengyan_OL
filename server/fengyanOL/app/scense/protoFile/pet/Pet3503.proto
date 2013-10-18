@@ -1,0 +1,45 @@
+package protoFile.pet.Pet3503;
+message GetTavernListInfoRequest{
+     required int32 id=1;//角色id
+	 required int32 npcId=2;//NPCid
+	 optional int32 page=3;//当前页数
+}
+message GetTavernTaskInfoResponse{
+	 required bool result = 1;
+	 optional string message = 2;
+	 optional WoW data = 3;//酒馆魔兽信息
+}
+
+message WoW{
+	 repeated XingYunTavernWoWInfo xingYunwowInfo=1;//魔兽信息
+	 optional int32 page=2;//当前页数
+     optional int32 zong=3;//总页数
+}
+
+message XingYunTavernWoWInfo{
+	 optional string wSkill=1;//技能
+	 optional string wTexing=2;//特性
+	  optional int32 wLiliang=3;//力量
+	   optional int32 wZhili=4;//智力
+	    optional int32 wNaili=5;//耐力
+		 optional int32 wMinjie=6;//敏捷
+		  optional int32 wWugong=7;//物攻
+		   optional int32 wMogong=8;//魔攻
+		    optional int32 wGongsu=9;//攻速
+			 optional int32 wBaoji=10;//暴击
+			 optional int32 wWufang=11;//物防
+			 optional int32 wMofang=12;//魔防
+			 optional int32 wMingzhong=13;//命中
+			 optional int32 wShanbi=14;//闪避
+			 optional int32 wKaobao=15;//抗暴
+			 optional int32 wGuyongzhi=16;//是否标记已拥有  1标记  -1不标记
+			 optional string wName=17;//宠物名称
+			 optional int32 wGuYongXingYunZhi=18;//雇佣价格(幸运值)
+			 optional int32 id=19;//宠物模板id
+                         optional int32 color=20;//宠物颜色 1=普通（绿）2=优秀（蓝）3=精良（紫） 4=史诗（金）5=传说（橙）6=逆天（红）
+			 optional int32 type=21;//宠物类型（大）
+			 optional int32 icon=22;//宠物id	（大）
+                          optional int32 level=23;//宠物等级
+}
+
+

@@ -1,0 +1,9 @@
+package protoFile.campaign.GroupPK4403;
+message GroupPKRequest{
+    required int32 id=1;//角色id
+    required int32 pkId=2;//挑战的城镇id
+}
+message GroupPKResponse{
+    optional string message=1;
+    optional bool result=2;
+}

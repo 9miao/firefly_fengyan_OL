@@ -1,0 +1,26 @@
+package protoFile.mail.GetMailList;
+//获取邮件列表
+message getMailListRequest{
+      required int32 id = 1;//角色id
+      required int32 mailType = 2;//邮件类型 0 全部邮件1系统邮件2玩家邮件3保存
+      required int32 pageCount = 3;//请求的页数
+}
+message getMailListResponse{
+      required bool result = 1;
+      optional string message = 2;
+      optional DataPacket data = 3;
+}
+message DataPacket{
+      optional int32 curPage = 1;//当前页数
+      optional int32 maxPage = 2;//总页数
+      optional int32 responseMailType = 3;//邮件类型
+      repeated MailInfo mailinfo = 4;//邮件列表
+}
+message MailInfo{
+      optional int32 mailId = 1;//邮件id
+      optional int32 mailState = 2;//邮件状态 0 为读 1已读
+      optional int32 mailFromType = 3;//0系统1玩家
+      optional string mailTitle = 4;//邮件标题
+      optional string mialSendTime = 5;//发送邮件时间
+      optional string outline = 6; //邮件内容概述 
+}

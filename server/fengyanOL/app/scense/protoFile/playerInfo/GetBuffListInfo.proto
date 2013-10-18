@@ -1,0 +1,13 @@
+package protoFile.playerInfo.GetBuffListInfo;
+message GetBuffListInfoResponse{
+     repeated BuffInfo buffInfo=1;//buff列表
+}
+message BuffInfo{
+     optional int32 buffId=1;//Buff的id
+     optional string buffName=2;//Buff名称
+     optional string buffDes=3;//Buff描述
+     optional int32 type = 4;//物品的类型
+     optional int32 icon = 5;//物品的图标
+     optional int32 timeAndCountFlag=6;//标志位0时间（秒）1剩余总量
+     optional int32 timeOrCount=7;//时间或总量
+}

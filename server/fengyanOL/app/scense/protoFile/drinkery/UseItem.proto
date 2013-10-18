@@ -1,0 +1,10 @@
+package protoFile.drinkery.UseItem;
+message UseItemRequest{
+     required int32 id=1;//角色id 
+     required int32 type=2;//0魔法泡沫酒 1普通果汁酒 2神奇果汁酒
+}
+message UseItemResponse{
+     required bool result=1;
+     optional string message=2;
+     optional int32 failType=3;//失败类型0系统失败1魔钻不足
+}

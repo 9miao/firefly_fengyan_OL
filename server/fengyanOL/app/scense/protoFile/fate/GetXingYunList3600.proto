@@ -1,0 +1,13 @@
+package protoFile.fate.GetXingYunList3600;
+import "XingYunInfo.proto";
+
+message GetXingYunListRequest{
+    required int32 id=1;//角色Id
+}
+message GetXingYunListResponse{
+    optional string message=1;
+    optional bool result=2;
+    repeated XingYunBasicInfo xyList=3;//星运集合信息
+    optional int32 showIndex=4;//当前可点击的索引下标从1开始
+    optional int32 maxCount=5;//积分
+}

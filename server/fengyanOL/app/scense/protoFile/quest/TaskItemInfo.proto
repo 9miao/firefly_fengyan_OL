@@ -1,0 +1,52 @@
+//请求npc对应的任务信息
+package protoFile.quest;
+
+
+//任务状态
+enum TaskState{
+	ERROR		= 0;	//非法
+	ACCERT_ABLE = 1;	//可接
+	RUNING		= 2;	//进行中
+	COMPLETE	= 3;	//完成
+	EXCUTE		= 4;	//可执行状态,例如在对话人物指定的对话NPC
+}
+
+//任务类型
+enum TaskType{
+	TASK_TYPE_ERROR		= 0;	//非法
+	MAIN				= 1;	//主线任务
+	Extension			= 2;	//支线任务
+}
+
+//任务条目信息
+message TaskItemInfo{
+	required int32		task_id				= 1;		//任务id
+	required int32		task_type			= 2;		//任务类型 @TaskType
+	required int32		task_state			= 3;		//任务状态 @TaskState
+	required int32		task_price_coins	= 4;		//任务奖励 魔币
+	required int32		task_price_zuan		= 5;		//任务奖励 魔钻
+	required int32		task_exp			= 6;		//任务奖励经验
+	required string		task_name			= 7;		//任务名
+	optional int32		task_is_track		= 8;		//任务是否被追踪
+	optional int32		task_lv				= 9;		//可接等级
+	optional string		task_type_name		= 10;		//任务类型名
+	optional string		task_ui_des			= 11;		//任务描述
+	optional string		task_runing_des		= 12;		//任务未完成对白
+	optional string		task_taget			= 13;		//任务目的
+	repeated TaskTalk	task_des			= 14;		//npc任务对白
+	repeated ItemInfo	task_price_item		= 15;		//任务物品奖励
+}
+
+//任务的对话
+message TaskTalk{
+        optional string roleType = 1; //对话者的身份 1NPC 2角色
+        optional string task_des = 2;//对话内容
+}
+
+message ItemInfo{//物品静态信息
+        optional int32 itemId = 1;//物品的id
+        optional int32 stack = 2;//物品的数量
+
+}
+
+

@@ -1,0 +1,24 @@
+package protoFile.pet.GetOnePetInfo2311;
+import "protoFile/pet/petInfo.proto";
+message GetOnePetInfoRequest{
+     required int32 id=1;//角色id
+     required int32 petId=2;//宠物Id
+     required int32 masterId=3;//宠物拥有者的ID
+}
+message GetOnePetInfoResponse{
+     optional bool result=1;
+     optional string message=2;
+     optional PetInfo info = 3;//宠物信息
+     optional int32 extendsExp=4;//可传承经验
+     optional ZiZhiInfo ziZhiInfo=5;//资质信息
+}
+message ZiZhiInfo{
+     optional int32 cur_zi_li=1;//当前力量资质
+     optional int32 max_zi_li=2;//最大力量资质
+     optional int32 cur_zi_zhi=3;//当前智力资质
+     optional int32 max_zi_zhi=4;//最大智力资质
+     optional int32 cur_zi_nai=5;//当前耐力资质
+     optional int32 max_zi_nai=6;//最大耐力资质
+     optional int32 cur_zi_min=7;//当前敏捷资质
+     optional int32 max_zi_min=8;//最大敏捷资质
+}

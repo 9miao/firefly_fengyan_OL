@@ -1,0 +1,14 @@
+package protoFile.chat.chatMessage;
+message chatMessageResponse{
+     required int32 topic = 1;//消息的频道
+     required int32 id = 2;//发送者的id
+     required int32 profession = 3;//角色的职业
+     required string fromName = 4;//角色的名称
+     required string content = 5;//消息内容
+     repeated ItemLinkData linkData = 6;//聊天连接信息
+}
+message ItemLinkData{
+     optional int32 chatEquipType = 1;//装备或者角色 0装备  1角色  2怪物
+     optional int32 id = 2;//装备或者角色id
+     optional string name = 3;//装备或者角色名称
+}

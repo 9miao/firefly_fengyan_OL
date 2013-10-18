@@ -1,0 +1,4 @@
+package protoFile.mail.mailArrived;
+message mailArrived{
+     required int32 signal = 1;
+}

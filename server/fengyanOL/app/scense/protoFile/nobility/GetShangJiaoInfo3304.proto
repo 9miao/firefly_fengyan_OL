@@ -1,0 +1,12 @@
+package protoFile.nobility.GetShangJiaoInfo3304;
+message GetShangJiaoInfoRequest{
+     required int32 id=1;//角色id
+     required string wy=2;//物品唯一标识
+}
+
+
+message GetShangJiaoInfoResponse{
+	 required bool   result = 1;
+	 optional string message = 2;
+}
+

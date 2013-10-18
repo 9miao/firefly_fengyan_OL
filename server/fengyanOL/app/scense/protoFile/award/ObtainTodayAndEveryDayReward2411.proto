@@ -1,0 +1,9 @@
+package protoFile.award.ObtainTodayAndEveryDayReward2411;
+message ObtainTodayAndEveryDayRewardRequest{
+     required int32 id=1;//角色id
+     required int32 type=2;//领取奖励的类型4新手奖励5每日奖励
+}
+message ObtainTodayAndEveryDayRewardResponse{
+     optional string message=1;
+     optional bool result=2;
+}

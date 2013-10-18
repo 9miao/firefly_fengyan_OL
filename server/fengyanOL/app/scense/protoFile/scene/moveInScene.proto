@@ -1,0 +1,7 @@
+package protoFile.scene.moveInScene;
+message moveInSceneRequest{
+     required int32 id = 1;
+     required int32 sceneId = 2;
+     required int32 x = 3;
+     required int32 y = 4;
+}

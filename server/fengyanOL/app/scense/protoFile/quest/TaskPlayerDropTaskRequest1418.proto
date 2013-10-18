@@ -1,0 +1,13 @@
+package protoFile.quest.TaskPlayerDropTaskRequest1418;
+//请求放弃任务
+
+message TaskPlayerDropTaskRequest{ 
+    required int32 id		= 1;			//角色id
+	required int32 task_id	= 2;			//任务id
+}
+
+message TaskPlayerDropTaskResponse{
+	required bool	result				= 1;			//是否成功
+	optional string message				= 2;			//错误说明
+}
+

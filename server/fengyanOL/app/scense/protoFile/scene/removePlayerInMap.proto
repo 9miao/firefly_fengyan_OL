@@ -1,0 +1,4 @@
+package protoFile.scene.removePlayerInMap;
+message removePlayerInMap{
+     required int32 id = 1; //ÒÆ³ýµÄ½ÇÉ«µÄid
+}

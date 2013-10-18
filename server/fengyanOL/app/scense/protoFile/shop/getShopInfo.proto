@@ -1,0 +1,24 @@
+package protoFile.shop.getShopInfo;
+import "protoFile/itemInfo.proto";
+
+message getShopInfoRequest{//获取商店信息请求
+     required int32 id=1;//角色id
+     required int32 shopCategory = 2;//商店的类型
+}
+
+message getShopInfoResponse{//获取商店信息返回
+     required bool result=1;
+     optional string message=2;
+     optional ShopInfo data=3;
+}
+
+message ShopInfo{
+     repeated PackageInfo packageItemInfo = 1;
+     optional int32 shopCategory =2;//商店的类型 1武器 2防具 3材料 4 杂货
+     optional int32 refreshShopTime = 3;//商店刷新剩余的时间
+}
+
+message PackageInfo{
+     optional ItemsInfo itemInfo = 1;
+     optional int32 position = 2;
+}

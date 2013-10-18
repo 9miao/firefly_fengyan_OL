@@ -1,0 +1,11 @@
+package protoFile.pet.Pet3501;
+message Get3501Request{
+     required int32 id=1;//角色id
+     required int32 petid=2;//宠物模板id
+     optional int32 typeid=3;//1表示金币兑换的宠物  2表示幸运值兑换
+}
+message Get3501Response{
+	 required bool result = 1;
+	 optional string message = 2;
+}
+

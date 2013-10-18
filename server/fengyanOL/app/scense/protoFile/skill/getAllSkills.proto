@@ -1,0 +1,39 @@
+package protoFile.skill.getAllSkills;
+message getAllSkillsRequest{
+     required int32 id = 1;
+}
+
+message getAllSkillsResponse{
+     required bool result = 1;
+     optional string message = 2;
+     repeated ResponseData data = 3;
+}
+
+message ResponseData{
+     optional int32 skillLevel = 1;
+     optional SkillData skillInfo = 2;
+     repeated string effects = 3;
+}
+
+message SkillData{
+     optional int32 groupType = 1;
+     optional int32 professionStageRequire = 2;
+     optional string removeEffectRate = 3;
+     optional string addEffect = 4;
+     optional int32 useRate = 5;
+     optional string description = 6;
+     optional int32 level = 7;
+     optional int32 type = 8;
+     optional int32 weapon = 9;
+     optional int32 levelRequire = 10;
+     repeated string addEffectNames = 11;
+     optional string name = 12;
+     optional int32 useCoin = 13;
+     optional int32 skillProfession = 14;
+     optional string removeEffect = 15;
+     optional string addEffectRate = 16;
+     optional int32 useMp = 17;
+     optional int32 maxLevel = 18;
+     optional int32 id= 19;
+     optional string icon = 20;
+}

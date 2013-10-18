@@ -1,0 +1,10 @@
+package protoFile.strengthen.CastingItem2104;
+message CastingItemRequest{
+    required int32 id=1;//角色id
+    required int32 castingItemId=2;//祭炼对象id
+    optional int32 consumeItemId=3;//消耗装备id
+}
+message CastingItemResponse{
+    required bool result=1;
+    optional string message=2;
+}

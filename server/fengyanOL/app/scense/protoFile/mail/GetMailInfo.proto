@@ -1,0 +1,22 @@
+package protoFile.mail.GetMailInfo;
+//获取邮件的详细信息
+message getMailInfoRequest{
+      required int32 id = 1;//角色id
+      required int32 mailId = 2;//邮件id
+}
+message getMailInfoResponse{
+      required bool result = 1;
+      optional string message = 2;
+      optional DataPacket data = 3;
+}
+message DataPacket{
+      optional MailInfo mailinfo = 1;//邮件列表
+}
+message MailInfo{
+      optional int32 mailIdResponse = 1;//邮件id
+      optional string mailFrom= 2;//发信者
+      optional string mailTitle = 3;//邮件标题
+      optional string mailContent = 4;//邮件内容
+      optional int32 mailType=5;//0系统1玩家
+      optional string mailDate = 6;//邮件的日期
+}

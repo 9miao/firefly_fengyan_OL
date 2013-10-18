@@ -1,0 +1,10 @@
+package protoFile.hall.InviteJoinGroup;
+message InviteJoinGroupRequest{
+     required int32 id=1;//角色id
+     required int32 roleId=2;//被邀请的角色id
+}
+message InviteJoinGroupResponse{
+     required bool result=1;
+     optional string message=2;
+
+}

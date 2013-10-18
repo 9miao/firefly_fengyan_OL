@@ -1,0 +1,15 @@
+package protoFile.guild.CorpsInviteOtherRequest;
+message UnionInviteOtherRequest{ 
+    required int32 id = 1; //角色id
+	optional int32 otherid = 2; //对方id
+	optional string otername = 3; //对方名字
+
+}
+
+message UnionInviteOtherResponse{
+	required bool result = 1;
+	optional int32 otherid = 2; //对方id
+	optional string otername = 3; //对方名字
+	optional string message = 4; 
+}
+

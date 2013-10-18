@@ -1,0 +1,29 @@
+package protoFile.friend.addPlayerFriend;
+message addPlayerFriendRequest{
+     required int32 id = 1;
+     required string playerName =2;
+     required int32 type = 3;
+     required int32 isSheildMail = 4;
+     required string content = 5;
+}
+
+message addPlayerFriendResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional Friend data = 3;
+}
+
+message Friend{
+     optional FriendInfo newFriend =1;
+}
+
+message FriendInfo{
+     optional string camp = 1;
+     optional int32 friendId = 2;
+     optional int32 id = 3;
+     optional int32 isSheildedMail = 4;
+     optional int32 level = 5;
+     optional string nickname = 6;
+     optional string profession = 7;
+     optional int32 type = 8;
+}

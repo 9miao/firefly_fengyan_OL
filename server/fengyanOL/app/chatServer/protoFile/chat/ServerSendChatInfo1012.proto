@@ -1,0 +1,6 @@
+//服务器推送的聊天信息
+package protoFile.chat.ServerSendChatInfo1012;
+message ServerSendChatInfoResponse{
+     required int32 id=1;//私聊对象id 另一个人的角色id
+     optional string chatMessage=2;//私聊信息
+}

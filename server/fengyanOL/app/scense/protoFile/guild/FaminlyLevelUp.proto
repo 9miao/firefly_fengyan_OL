@@ -1,0 +1,9 @@
+package protoFile.guild.FaminlyLevelUp;
+message FamilyLevelUpRequest{
+     required int32 id = 1;
+}
+
+message FamilyLevelUpResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

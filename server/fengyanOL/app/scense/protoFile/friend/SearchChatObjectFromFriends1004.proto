@@ -1,0 +1,14 @@
+package protoFile.friend.SearchChatObjectFromFriends1004;
+message SearchChatObjectFromFriendsRequest{
+     required int32 id=1;//角色id
+     required string nameStr=2;//关键字
+}
+message SearchChatObjectFromFriendsResponse{
+     required bool result=1;
+     optional string message = 2;
+     repeated ChatObjectData chatObjectData=3;
+}
+message ChatObjectData{
+     optional int32 roleId=1;//角色id
+     optional string roleName=2;//角色名称
+}

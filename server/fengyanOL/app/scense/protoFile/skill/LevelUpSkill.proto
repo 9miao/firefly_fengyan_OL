@@ -1,0 +1,9 @@
+package protoFile.skill.LevelUpSkill;
+message LevelUpSkillRequest{
+     required int32 id=1;//½ÇÉ«id
+     required int32 skillId=2;//¼¼ÄÜid
+}
+message LevelUpSkillResponse{
+     required bool result=1;
+     optional string message=2;
+}

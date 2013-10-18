@@ -1,0 +1,10 @@
+package protoFile.hall.StartCopyScene;
+message startCopySceneRequest{//开始房间设置的副本
+     required int32 id = 1;
+     optional int32 vipMatrix=2;//1(高级阵法)2（白金阵法）3（至尊阵法）
+}
+
+message startCopySceneResponse{//
+     required bool result = 1;
+     optional string message = 2;
+}

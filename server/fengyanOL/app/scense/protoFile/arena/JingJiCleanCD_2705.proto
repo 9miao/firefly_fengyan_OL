@@ -1,0 +1,11 @@
+package protoFile.arena.JingJiCleanCD_2705;
+
+message JingjiCleanCDRequest{//竞技场CD清除请求
+     required int32 id = 1;//角色的id
+}
+
+
+message JingjiCleanCDResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

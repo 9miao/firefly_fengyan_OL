@@ -1,0 +1,9 @@
+package protoFile.strengthen.StrengthenItem2102;
+message StrengthenItemRequest{
+     required int32 id=1;//½ÇÉ«id
+     required int32 itemId=2;//×°±¸id
+}
+message StrengthenItemResponse{
+     required bool result=1;
+     optional string message=2;
+}

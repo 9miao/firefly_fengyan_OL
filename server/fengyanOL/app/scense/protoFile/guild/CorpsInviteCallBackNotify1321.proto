@@ -1,0 +1,6 @@
+package protoFile.guild.CorpsInviteCallBackNotify1321;
+message UnionInvitePlayerBackNotify{ 
+    required int32 type 	= 1;	//弹窗类型 [0:包含一个确定按钮]
+	required string msg 	= 2;	//弹窗内容
+}
+

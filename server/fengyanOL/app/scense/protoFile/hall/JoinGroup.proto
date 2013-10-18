@@ -1,0 +1,10 @@
+package protoFile.hall.JoinGroup;
+message JoinGroupRequest{
+     required int32 id=1;//½ÇÉ«id
+     required int32 groupId=2;//¶ÓÎéid
+     required string password=3;//ÃÜÂë
+}
+message JoinGroupResponse{
+     required bool result=1;
+     optional string message=2;
+}

@@ -1,0 +1,21 @@
+package protoFile.pet.TrainingPet2304;
+message TrainingPetRequest{
+    required int32 id=1;//角色id
+    required int32 petId=2;//宠物id
+    required int32 trainingType=3;//培养类型 0金币 1钻2 2钻5 3钻10
+}
+message TrainingPetResponse{
+    optional bool result=1;
+    optional string message=2;
+    optional TrainInfo trainInfo=3;
+}
+message TrainInfo{
+    optional int32 baseLiLiang=1;//基础力量
+    optional int32 changeLiLiang=2;//力量变化值
+    optional int32 baseZhiLi=3;//基础智力
+    optional int32 changeZhiLi=4;//智力变化值
+    optional int32 baseNaiLi=5;//基础耐力
+    optional int32 changeNaiLi=6;//耐力变化值
+    optional int32 baseMinJie=7;//基础敏捷
+    optional int32 changeMinJie=8;//敏捷变化值
+}

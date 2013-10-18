@@ -1,0 +1,12 @@
+package protoFile.packageInfo.unloadedEquipment;
+message unloadedEquipmentRequest{
+     required int32 id = 1;//角色的id
+     required int32 fromPosition = 2;//在装备栏中的位置
+     required int32 toPosition = 3;//移动到包裹中的位置 若是双击装备栏卸下 值为-1
+     required int32 curpage = 4;//包裹的当前分页
+}
+
+message unloadedEquipmentResponse{
+     required bool result = 1;
+     optional string message =2;
+}

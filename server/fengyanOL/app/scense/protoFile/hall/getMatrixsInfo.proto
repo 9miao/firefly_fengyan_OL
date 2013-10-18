@@ -1,0 +1,37 @@
+package protoFile.hall.getMatrixsInfo;
+message getMatrixsInfoRequest{
+     required int32 id = 1;//角色的ID
+}
+
+message getMatrixsInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     repeated MatrixInfo matrixList = 1;//阵法信息列表
+}
+
+message MatrixInfo{
+     optional int32 matrixId = 1;//阵法的ID
+     optional string matrixname=2;//阵法的名称
+     optional string description = 3;//阵法的描述
+     optional int32 noweffect = 4;//正在使用的阵法效果
+     repeated FrontEye frontEyeList = 5;//阵法的阵眼信息
+}
+
+message FrontEye{
+     optional bool isOpened = 1;//阵眼是否启用
+     optional string effectPercen = 2;//阵法效果的增幅度
+     optional int32 pos=3;//位置 格子在阵法的位置
+     optional bool isHaveRole=4;//格子中是否存在玩家 默认不存在
+     optional Role roleInfo = 5;//阵眼上的角色信息
+}
+
+message Role{
+     optional int32 roleId = 1;//角色的ID
+     optional int32 profession = 2;//角色的职业
+     optional string rolename = 3;//角色的名称
+     optional int32 rolelevel = 4;//角色的等级
+}

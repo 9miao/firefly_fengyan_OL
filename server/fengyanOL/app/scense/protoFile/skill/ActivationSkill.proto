@@ -1,0 +1,9 @@
+package protoFile.skill.ActivationSkill;
+message ActivationSkillRequest{
+     required int32 id=1;//½ÇÉ«id
+     required int32 skillId=2;//¼¼ÄÜid
+}
+message ActivationSkillResponse{
+     required bool result=1;
+     optional string message=2;
+}

@@ -1,0 +1,19 @@
+package protoFile.mail.SaveAndDeleteMail;
+//保存和删除邮件
+message saveAndDeleteMailRequest{
+      required int32 id = 1;//角色id
+      required int32 setType = 2;//操作类型 0保存1删除单条数据2删除一页数据
+      required int32 requestInfo = 3;//邮件id或页数  当保存和删除单条数据时该数据为邮件id 
+      repeated int32 mailId = 4;//当删除一页数据时该参数为一页所有邮件的id集合
+      required int32 mailType = 5;
+}
+message saveAndDeleteMailResponse{
+      required bool result = 1;
+      optional string message = 2;
+      optional DataPacket data = 3;
+      
+}
+message DataPacket{
+      optional int32 maxPage = 1;//总页数
+      optional int32 setTypeResponse = 2;//操作类型0保存1删除单条数据2删除一页数据
+}

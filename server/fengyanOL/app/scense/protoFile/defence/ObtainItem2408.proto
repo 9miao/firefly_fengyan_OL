@@ -1,0 +1,10 @@
+package protoFile.defence.ObtainItem2408;
+message ObtainItemRequest{
+     required int32 id=1;//角色id
+     optional int32 type=2;//类型 0获取所有 1获取单个
+     optional int32 pos=3;//单个在背包的位置
+}
+message ObtainItemResponse{
+     optional bool result=1;
+     optional string message=2;
+}

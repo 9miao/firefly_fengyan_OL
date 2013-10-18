@@ -1,0 +1,11 @@
+package protoFile.arena.AddJingJiCount3703;
+message AddJingJiCountRequest{
+    required int32 id=1;//角色id
+}
+message AddJingJiCountResponse{
+    optional string message=1;
+    optional bool result=2;
+    optional int32 bCount=3;//战斗次数
+    optional int32 addCount=4;//购买次数
+    optional int32 reqCoin=5;//所需金币
+}

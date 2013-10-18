@@ -1,0 +1,12 @@
+package protoFile.hall.CreateGroup;
+message CreateGroupRequest{
+       required int32 id=1;//角色id
+     required string groupName=2;//队伍名称
+     required int32 minLevel=3;//等级下限
+     required string groupPwd=4;//密码
+     required int32 copySceneId=5;//副本id
+}
+message CreateGroupResponse{
+     required bool result=1;
+     optional string message=2;
+}

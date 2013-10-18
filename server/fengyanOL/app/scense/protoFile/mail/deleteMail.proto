@@ -1,0 +1,10 @@
+package protoFile.mail.deleteMail;
+message deleteMailRequest{//É¾³ıÓÊ¼ş
+     required int32 id = 1;
+     required int32 mailId = 2;
+}
+
+message deleteMailResponse{//É¾³ıÓÊ¼ş
+     required bool result = 1;
+     optional string message = 2;
+}

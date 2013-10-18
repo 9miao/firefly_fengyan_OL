@@ -1,0 +1,7 @@
+package protoFile.playerInfo.GetOtherRoleInfo221;
+
+message GetOtherRoleInfoRequest{
+     required int32 id=1;//角色id
+     required int32 roleId=2;//其他玩家角色id
+}
+

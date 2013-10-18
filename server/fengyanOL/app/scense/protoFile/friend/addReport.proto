@@ -1,0 +1,12 @@
+package protoFile.friend.addReport;
+message getReportRequest{ 
+     required int32 cid = 1; //当前角色id
+     required int32 tocid= 2;//被举报人角色id(倒霉的那个人)
+     optional string context=3;//举报信息
+}
+
+message getReportResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional int32 data = 3;
+}

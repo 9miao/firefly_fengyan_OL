@@ -1,0 +1,9 @@
+package protoFile.revive.askforRevive;
+message askforReviveRequest{//«Î«Û∂””—æ»÷˙
+     required int32 id = 1;
+}
+
+message askforReviveResponse{//
+     required bool result = 1;
+     optional string message = 2;
+}

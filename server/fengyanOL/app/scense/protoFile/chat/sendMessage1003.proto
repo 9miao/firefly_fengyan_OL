@@ -1,0 +1,20 @@
+package protoFile.chat.sendMessage1003;
+import "protoFile/itemInfo.proto";
+message chatConectingRequest{
+     required int32 id = 1;//角色的id
+     required int32 topic = 2;//消息的频道  1世界 2当前 3军团 4GM 5系统通告 6军团通告
+     required string content = 3;//聊天内容
+     repeated ItemLinkData linkData = 4;//聊天连接信息
+     optional string chatOjbect=5;//如果是私聊则私聊对象名称
+}
+
+message chatConectingResponse{
+     required bool result = 1;
+     optional string message = 2;
+}
+
+message ItemLinkData{
+     optional int32 chatEquipType = 1;//装备或角色 0装备  1角色  2怪物
+     optional int32 id = 2;//装备货角色id
+     optional string name = 3;//装备或角色名称
+}

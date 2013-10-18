@@ -1,0 +1,17 @@
+package protoFile.tower.GetCurLevelInfo4200;
+message GetCurLevelInfoRequest{
+     required int32 id=1;//角色id
+}
+message GetCurLevelInfoResponse{
+     optional string message=1;
+     optional bool result=2;
+     optional PanPaInfo panPaInfo=3;
+}
+
+message PanPaInfo{
+     optional int32 curLev=1;//当前阶级
+     optional string curMonster=2;//当前怪物
+     optional string obtainItem=3;//挑战奖励
+     optional int32 reCount=4;//刷新次数
+     optional int32 reZuan=5;//需要钻
+}

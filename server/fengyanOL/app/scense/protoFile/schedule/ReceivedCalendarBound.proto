@@ -1,0 +1,11 @@
+package protoFile.schedule.ReceivedCalendarBound;
+
+message ReceivedCalendarBoundRequest{
+    required int32 id = 1;//角色的ID
+    required int32 step = 2;//奖励的步骤
+}
+
+message ReceivedCalendarBoundResponse{
+    required bool result = 1;//结果
+    optional string message = 2;//消息
+}

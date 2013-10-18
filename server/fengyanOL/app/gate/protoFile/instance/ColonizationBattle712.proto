@@ -1,0 +1,120 @@
+package protoFile.instance.ColonizationBattle712;
+import "protoFile/itemInfo.proto";
+
+message FightRequest{
+     required int32 id = 1;//角色的id
+     required int32 copyId = 2;//副本id
+}
+
+message FightResponse{
+     required bool result = 1;//结果
+     optional string message = 2;//消息
+     optional ResponseData data = 3; //数据
+}
+
+message ResponseData{
+     required int32 battleResult =1;//战斗结果
+     repeated InitBattleData startData = 2;//初始化战斗数据
+     repeated FightData stepData = 3; //战斗回合数据
+     required int32 centerX = 4;//战斗的坐标位置X
+     required int32 centerY = 5;//战斗的坐标位置Y
+     repeated int32 rResArr = 6;//战斗中所有的资源的id列表
+     required SettlementData setData = 7;//战斗结算数据
+}
+
+message InitBattleData{
+     optional int32 chaId= 1;//角色的ID
+     optional int32 chaBattleId= 2;//角色的战场ID
+     optional string chaName= 3;//角色的名称
+     optional int32 chaLevel= 4;//角色的等级
+     optional int32 chaProfessionType= 5;//角色的职业
+     optional int32 chaDirection= 6;//1--玩家朝向右，朝向右。2--玩家朝向左
+     optional int32 chaCurrentHp= 7;//角色当前的血量
+     optional int32 chaCurrentPower= 8;//角色的当前能量
+     optional int32 chaTotalHp= 9;//角色的总HP
+     optional int32 chaTotalPower= 10;//角色的总Power
+     repeated int32 chaPos = 11;//角色动画的坐标
+}
+
+message FightData{
+     optional int32 chaId = 1;//角色的id
+     optional int32 chaBattleId = 2;//角色的战场ID
+     optional int32 chaProfessionType = 3;//角色的职业
+     optional int32 actionId = 4;//角色的攻击动作id
+     optional int32 counterHitActionId = 5;//角色受反击时的动作
+     optional int32 isDeathOfCounterHit = 6;//角色是否受反击致死0:否，1：是
+     optional int32 txtEffectId = 7;//角色的文字特效
+
+     optional int32 chaEffectId = 8;//角色特效ID
+     optional int32 chaEnemyEffectId = 9;//角色技能承受特效
+     optional int32 chaThrowEffectId = 10;//角色技能投射特效
+     optional int32 chaAoeEffectId = 11;//技能的全屏特效
+
+     repeated int32 chaBuffArr = 12;//角色的buff列表
+     repeated BuffInfo chaBuffShowList = 13;//角色buff信息列表
+
+     optional int32 chaPowerUp = 14;//power增加
+     optional int32 chaPowerDown = 15;//power减少(能量消耗)
+     optional int32 chaCurrentPower = 16;//当前的能量
+     optional int32 chaChangeHp = 17;//角色血量变化(受治疗或攻击后)
+     optional int32 chaCurrentHp = 18;//角色当前的血量
+     optional int32 chaExpendHp = 19;//角色血量消耗(技能消耗反弹等)
+
+     repeated int32 chaStartPos = 20;//角色的起始坐标
+     repeated int32 chaTargetPos = 21;//角色的目标坐标
+     optional int32 chaAttackType = 22;//角色的攻击方式 1:进程，2：远程
+     optional int32 chaDirection = 23;//1玩家朝向右 2--玩家朝向左
+     optional bool isCriticalBlow = 24;//是否暴击
+     repeated EnemyArray enemyChaArr = 25;//被攻击方数据
+     optional int32 chaTotalHp = 26;//攻击方的总血量
+     optional int32 chaTotalPower = 27;//攻击方的总能量
+     optional int32 powerEffectId = 28;//受攻击方的能量特效
+     optional string chaName = 29;//攻击方的名称
+     optional int32 chaLevel=30;//等级
+}
+
+message EnemyArray{
+     optional int32 enemyChaId = 1;// ID
+     optional int32 enemyBattleId = 2;// 战斗ID
+     optional int32 enemyActionId = 3;// 动作ID
+     optional int32 enemyCounterHitActionId = 4;//反击时的动作ID
+     optional int32 enemyTxtEffectId = 5;// 文字效果ID，暴击，闪避，冰冻等
+     
+     optional int32 chaEffectId = 6;//角色特效ID
+     optional int32 chaEnemyEffectId = 7;//被打角色特效ID
+     optional int32 chaThrowEffectId = 8;//角色投射特效ID
+     optional int32 chaEnemyAoeEffectId = 9;//受攻击者反击技能的全屏特效
+     
+     repeated int32 enemyBuffArr = 10;// buff数组 存储buff id，用来做特效显示
+     repeated BuffInfo enemyBuffShowList = 11;//buff显示列表，包括多个RbattleBuffVo
+
+     optional int32 enemyPowerUp = 12;// +20 power增加
+     optional int32 enemyCurrentPower = 13;//当前能量
+     optional int32 enemyChangeHp = 14;//角色血量变化
+     optional int32 enemyCurrentHp = 15;//角色的当前血量
+     optional int32 enemyCounterHit = 16;// 是否反击：0-否，1-是
+     repeated int32 enemyStartPos = 17;// 起始坐标 
+     repeated int32 enemyTargetPos = 18;// 目标坐标
+     optional int32 enemyDirection = 19;//1--玩家朝向右，朝向右。2--玩家朝向左
+     optional int32 enemyProfessionType = 20;//受击方的职业类型
+     optional int32 enemyTotalHp = 21;//受击方的总血量
+     optional int32 enemyTotalPower = 22;//受攻击方的总能量
+     optional int32 enemyPowerEffectId = 23;//受攻击方的能量特效
+     optional string enemyChaName = 29;//受攻击方的名称
+     optional int32 enemychaLevel=30;//等级
+}
+
+message BuffInfo{
+     optional int32 buffId = 1;//buff ID
+     optional int32 buffLayerCount = 2;//buff 层叠数
+     optional int32 buffRemainRoundCount = 3;//buff 剩余回合数
+     optional int32 buffEffectId = 4;//buff的特效ID
+     optional int32 buffIconId = 5;//buff的图标ID
+     optional string buffName = 6;//buff的名称
+}
+message SettlementData{
+     repeated ItemsInfo itemsBonus = 1; //角色获得的物品奖励
+     optional string sceneName=2;//副本名称
+     optional int32 sucNum=3;//连胜次数
+     optional int32 goldNum=4;//金币奖励
+}

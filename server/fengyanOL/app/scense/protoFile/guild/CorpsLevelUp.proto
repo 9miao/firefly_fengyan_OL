@@ -1,0 +1,10 @@
+package protoFile.guild.CorpsLevelUp;
+
+
+message CorpsLevelUpRequest{
+	required int32 id	=	1;	//角色id
+}
+
+message CorpsLevelUpNotify{
+	required int32 level = 1;	//升级到的军团等级
+}

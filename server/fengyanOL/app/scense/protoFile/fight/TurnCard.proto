@@ -1,0 +1,10 @@
+package protoFile.fight.TurnCard;
+message TurnCardRequest{
+     required int32 characterId = 1;
+     required int32 cardId = 2;
+}
+
+message TurnCardResponse{
+     required bool result = 1;
+     optional string message =2;
+}

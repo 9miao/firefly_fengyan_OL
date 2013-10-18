@@ -1,0 +1,12 @@
+package protoFile.playerInfo.FriendChangeState309;
+message FriendChangeStateRequest{ 
+     required int32 id = 1; //角色id
+	 required string content = 2; //新的心情
+}
+
+message FriendChangeStateResponse{
+     required bool result = 1;
+	 required string content = 2; //新的心情
+     optional string message = 3; 
+}
+

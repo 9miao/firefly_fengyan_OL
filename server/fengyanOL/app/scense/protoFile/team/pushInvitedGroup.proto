@@ -1,0 +1,5 @@
+package protoFile.team.pushInvitedGroup;
+message pushInvitedGroupRequest{
+     required int32 inviterId = 1;
+     required string msg = 2;
+}

@@ -1,0 +1,4 @@
+package protoFile.arena.JingJiCD3701;
+message JingJiCDResponse{
+   optional int32 cdTime=1;//CDÊ±¼ä
+}

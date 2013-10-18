@@ -1,0 +1,31 @@
+package protoFile.lodeg.getRestRoomInfo;
+message getRestRoomInfoRequest{
+     required int32 id = 1;
+     required int32 placeId = 2;
+}
+
+message getRestRoomInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional DataPacket data = 3;
+}
+
+message DataPacket{
+     optional Info npcInfo = 1;
+     optional List countList = 2;
+}
+
+message Info{
+     optional string image = 1;
+     optional string dialogContent = 2;
+     optional int32 id = 3;
+     optional string name = 4;
+}
+
+message List{
+     optional int32 nap = 1;
+     optional int32 lightSleep = 2;
+     optional int32 peacefulSleep = 3;
+     optional int32 spoor = 4;
+
+}

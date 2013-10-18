@@ -1,0 +1,14 @@
+package protoFile.instance.escInstance;
+message escInstanceRequest{
+     required int32 id = 1;//½ÇÉ«Id
+}
+
+message escInstanceResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data=3;
+}
+
+message ResponseData{
+     optional int32 placeId = 1;//³¡¾°Id
+}

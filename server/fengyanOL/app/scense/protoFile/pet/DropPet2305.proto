@@ -1,0 +1,9 @@
+package protoFile.pet.DropPet2305;
+message DropPetRequest{
+    required int32 id=1;//½ÇÉ«id
+    required int32 petId=2;//³èÎïid
+}
+message DropPetResponse{
+    optional bool result=1;
+    optional string message=2;
+}

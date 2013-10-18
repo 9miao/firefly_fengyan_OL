@@ -1,0 +1,24 @@
+package protoFile.quest.pushQuestProcessList;
+message pushQuestProcessList{
+     repeated QuestProcess questprocesslist = 1;//任务进度列表
+     optional int32 circulatingCount = 2;//环任务的环数
+     optional int32 circulatingNum = 3;//总环数限制
+}
+
+message QuestProcess{
+     optional int32 taskId = 1;//任务的id
+     optional string taskname = 2;//任务的名称
+     optional int32 hasFinished = 3;//是否已经完成 0：未完成 1：已完成
+     repeated ProcessInfo processinfolist = 4;//任务的目标进度
+     optional int32 tasktype = 5;//任务的类型
+     optional int32 finishedNpcId = 6;//任务完成后的NPCid
+}
+
+message ProcessInfo{
+     optional int32 questGoalId = 1;//任务目标Id
+     optional int32 requireNum = 2;//目标的需求数目
+     optional int32 achieveNum = 3;//目标已实现的数目
+     optional string trackDesc = 4;//任务的追踪描述
+     optional int32 trackID = 5;//追踪的ID
+}
+

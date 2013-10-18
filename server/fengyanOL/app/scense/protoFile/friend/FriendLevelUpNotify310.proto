@@ -1,0 +1,8 @@
+package protoFile.friend.FriendLevelUpNotify310;
+//好友升级广播
+message FriendLevelUpNotify{ 
+         required int32 id = 1;			//角色id
+	 required string name = 2;		//角色名字
+	 required int32 level = 3;		//角色等级
+}
+

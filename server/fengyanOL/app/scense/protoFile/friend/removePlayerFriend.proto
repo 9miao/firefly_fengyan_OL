@@ -1,0 +1,15 @@
+package protoFile.friend.removePlayerFriend;
+message removePlayerFriendRequest{//删除好友/仇人
+     required int32 id = 1; //角色id
+     required int32 friendId = 2; //好友id
+}
+
+message removePlayerFriendResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional DataPacket data= 3;
+}
+
+message DataPacket{
+     optional int32 friendId =1;
+}

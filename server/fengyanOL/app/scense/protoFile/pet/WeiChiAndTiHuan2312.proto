@@ -1,0 +1,10 @@
+package protoFile.pet.WeiChiAndTiHuan2312;
+message WeiChiAndTiHuanRequest{
+    required int32 id=1;
+    required int32 petId=2;//宠物id
+    required int32 type=3;//操作类型0维持1替换
+}
+message WeiChiAndTiHuanResponse{
+    optional bool result=1;
+    optional string message=2;
+}

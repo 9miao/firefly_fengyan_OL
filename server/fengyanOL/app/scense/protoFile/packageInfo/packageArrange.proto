@@ -1,0 +1,11 @@
+package protoFile.packageInfo.packageArrange;
+message packageArrangeRequest{//包裹整理
+     required int32 id = 1;
+     required int32 packageType =2;//包裹的类型  1 任务分页 2道具分页
+}
+
+message packageArrangeResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional int32 data = 3;//包裹的类型  1 任务分页 2道具分页
+}

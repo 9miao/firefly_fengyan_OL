@@ -1,0 +1,11 @@
+package protoFile.quest.updateQuestTraceStatu;
+message updateQuestTraceStatuRequest{//更新任务追踪状态
+     required int32 id = 1;//角色的ID
+     required int32 taskID = 2;// 任务的id
+     required int32 traceStatu = 3;//任务的追踪状态 1追踪 0不追踪
+}
+
+message updateQuestTraceStatuResponse{//任务的
+     required bool result = 1;
+     optional string message = 2;
+}

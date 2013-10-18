@@ -1,0 +1,9 @@
+package protoFile.pet.ModifyPetStatus2310;
+message ModifyPetStatusRequest{
+    required int32 id=1;//½ÇÉ«id
+    required int32 petId=2;//³èÎïid
+}
+message ModifyPetStatusResponse{
+    optional string message=1;
+    optional bool result=2;
+}

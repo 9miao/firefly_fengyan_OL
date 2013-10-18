@@ -1,0 +1,9 @@
+package protoFile.fate.YiJianObtainAndDrop3602;
+message YiJianObtainAndDropRequest{
+     required int32 id=1;
+     required int32 type=2;//0ÊÇÊ°È¡1Âô³ö
+}
+message YiJianObtainAndDropResponse{
+     optional string message=1;
+     optional bool result=2;
+}

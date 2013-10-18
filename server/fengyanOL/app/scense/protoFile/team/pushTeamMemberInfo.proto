@@ -1,0 +1,16 @@
+package protoFile.team.pushTeamMemberInfo;
+message TeamMemberInfo{
+     repeated memberInfo member = 1;
+     required int32 leaderId = 2;
+}
+
+message memberInfo{
+     required int32 id = 1;
+     required string nickname = 2;
+     required int32 level = 3;
+     required int32 profession = 4;
+     required int32 maxHp = 5;
+     required int32 hp = 6;
+     required int32 maxMp = 7;
+     required int32 mp = 8;
+}

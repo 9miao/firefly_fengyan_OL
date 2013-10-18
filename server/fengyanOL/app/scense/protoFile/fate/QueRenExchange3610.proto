@@ -1,0 +1,12 @@
+package protoFile.fate.QueRenExchange3610;
+message QueRenExchangeRequest{
+     required int32 id=1;//角色id
+	 required int32 wId=5;//物品唯一标识
+}
+message QueRenExchangeResponse{
+	required bool   result = 1;
+	optional string message = 2;
+}
+
+
+

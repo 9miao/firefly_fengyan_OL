@@ -1,0 +1,26 @@
+package protoFile.fate.JiFeng3609;
+message GetJiFengListInfoRequest{
+     required int32 id=1;//角色id
+     required int32 nowpage = 2;//当前页
+}
+message GetJiFengListInfoResponse{
+	 required bool result = 1;
+	 optional string message = 2;
+	 optional JiFengExch data = 3;//积分兑换信息
+}
+
+message JiFengExch{
+	 repeated ExchangeInfo exchInfo=1;//物品信息
+	 optional int32 jiFengTotal = 2;//总积分
+	 optional int32 curpage=3;//当前页
+	 optional int32 totalpage=4;//总共页
+}
+
+message ExchangeInfo{
+         optional int32 icon = 1;//图标的ID
+         optional string exchName = 2;//兑换名称
+         optional string exhDesc = 3;//兑换描述
+         optional int32 jifengValue = 4;//兑换花费值
+		 required int32 wId=5;//物品唯一标识
+		 }
+

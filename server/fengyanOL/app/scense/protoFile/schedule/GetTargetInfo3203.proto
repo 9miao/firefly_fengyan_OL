@@ -1,0 +1,29 @@
+package protoFile.schedule.GetTargetInfo3203;
+message GetTargetInfoRequest{
+    required int32 id=1;//角色id
+}
+message GetTargetInfoResponse{
+    optional bool result=1;
+    optional string message=2;
+    repeated DayTaskInfo dayTaskInfo=3;
+}
+message DayTaskInfo{
+    optional bool isSucFlag=1;//是否达标
+    repeated DayListTaskInfo dayListTaskInfo=2;//每天任务列表信息
+    optional bool isOpenFlag=3;//是否开启
+}
+message DayListTaskInfo{
+    optional int32 taskId=1;//任务id
+    optional bool isCompleteFlag=2;//是否完成
+    optional string icon=3;//图片名称
+    optional string taskDes=4;//任务说明
+    optional bool isObtainFlag=5;//奖励是否领取
+    repeated RewardInfo rewardInfo=6;//奖励信息
+}
+message RewardInfo{
+    optional int32 itemId=1;//奖励物品id
+    optional int32 icon = 2;//物品的图标
+    optional int32 stack = 3;//物品的层叠数
+    optional int32 type = 4;//物品的类型
+    optional int32 rewardType=5;//奖励类型 0物品1金币2钻3体力4经验值
+}

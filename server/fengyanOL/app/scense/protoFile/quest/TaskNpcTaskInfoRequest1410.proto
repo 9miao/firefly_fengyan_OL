@@ -1,0 +1,20 @@
+//请求npc对应的任务信息
+package protoFile.quest.TaskNpcTaskInfoRequest1410;
+import "protoFile/quest/TaskItemInfo.proto";
+
+
+//请求npc任务信息
+message TaskNpcTaskInfoRequest{ 
+    required int32 id = 1;				//角色id
+	required int32 npc_id = 2;			//npc id
+}
+
+message TaskNpcTaskInfoResponse{
+	required bool	result				= 1;			//是否成功
+	required int32	npc_id				= 2;			//npc的id
+	required int32  npc_img				= 3;			//npc头像id
+	required string npc_name			= 4;			//npc名字
+	required string npc_word			= 5;			//npc对话内容
+	repeated TaskItemInfo ncp_task_item = 6;			//npc对应的任务信息,如果没有赋值为null
+}
+

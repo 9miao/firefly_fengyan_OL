@@ -1,0 +1,41 @@
+package proto.shop.shop208;
+
+enum MallItemType{
+	NOMAL = 0;	//普通
+	NEW = 1;	//新品
+	HOT = 2;	//热卖
+	SALL = 3;	//打折
+}
+
+message getMallItemInfoRequest{
+     required int32 id = 1;
+     required int32 categories = 2;//商城物品的分类1热卖2所有3强化4宠物
+     required int32 page = 3;//页面，默认为1
+}
+
+message getMallItemInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+	 optional int32	curpage = 1;//当前页
+     optional int32 categories =2;//商城分类
+     optional int32 goal = 3;//商品总页数
+     repeated ItemIifo items = 4;//商品信息集合
+     repeated ItemIifo zxItems=5;//促销商品
+} 
+
+message ItemIifo{
+	required int32  templateId= 1; 	//物品id
+	required int32	type = 2;		//物品类型
+	required int32 	price = 3;		//钻价格
+	required int32	count = 4;		//可购买数量
+	required int32	itemID = 5;		//商品id
+        optional int32  priceNow = 6;           //现价
+}
+
+
+
+

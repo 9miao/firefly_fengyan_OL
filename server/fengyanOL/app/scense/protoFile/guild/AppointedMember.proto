@@ -1,0 +1,11 @@
+package protoFile.guild.AppointedMember;
+message AppointedMemberRequest{
+     required int32 id = 1;//角色id
+     required int32 memberId = 2;//会员id
+     required int32 workType = 3;//2：左参谋，3：右参谋，4：左队长，5：右队长，6：中队长，7普通成员
+}
+
+message AppointedMemberResponse{
+     required bool result = 1;//返回是否任命成功
+     optional string message = 2;//根据是否任命成功返回相应消息给用户
+}

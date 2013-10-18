@@ -1,0 +1,10 @@
+package protoFile.guild.DonateFunds;
+message DonateFundsRequest{
+     required int32 id = 1;
+     required int32 fundsNum = 2;
+}
+
+message DonateFundsResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

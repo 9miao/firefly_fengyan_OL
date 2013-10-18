@@ -1,0 +1,121 @@
+package protoFile.consignment.GetCommissionItemInfo1201;
+message GetCommissionItemInfoRequest{
+     required int32 id=1;//角色id
+     required int32 itemType=2;//物品类型 -1金币兑换钻  -2钻兑换金币 0以上的是物品
+     required int32 curPage=3;//页数
+     optional string itemName=4;//物品名称
+     optional int32 minLevel=5;//等级下限
+     optional int32 maxLevel=6;//等级上限
+     optional int32 itemQuality=7;//品质0全部1垃圾(灰色)2较差(白色)普通(绿色)优秀(蓝色)史诗(紫色)神器(橙色)逆天(红色)
+     optional int32 sortType=8;//0不排序 1正序    2倒序     
+     optional int32 sortName=9;//排序名称0不排序1名称2等级3剩余时间4价格
+     optional bool searchFlag=10;//是否是搜索
+}
+message GetCommissionItemInfoResponse{
+     required bool result=1;
+     optional string message=2;
+     optional ResponseData data = 3;
+}
+message ResponseData{
+     repeated ConsignmentItemInfo confignItemInfo=1;//物品信息
+     repeated ConsignmentCoinInfo confignCoinInfo=2;//钻石或金币信息
+     optional int32 consignmentType=3;//拍卖的物品类型货币需要单独处理 -1金币兑换钻  -2钻兑换金币 0以上的是物品
+     optional string itemName=4;//物品名称
+     optional int32 minLevel=5;//等级下限
+     optional int32 maxLevel=6;//等级上限
+     optional int32 itemQuality=7;//品质0全部1垃圾(灰色)2较差(白色)普通(绿色)优秀(蓝色)史诗(紫色)神器(橙色)逆天(红色)
+     optional int32 sortType=8;//0不排序 1正序    2倒序     
+     optional int32 sortName=9;//排序名称0不排序1名称2等级3剩余时间4价格
+     optional bool searchFlag=10;//是否是搜索
+     optional int32 curPage=11;
+     optional int32 maxPage=12;
+}
+message ConsignmentItemInfo{
+     optional int32 consignmentId=1;//拍卖id
+     optional string remainTime=2;//剩余时间
+     optional string ownerName=3;//出售者
+     optional ItemsInfo item = 4;//物品信息
+     optional int32 moneyType=5;//货币类型0金币1钻石
+     optional int32 moneyNum=6;//价格
+}
+message ConsignmentCoinInfo {
+     optional int32 consignmentId=1;//拍卖id     
+     optional string remainTime=2;//剩余时间
+     optional string ownerName=3;//出售者
+     optional int32 moneyType=4;//货币类型0金币1钻石
+     optional int32 moneyNum=5;//价格
+     optional int32 sellMoneyNum=6;//出售的金币或钻石的数量
+}
+message ItemsInfo{
+     optional int32 id = 1;//物品的id
+     optional int32 type = 2;//物品的类型
+     optional string name = 3;//物品的名称
+     optional string prefixNmae = 4;//物品的前缀名称
+     optional string suffixName = 5;//物品的后缀名称
+     optional int32 bindType = 6;//物品的绑定类型
+     optional int32 isBound = 7;//是否绑定
+     optional string description = 8;//物品描述
+     optional int32 professionRequire = 9;//职业限制
+     optional int32 canInjection = 10;//可否注魂
+     optional int32 bodyType = 11;//装备位置
+     optional int32 weaponType = 12;//武器类型
+     optional int32 nowQuality = 13;//当前品质
+     optional int32 baseAttack = 14;//基础攻击
+     optional int32 extAttack = 15;//附加攻击
+     optional int32 attackType = 16;//攻击类型
+     optional int32 baseSpeed = 17;//武器速度
+     optional int32 levelRequire = 18;//等级限制
+     optional int32 baseStr = 19;//基础力量
+     optional int32 extStr = 20;//附加力量
+     optional int32 baseVit = 21;//基础耐力
+     optional int32 extVit = 22;//附加耐力
+     optional int32 baseDex = 23;//基础敏捷
+     optional int32 extDex = 24;//附加敏捷
+     optional int32 baseWis = 25;//基础智力
+     optional int32 extWis = 26;//附加智力
+     optional int32 baseSpi = 27;//基础精神
+     optional int32 extSpi = 28;//附加精神
+     optional int32 basePhysicalAttack = 29;//基础物理攻击附加
+     optional int32 extPhysicalAttack = 30;//附加物理攻击附加
+     optional int32 baseMagicAttack = 31;//基础魔法攻击附加
+     optional int32 extMagicAttack = 32;//附加魔法攻击附加
+     optional int32 basePhysicalDefense = 33;//基础物理防御附加
+     optional int32 extPhysicalDefense = 34;//附加魔法防御附加
+     optional int32 baseMagicDefense = 35;//基础魔法攻击附加
+     optional int32 extMagicDefense = 36;//附加魔法攻击附加
+     optional int32 baseHpAdditional = 37;//基础HP附加
+     optional int32 extHpAdditional = 38;//附加HP附加
+     optional int32 baseMpAdditional = 39;//基础MP附加
+     optional int32 extMpAdditional = 40;//附加MP附加
+     optional int32 baseHitAdditional = 41;//基础命中附加
+     optional int32 extHitAdditional = 42;//附加命中附加
+     optional int32 baseCritAdditional = 43;//基础暴击附加
+     optional int32 extCritAdditional = 44;//附加暴击附加
+     optional int32 baseDodgeAdditional = 45;//基础闪避附加
+     optional int32 extDodgeAdditional = 46;//附加闪避附加
+     optional int32 baseSquelchAdditional = 47;//基础反击附加
+     optional int32 extSquelchAdditional = 48;//附加反击附加
+     optional int32 baseSpeedAdditional = 49;//基础速度附加
+     optional int32 extSpeedAdditional = 50;//附加速度附加
+     optional int32 baseBogeyAdditional = 51;//基础破防附加
+     optional int32 extBogeyAdditional = 52;//附加破防附加
+     optional string equipEffect = 53;//装备特效
+     optional string devilEffect = 54;//附魔特效
+     optional string suiteEffect = 55;//套装特效
+     repeated Suite SuiteItems = 56;//套装效果
+     optional int32 buyingRateCoin = 57;//交易价格
+     optional int32 baseDurability = 58;//基础耐久
+     optional int32 nowDurability = 59;//当前耐久
+     optional int32 baseDefense = 60;//基础防御
+     optional int32 extDefense = 61;//附加防御
+     optional int32 stack = 62;//物品的层叠数
+     optional int32 starLevel = 63;//物品的星级
+     optional int32 icon = 64;//物品的图标
+     optional int32 templateId= 65;//物品的模板ID
+     optional int32 maxstack = 66;//最大堆叠数
+}
+
+message Suite{
+     optional string suitItemName = 1;
+     optional int32 hasSiutitem = 2;
+}

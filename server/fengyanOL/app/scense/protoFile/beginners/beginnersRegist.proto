@@ -1,0 +1,11 @@
+package protoFile.beginners.beginnersRegist;
+message beginnersRegistRequest{
+     required int32 beginnerId = 1;
+     required string nickname = 2;
+}
+
+message beginnersRegistResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional int32 data = 3;
+}

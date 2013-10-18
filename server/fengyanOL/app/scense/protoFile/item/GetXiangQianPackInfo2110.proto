@@ -1,0 +1,20 @@
+package protoFile.item.GetXiangQianPackInfo2110;
+import "protoFile/itemInfo.proto";
+message GetXiangQianPackInfoRequest{
+     required int32 id=1;//角色id
+     required int32 page=2;//页数
+}
+message GetXiangQianPackInfoResponse{
+     optional string message=1;
+     optional bool result=2;
+     optional XQPackInfo xqPackInfo=3;
+}
+message XQPackInfo{
+     optional int32 curPage=1;//当前页
+     optional int32 maxPage=2;//最大页
+     repeated XQItemInfo xqItemInfo=3;//物品信息
+}
+message XQItemInfo{
+     optional int32 inBody=1;//是否在身上1在身上
+     optional ItemsInfo itemsInfo=2;
+}

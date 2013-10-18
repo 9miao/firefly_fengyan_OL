@@ -1,0 +1,10 @@
+package protoFile.guild.ModifyJoinLevel_1324;
+message ModifyJoinLevelRequest{//修改军团加入等级限制请求
+     required int32 id = 1;//角色的等级
+     required int32 levelrequired = 2;//修改的限制等级
+}
+
+message ModifyJoinLevelResponse{
+     required bool result = 1;
+     optional string message = 2;
+}

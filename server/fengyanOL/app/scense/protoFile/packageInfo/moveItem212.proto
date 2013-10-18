@@ -1,0 +1,19 @@
+package protoFile.packageInfo.moveItem212;
+message moveItemRequest{
+     required int32 id = 1;//角色的id
+     required int32 packageType =2;//包裹的类型  1 任务分页 2道具分页
+     required int32 fromPosition = 3;//起始位置
+     required int32 toPosition = 4;//目标位置
+     required int32 curpage = 5;//包裹的当前分页
+}
+
+message moveItemResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+    optional int32 packageType = 1;//包裹的类型 1 任务分页 2道具分页
+    optional int32 curpage = 3;//包裹的当前分页
+}

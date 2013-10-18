@@ -1,0 +1,19 @@
+package protoFile.instance.GetColonFuBenList2902;
+message GetColonFuBenListRequest{
+    required int32 id=1;//角色id
+    required int32 coloId=2;//副本组id
+}
+message GetColonFuBenListResponse{
+    optional string message=1;
+    optional bool result=2;
+    optional string coloDes=3;//该副本组殖民描述
+    repeated ColoFuBenInfo fuBenlist=4;//副本集合
+}
+message ColoFuBenInfo{
+    optional int32 fuBenId=1;//副本id
+    optional string fuBenName=2;//副本名称
+    optional string coloCorpsName=3;//殖民军团名称
+    optional string lingzhu=4;//领主
+    optional int32 coloType=5;//占领类型0为占领1己方占领2其他军团占领
+    optional int32 _fu_camp=6;//0中立1光明2黑暗
+}

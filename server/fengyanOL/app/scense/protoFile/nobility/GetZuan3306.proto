@@ -1,0 +1,13 @@
+package protoFile.nobility.GetZuan3306;
+message GetZuanInfoRequest{
+     required int32 id=1;//角色id
+     required string wy=2;//物品唯一标识
+}
+
+
+message GetZuanInfoResponse{
+	 required bool   result = 1;
+	 optional string message = 2;
+         optional int32  count=3;//钻石的数量
+}
+

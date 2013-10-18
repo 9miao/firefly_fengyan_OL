@@ -1,0 +1,27 @@
+package protoFile.fight.getAllCardInfo;
+message getAllCardInfoRequest{
+     required int32 id = 1;//角色的id
+}
+
+message getAllCardInfoResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     repeated CardsInfo card = 1;
+}
+
+message CardsInfo{
+     optional int32 cardId = 1;     //卡片的id
+     optional int32 coinBounds = 2; //铜币奖励
+     optional Item itemBound = 3;   //物品奖励
+}
+
+message Item{
+     optional int32 itemTemplateId = 1;    //物品的模板id
+     repeated int32 extraAttributeList = 2;//物品的附件属性id列表
+     repeated int32 selfAttributeList = 3; //物品的自身属性id列表
+     optional int32 qualityLevel = 4;      //物品的等级
+}

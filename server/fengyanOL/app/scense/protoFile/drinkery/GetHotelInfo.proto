@@ -1,0 +1,13 @@
+package protoFile.drinkery.GetHotelInfo;
+message GetHotelInfoRequest{
+     required int32 id=1;//角色id
+}
+message GetHotelInfoResponse{
+     required bool result=1;
+     optional string message=2;
+     repeated HotelInfo hotelInfo=3;//酒店1
+}
+message HotelInfo{
+     optional int32 canUseTimes=1;//剩余次数
+     optional int32 coinNum=2;//花费数量
+}

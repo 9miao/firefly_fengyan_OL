@@ -1,0 +1,8 @@
+package protoFile.meditation.CancelGuaJi3202;
+message CancelGuajiRequest{
+    required int32 id=1;
+}
+message CancelGuajiResponse{
+    optional bool result=1;
+    optional string message=2;
+}

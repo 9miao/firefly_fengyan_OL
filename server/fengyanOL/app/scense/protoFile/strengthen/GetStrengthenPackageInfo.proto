@@ -1,0 +1,22 @@
+package protoFile.strengthen.GetStrengthenPackageInfo;
+import "protoFile/itemInfo.proto";
+
+message GetStrengthenPackageInfoRequest{
+     required int32 id=1;
+     required int32 curPage=2;//页数
+}
+message GetStrengthenPackageInfoResponse{
+     optional string message=1;
+     optional bool result=2;
+     optional StrengthenInfo data=3;    
+}
+message StrengthenInfo{
+     optional int32 nowPage=1;
+     optional int32 maxPage=2;
+     repeated QhItemInfo strItemList=3;//可强化的装备集合
+}
+
+message QhItemInfo{
+     required int32 itemtag = 1;//物品标记 1已装备 2未装备
+     required ItemsInfo item = 2;//物品信息
+}

@@ -1,0 +1,11 @@
+package protoFile.zudui.JoinDuiWu4303;
+message JoinDuiWuRequest{
+    required int32 id=1;//角色id
+    required int32 pos=2;//所在阵法位置索引
+    required int32 dwId=3;//队伍id
+}
+message JoinDuiWuResponse{
+    optional string message=1;
+    optional bool result=2;
+    optional int32 rdwId=3;//队伍id
+}

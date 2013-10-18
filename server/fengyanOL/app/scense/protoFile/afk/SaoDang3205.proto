@@ -1,0 +1,15 @@
+package protoFile.afk.SaoDang3205;
+message SaoDangRequest{
+    required int32 id=1;
+    required int32 fubenId=2;
+    required int32 sdType=3;//扫荡类型0默认消耗完剩余活力1 轮数
+    optional int32 sdRound=4;//扫荡轮数 当sdType为1时此值有用
+}
+message SaoDangResponse{
+    optional bool result=1;
+    optional string message=2;
+    repeated BattleInfo baInfoList=3;
+}
+message BattleInfo{
+    optional string baDesStr=1;//战斗信息
+}

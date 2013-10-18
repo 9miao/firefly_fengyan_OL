@@ -1,0 +1,27 @@
+package protoFile.guild.GetCorpsTechnologyListInfo1314;
+message GetCorpsTechnologyListInfoRequest{
+     required int32 id=1;//角色id
+     required int32 curPage=2;
+}
+message GetCorpsTechnologyListInfoResponse{
+     required bool result=1;
+     optional string message=2;
+     optional CorpsTechnologyInfo data=3;
+}
+message CorpsTechnologyInfo{
+     optional int32 curPage=1;
+     optional int32 maxPage=2;
+     repeated TechnologyInfo technologyInfo=3;
+}
+message TechnologyInfo{
+     optional int32 technologyId=1;//科技id
+     optional int32 technologyImg=2;//科技图标
+     optional string technologyName=3;//科技名称
+     optional int32 technologyLevel=4;//科技等级
+     optional string remainCondition=5;//需求条件
+     optional int32 curSchedule=6;//当前进度
+     optional int32 maxSchedule=7;//最大进度
+     optional string technologyDes=8;//科技描述
+     optional bool defaultDonate=9;//是否默认捐献
+	 optional bool isenable = 10;//军团科技是否可用
+}

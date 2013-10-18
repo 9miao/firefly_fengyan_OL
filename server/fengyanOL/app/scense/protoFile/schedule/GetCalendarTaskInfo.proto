@@ -1,0 +1,29 @@
+package protoFile.schedule.GetCalendarTaskInfo;
+message GetCalendarTaskListInfoRequest{
+     required int32 id=1;//角色id
+}
+message GetCalendarTaskInfoResponse{
+	 required bool result = 1;
+	 optional string message = 2;
+	 optional CalendarTaskInfo data = 3;//日程信息
+}
+
+message CalendarTaskInfo{
+	 optional int32 totalLivenessNum=1;//总活跃度
+	 repeated Schedule unfinished = 2;//未完成的日程列表
+         repeated Schedule finished = 3;//完成的日程列表
+         repeated Bound scheduleBound = 4;//奖励列表
+}
+
+message Schedule{//日程信息
+         optional int32 scheduleId = 1;//日程的ID
+         optional string desc = 2;//日程的描述
+         optional int32 now = 3;//当前进度
+         optional int32 total = 4;//总的进度
+         optional int32 activity = 5;//日程奖励的活力
+}
+
+message Bound{//日程奖励
+         optional int32 step = 1;//奖励的序号
+         optional int32 received =2;//是否已经领取
+}

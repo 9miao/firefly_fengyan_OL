@@ -1,0 +1,12 @@
+package protoFile.hall.GetRoleOfRoomInfo;
+message GetRoleOfRoomInfoResponse{
+     repeated RoleOfRoomInfo roleOfRoomInfo=1;//角色信息集合
+}
+message RoleOfRoomInfo{
+     optional int32 roleId=1;//角色id
+     optional int32 roleLevel=2;//角色等级
+     optional string roleName=3;//角色名称
+     optional int32 roleWork=4;//角色职业
+     optional bool isRoomOwner=5;//是否是房主
+     optional bool isReady=6;//是否准备
+}

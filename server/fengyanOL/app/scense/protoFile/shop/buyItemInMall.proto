@@ -1,0 +1,20 @@
+package protoFile.shop.buyItemInMall;
+message buyItemInMallRequest{
+     required int32 id = 1;//购买者角色Id
+     required int32 itemTemplateId = 2;//物品的模板id
+     required int32 count = 3;//商品的数量
+     required int32 priceType=4;//1魔钻 2魔晶
+}
+
+message buyItemInMallResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data=3;
+}
+
+message ResponseData{
+     optional bool recharge =1;//是否需要提示充值
+     optional int32 priceType= 20;// 1为魔钻价格 2为魔晶价格    魔钻价格(人民币) 魔晶价格(礼券)
+     required int32 itemTemplateId = 3;//物品的模板id
+     required int32 count = 4;//商品的数量
+} 

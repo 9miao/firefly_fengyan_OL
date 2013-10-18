@@ -1,0 +1,20 @@
+package protoFile.quest.getProcessQuestList;
+message getProcessQuestListRequest{//获取正在进行中的任务列表
+     required int32 id = 1;
+}
+
+message getProcessQuestListResponse{
+     required bool result = 1;
+     optional string message = 2;
+     optional ResponseData data = 3;
+}
+
+message ResponseData{
+     repeated ProcessQuest progressingquestList = 1;
+}
+
+message ProcessQuest{
+     optional int32 taskId = 1;   //任务的ID
+     optional string taskname = 2;//任务的名称
+     optional int32 trackStatu = 3;//任务的追逐状态
+}

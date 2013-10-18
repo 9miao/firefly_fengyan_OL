@@ -1,0 +1,10 @@
+package protoFile.guild.CorpsTechnologyDonate;
+message CorpsTechnologyDonateRequest{
+      required int32 id=1;//角色id
+      required int32 donateNum=2;//数量
+      required int32 technologyId=3;//科技id
+}
+message CorpsTechnologyDonateResponse{
+      required bool result = 1;
+      optional string message = 2;
+}

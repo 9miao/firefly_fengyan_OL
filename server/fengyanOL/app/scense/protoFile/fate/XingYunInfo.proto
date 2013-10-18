@@ -1,0 +1,14 @@
+package protoFile.fate;
+message XingYunBasicInfo{
+     optional int32 xyId=1;//星运id
+     optional int32 type=2;//找图标所需
+     optional int32 icon=3;//找图标所需
+     optional string xyName=4;//星运名称
+     optional string xyDes=5;//星运描述
+     optional int32 xytemId = 6;//星运的模板ID
+     optional int32 quality = 7;//星运的品质
+     optional int32 level = 8;//星运的当前等级
+     optional int32 exp = 9;//星运的当前经验
+     optional int32 maxexp = 10;//星运的最大经验
+     optional int32 price = 11;//星运的价格
+}
